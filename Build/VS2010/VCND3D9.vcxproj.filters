@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="PCH Files">
+      <UniqueIdentifier>{29607630-034b-429a-8152-bf8f84792b69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{812ac71d-f424-4b57-a952-d6acdfdf6279}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Shader Files">
+      <UniqueIdentifier>{a51c6212-99dc-44f2-a1b6-5a4283189e12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects">
+      <UniqueIdentifier>{66131034-ac83-413b-be40-0fa36ebcb994}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_BasicFX.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_LitFX.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_LitTexturedFX.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_ShadowMapFX.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_TerrainFX.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_TexturedFX.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Cache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Declaration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9MaterialCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9ShaderConstants.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9ShaderCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9EffectCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Effect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\Precompiled.cpp">
+      <Filter>PCH Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9StateBlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_LightingFX.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Types.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Allocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Converter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Help.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9ModelLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_LitTexSkinnedFX.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Animator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\VCND3D9\Effects\D3D9_SelectionFX.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_BasicFX.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_LitFX.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_LitTexturedFX.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_ShadowMapFX.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_TerrainFX.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_TexturedFX.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Cache.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Declaration.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9MaterialCore.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Mesh.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Shader.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9ShaderConstants.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9ShaderCore.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Texture.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9EffectCore.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Effect.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\Precompiled.h">
+      <Filter>PCH Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9StateBlock.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9ObjectWrapper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_LightingFX.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Types.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Allocator.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Converter.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Help.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9ModelLoader.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_LitTexSkinnedFX.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Animator.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\VCND3D9\Effects\D3D9_SelectionFX.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Game\Data\Shaders\TexturedGeometry.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\BasicGeometry.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\ColorFunctions.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\DummyShader.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\LightingFunctions.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\LitGeometry.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\LitTexturedGeometry.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\LitTexturedSkinned.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\NoiseFunctions.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\ParamPool.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\Particles.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\ShaderUtils.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\ShadowMap.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\SkinningFunctions.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\Terrain.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Shaders\Selection.fx">
+      <Filter>Shader Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D81CF041-44F6-4D89-90A6-71F16621A920}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Debug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <Import Project="Vicuna_Final.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="Vicuna_Release.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(WWISESDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>gtestd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(WWISESDK)\Win32_vc100\Profile(StaticCRT)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>AkSoundEngine.lib;AkMemoryMgr.lib;AkStreamMgr.lib;AkMusicEngine.lib;CommunicationCentral.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <Link>
+      <AdditionalDependencies>gtest.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(WWISESDK)\Win32_vc100\Release(StaticCRT)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>AkSoundEngine.lib;AkMemoryMgr.lib;AkStreamMgr.lib;AkMusicEngine.lib</AdditionalDependencies>
+    </Lib>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(WWISESDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>AK_OPTIMIZED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Link>
+      <AdditionalDependencies>gtest.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(WWISESDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>AK_OPTIMIZED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Lib />
+    <Lib>
+      <AdditionalLibraryDirectories>$(WWISESDK)\Win32_vc100\Release(StaticCRT)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>AkSoundEngine.lib;AkMemoryMgr.lib;AkStreamMgr.lib;AkMusicEngine.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources\VCNWwise\Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\VCNWwise\WwiseAudioCore.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="MessageBox.vcxproj">
+      <Project>{196ff958-4c4d-443a-a9a8-798eac4331b9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNAnim.vcxproj">
+      <Project>{990bf051-b519-4f21-9ac4-f701418e43d7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNAudio.vcxproj">
+      <Project>{bdc354df-7dc1-4634-8c8d-0a6458bea5a9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNCore.vcxproj">
+      <Project>{6c336355-a8f0-4d4c-9c2b-04810e1c166a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCND3D9.vcxproj">
+      <Project>{0a2aa1b9-40ae-4b9d-95d4-70d6fcb43e78}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNFMODSound.vcxproj">
+      <Project>{429bcecc-4abd-476f-9354-81b16f3106cc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNImporter.vcxproj">
+      <Project>{c6830e20-3c67-41f1-81fc-9443de5d629d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNLog.vcxproj">
+      <Project>{48fac6ed-9d0e-43f4-8dbd-4400df91bbc6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNNodes.vcxproj">
+      <Project>{d0d6c8ba-0ebd-4239-b14d-5a5705f186e9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNParticles.vcxproj">
+      <Project>{05f522aa-d15f-4806-aba1-ce7443f33fed}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNPhysic.vcxproj">
+      <Project>{ee042fa8-0776-4ebf-9acd-c2a763fadd66}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNPhysX.vcxproj">
+      <Project>{d96135ba-ae7c-4a33-84cb-f3ffb9a536d4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNRenderer.vcxproj">
+      <Project>{804fba67-d67d-4710-a07a-6a3dfd6b570c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNResources.vcxproj">
+      <Project>{cc5253fe-f467-4552-b149-d814c3cf8272}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNUI.vcxproj">
+      <Project>{361adb50-40e5-4171-8edd-6489bf259642}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNUtils.vcxproj">
+      <Project>{ad738cc9-6b15-4142-bb13-d8c533a4c0e0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNWindows.vcxproj">
+      <Project>{549bdd99-ee0b-4d89-8ddf-1ff92ff3c9ba}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources\VCNWwise\Precompiled.h" />
+    <ClInclude Include="..\..\Sources\VCNWwise\WwiseAudioCore.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

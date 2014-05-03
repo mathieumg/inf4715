@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VCNMeshes>
+  <VCNMesh Name="QuadMesh" version="3.0">
+    <Faces size="2">
+      <Face id="0" VertIndex.x="0" VertIndex.y="1" VertIndex.z="2"/>
+      <Face id="1" VertIndex.x="3" VertIndex.y="2" VertIndex.z="1"/>
+    </Faces>
+    <VertsPos size="4">
+      <VertPos id="0" Pos.x="-0.5" Pos.y="0" Pos.z="0.5"/>
+      <VertPos id="1" Pos.x="0.5" Pos.y="0" Pos.z="0.5"/>
+      <VertPos id="2" Pos.x="-0.5" Pos.y="0" Pos.z="-0.5"/>
+      <VertPos id="3" Pos.x="0.5" Pos.y="0" Pos.z="-0.5"/>
+    </VertsPos>
+    <VertsNormals size="4">
+      <VertNormal id="0" Normal.x="0" Normal.y="1" Normal.z="0"/>
+      <VertNormal id="1" Normal.x="0" Normal.y="1" Normal.z="0"/>
+      <VertNormal id="2" Normal.x="0" Normal.y="1" Normal.z="0"/>
+      <VertNormal id="3" Normal.x="0" Normal.y="1" Normal.z="0"/>
+    </VertsNormals>
+    <DiffuseUVs size="4">
+      <VertUV id="0" UV.x="0" UV.y="1"/>
+      <VertUV id="1" UV.x="1" UV.y="1"/>
+      <VertUV id="2" UV.x="0" UV.y="0"/>
+      <VertUV id="3" UV.x="1" UV.y="0"/>
+    </DiffuseUVs>
+  </VCNMesh>
+</VCNMeshes>

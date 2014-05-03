@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ed11e3c3-7060-41ae-8407-43eb166b8b7e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2a18d4b7-0fb1-4711-86b8-c9e6bcf602df}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{412f5916-12ae-4ddd-b654-9ad0e459370d}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Managed">
+      <UniqueIdentifier>{b87b710f-d38a-4ea7-be4a-7f64325cf6e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managed">
+      <UniqueIdentifier>{180725e7-6790-49f9-a1e8-6ed365cbda16}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CompassRoseObjCreateCallBack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DaylightSystemFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DayMasterClassDesc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DaySlaveControlFloatClassDesc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DaySlaveControlPosClassDesc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GEOLOC.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="natLight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NatLightAssemblyClassDesc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SlaveControlFloatClassDesc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SlaveControlPosClassDesc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sunlight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SunMasterClassDesc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SunMasterCreateMode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SunMasterCreationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeDimension.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WeatherFileDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompassRoseObjClassDesc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="autovis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CITYLIST.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="COMPASS.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AssemblyEntry.cpp">
+      <Filter>Source Files\Managed</Filter>
+    </ClCompile>
+    <ClCompile Include="AssemblyInfo.cpp">
+      <Filter>Source Files\Managed</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files\Managed</Filter>
+    </ClCompile>
+    <ClCompile Include="weatherdata.cpp">
+      <Filter>Source Files\Managed</Filter>
+    </ClCompile>
+    <ClCompile Include="SunlightClassDescFactory.cpp">
+      <Filter>Source Files\Managed</Filter>
+    </ClCompile>
+    <ClCompile Include="DaylightSystemFactory2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sunlight.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Crosshr1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="sunlight.RC">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="sunlight_vizR.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="autovis.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="citylist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompassRoseObjClassDesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompassRoseObjCreateCallBack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DaylightSystemFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DaylightSystemFactory2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DayMasterClassDesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DaySlaveControlFloatClassDesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DaySlaveControlPosClassDesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="natLight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NatLightAssemblyClassDesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SlaveControlFloatClassDesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SlaveControlPosClassDesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sunclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sunlight.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sunlightOverride.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SunMasterClassDesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SunMasterCreateMode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SunMasterCreationManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="suntypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeDimension.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="veroverrides.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="verts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="weatherdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WeatherFileDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SunlightClassDescFactory.h">
+      <Filter>Header Files\Managed</Filter>
+    </ClInclude>
+    <ClInclude Include="WeatherFileCache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files\Managed</Filter>
+    </ClInclude>
+    <ClInclude Include="AssemblyEntry.h">
+      <Filter>Header Files\Managed</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

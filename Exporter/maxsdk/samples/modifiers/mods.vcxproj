@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugUnicode|Win32">
+      <Configuration>DebugUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugUnicode|x64">
+      <Configuration>DebugUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="HybridUnicode|Win32">
+      <Configuration>HybridUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="HybridUnicode|x64">
+      <Configuration>HybridUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|Win32">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|x64">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DF1D7921-4B9E-4268-BF28-2388420778F9}</ProjectGuid>
+    <MaxSDK>../../../maxsdk</MaxSDK>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(MaxSDK)\ProjectSettings\PropertySheets\3dsmax.general.project.settings.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(MaxSDK)\ProjectSettings\PropertySheets\3dsmax.cpp.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">..\..\..\exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">..\..\..\x64\Exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">x64\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">..\..\..\exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">..\..\..\x64\Exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">x64\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">..\..\..\exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">..\..\..\x64\Exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">x64\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">mods</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">.dlm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">mods</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">.dlm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">mods</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">.dlm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">mods</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">.dlm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">mods</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">.dlm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">mods</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">.dlm</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\midl\Win32\mods.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>mods.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;bmm.lib;mnmath.lib;maxscrpt.lib;paramblk2.lib;poly.lib;core.lib;edmodel.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;assetmanagement.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\exe\stdplugs\mods.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mods.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>edmodel.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <ProgramDatabaseFile>..\..\..\exe\stdplugs\mods.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress>$(MaxSDK)\baseaddr.txt,$(TargetName)</BaseAddress>
+      <ImportLibrary>.\release\mods.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\midl\x64\mods.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>mods.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/opt:lbr   /ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;bmm.lib;mnmath.lib;maxscrpt.lib;paramblk2.lib;poly.lib;core.lib;edmodel.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;assetmanagement.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\x64\Exe\stdplugs\mods.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;..\..\..\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mods.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>edmodel.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <ProgramDatabaseFile>..\..\..\x64\Exe\stdplugs\mods.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress>$(MaxSDK)\baseaddr64.txt,$(TargetName)</BaseAddress>
+      <ImportLibrary>.\x64\Release\mods.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\midl\Win32\mods.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>mods.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;bmm.lib;mnmath.lib;maxscrpt.lib;paramblk2.lib;poly.lib;core.lib;edmodel.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;assetmanagement.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\exe\stdplugs\mods.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mods.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>edmodel.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <ProgramDatabaseFile>..\..\..\exe\stdplugs\mods.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\hybrid\mods.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\midl\x64\mods.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>mods.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;bmm.lib;mnmath.lib;maxscrpt.lib;paramblk2.lib;poly.lib;core.lib;edmodel.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;assetmanagement.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\x64\Exe\stdplugs\mods.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;..\..\..\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mods.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>edmodel.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <ProgramDatabaseFile>..\..\..\x64\Exe\stdplugs\mods.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\x64\Hybrid\mods.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\midl\Win32\mods.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;bmm.lib;mnmath.lib;maxscrpt.lib;paramblk2.lib;poly.lib;core.lib;edmodel.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;assetmanagement.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\exe\stdplugs\mods.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mods.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>edmodel.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <ProgramDatabaseFile>..\..\..\exe\stdplugs\mods.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\debug\mods.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\midl\x64\mods.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;bmm.lib;mnmath.lib;maxscrpt.lib;paramblk2.lib;poly.lib;core.lib;edmodel.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;assetmanagement.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\x64\Exe\stdplugs\mods.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;..\..\..\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mods.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>edmodel.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <ProgramDatabaseFile>..\..\..\x64\Exe\stdplugs\mods.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\x64\Debug\mods.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="afregion.cpp" />
+    <ClCompile Include="bend.cpp" />
+    <ClCompile Include="bomb.cpp" />
+    <ClCompile Include="clstnode.cpp" />
+    <ClCompile Include="clustmod.cpp" />
+    <ClCompile Include="..\EditableModifierCommon\CreateFaceMouseProcTemplate.cpp" />
+    <ClCompile Include="deflect.cpp" />
+    <ClCompile Include="delmod.cpp" />
+    <ClCompile Include="delpatch.cpp" />
+    <ClCompile Include="delsmod.cpp" />
+    <ClCompile Include="dispApprox.cpp" />
+    <ClCompile Include="dispmod.cpp" />
+    <ClCompile Include="editmesh.cpp" />
+    <ClCompile Include="editmops.cpp" />
+    <ClCompile Include="edmdata.cpp" />
+    <ClCompile Include="edmrest.cpp" />
+    <ClCompile Include="edmui.cpp" />
+    <ClCompile Include="extrude.cpp" />
+    <ClCompile Include="fextrude.cpp" />
+    <ClCompile Include="gravity.cpp" />
+    <ClCompile Include="mapmod.cpp" />
+    <ClCompile Include="meshsel.cpp" />
+    <ClCompile Include="mirror.cpp" />
+    <ClCompile Include="mods.cpp">
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">true</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">Fast</FloatingPointModel>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">mods.h</PrecompiledHeaderFile>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">true</UseFullPaths>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">true</BufferSecurityCheck>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">Fast</FloatingPointModel>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">mods.h</PrecompiledHeaderFile>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">true</UseFullPaths>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">true</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">Create</PrecompiledHeader>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">true</UseFullPaths>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">true</BufferSecurityCheck>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">Create</PrecompiledHeader>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">true</UseFullPaths>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">MaxSpeed</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">true</IntrinsicFunctions>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">Speed</FavorSizeOrSpeed>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">false</OmitFramePointers>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">Default</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">Create</PrecompiledHeader>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">true</UseFullPaths>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">MaxSpeed</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">true</IntrinsicFunctions>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">Speed</FavorSizeOrSpeed>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">false</OmitFramePointers>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">Default</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">false</BufferSecurityCheck>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">Create</PrecompiledHeader>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">true</UseFullPaths>
+    </ClCompile>
+    <ClCompile Include="noisemod.cpp" />
+    <ClCompile Include="nspline.cpp" />
+    <ClCompile Include="optmod.cpp" />
+    <ClCompile Include="resettm.cpp" />
+    <ClCompile Include="sctex.cpp" />
+    <ClCompile Include="selmod.cpp" />
+    <ClCompile Include="sinwave.cpp" />
+    <ClCompile Include="skew.cpp" />
+    <ClCompile Include="surfmod.cpp" />
+    <ClCompile Include="surfrev.cpp" />
+    <ClCompile Include="taper.cpp" />
+    <ClCompile Include="tessmod.cpp" />
+    <ClCompile Include="TWIST.CPP">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="twist1.cpp" />
+    <ClCompile Include="UniformGrid.cpp" />
+    <ClCompile Include="uvwxform.cpp" />
+    <ClCompile Include="wind.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mods.def" />
+    <None Include="addvertc.cur" />
+    <None Include="attach.cur" />
+    <None Include="Bevel.cur" />
+    <None Include="bmp00001.bmp" />
+    <None Include="bmp00002.bmp" />
+    <None Include="bmp00003.bmp" />
+    <None Include="bmp00004.bmp" />
+    <None Include="booleant.bmp" />
+    <None Include="boolinte.cur" />
+    <None Include="boolsubt.cur" />
+    <None Include="boolunio.cur" />
+    <None Include="bulbmask.bmp" />
+    <None Include="bulbs.bmp" />
+    <None Include="chamfer.cur" />
+    <None Include="createwe.cur" />
+    <None Include="CROSSHR.CUR" />
+    <None Include="crossins.cur" />
+    <None Include="echamfer.cur" />
+    <None Include="extrudec.cur" />
+    <None Include="faceselt.bmp" />
+    <None Include="fillet.cur" />
+    <None Include="magnify.cur" />
+    <None Include="mask_boo.bmp" />
+    <None Include="mask_fac.bmp" />
+    <None Include="mask_subobjtypes.bmp" />
+    <None Include="mask_unw.bmp" />
+    <None Include="move_x.cur" />
+    <None Include="move_y.cur" />
+    <None Include="outline.cur" />
+    <None Include="panhand.cur" />
+    <None Include="patchsel.bmp" />
+    <None Include="patselm.bmp" />
+    <None Include="region.cur" />
+    <None Include="scale_x.cur" />
+    <None Include="scale_y.cur" />
+    <None Include="segbreak.cur" />
+    <None Include="segrefin.cur" />
+    <None Include="selmask.bmp" />
+    <None Include="splselm.bmp" />
+    <None Include="subobjtypes.bmp" />
+    <None Include="thselcur.cur" />
+    <None Include="Trim.cur" />
+    <None Include="trimbut.bmp" />
+    <None Include="trimmask.bmp" />
+    <None Include="unwrap_option.bmp" />
+    <None Include="unwrap_option_mask.bmp" />
+    <None Include="unwrap_transform.bmp" />
+    <None Include="unwrap_transform_mask.bmp" />
+    <None Include="unwrap_verts.bmp" />
+    <None Include="unwrap_verts_mask.bmp" />
+    <None Include="unwrap_view.bmp" />
+    <None Include="unwrap_view_mask.bmp" />
+    <None Include="unwrapto.bmp" />
+    <None Include="vchamfer.cur" />
+    <None Include="vertconn.cur" />
+    <None Include="vinsert.cur" />
+    <None Include="weld.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="mods.rc" />
+    <ResourceCompile Include="mods_plasma.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="mods_vizr.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\EditableModifierCommon\CreateFaceMouseProcTemplate.h" />
+    <ClInclude Include="clstnodeapi.h" />
+    <ClInclude Include="EDITMESH.H" />
+    <ClInclude Include="MAPPING.H" />
+    <ClInclude Include="..\..\Include\mesh.h" />
+    <ClInclude Include="..\..\Include\meshadj.h" />
+    <ClInclude Include="..\..\Include\meshdelta.h" />
+    <ClInclude Include="MODS.H" />
+    <ClInclude Include="modsres.h" />
+    <ClInclude Include="resourceOverride.h" />
+    <ClInclude Include="SCTEX.H" />
+    <ClInclude Include="veroverrides.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets"></ImportGroup>
+</Project>

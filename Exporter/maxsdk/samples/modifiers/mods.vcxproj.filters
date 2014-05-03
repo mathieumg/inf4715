@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{cb2b47db-203b-4ea6-87c4-735a15a46924}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{326b221d-9308-4948-a705-b2457219cdf6}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{1928f8f8-3e15-47f2-8d8a-cd45aa6f44c7}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{1feae294-f7de-4fc6-86ff-7e1054012e5f}</UniqueIdentifier>
+      <Extensions>lib</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="afregion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bomb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clstnode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clustmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EditableModifierCommon\CreateFaceMouseProcTemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deflect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="delmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="delpatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="delsmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dispApprox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dispmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editmesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editmops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="edmdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="edmrest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="edmui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="extrude.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fextrude.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gravity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mapmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="meshsel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mirror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mods.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="noisemod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nspline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="optmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resettm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sctex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="selmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sinwave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="skew.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="surfmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="surfrev.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="taper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tessmod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TWIST.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="twist1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UniformGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="uvwxform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wind.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mods.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="addvertc.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="attach.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Bevel.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bmp00001.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bmp00002.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bmp00003.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bmp00004.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="booleant.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boolinte.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boolsubt.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boolunio.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bulbmask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bulbs.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="chamfer.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="createwe.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CROSSHR.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="crossins.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="echamfer.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="extrudec.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="faceselt.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="fillet.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="magnify.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mask_boo.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mask_fac.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mask_subobjtypes.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mask_unw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="move_x.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="move_y.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="outline.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="panhand.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="patchsel.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="patselm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="region.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="scale_x.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="scale_y.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="segbreak.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="segrefin.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="selmask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="splselm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="subobjtypes.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="thselcur.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Trim.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="trimbut.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="trimmask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_option.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_option_mask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_transform.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_transform_mask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_verts.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_verts_mask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_view.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_view_mask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrapto.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="vchamfer.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="vertconn.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="vinsert.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="weld.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="mods.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="mods_plasma.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="mods_vizr.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="clstnodeapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EDITMESH.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MAPPING.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\meshadj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\meshdelta.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MODS.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modsres.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceOverride.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCTEX.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="veroverrides.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EditableModifierCommon\CreateFaceMouseProcTemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hpp</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="PCH Files">
+      <UniqueIdentifier>{b05172e1-b48e-4de1-8d3a-7e341fc66706}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config Files">
+      <UniqueIdentifier>{0ce89937-10ab-41df-855e-0420a49bd798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\States">
+      <UniqueIdentifier>{1e5bc0cb-0bb2-49f7-970b-e4329973d75e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Events">
+      <UniqueIdentifier>{514b9d11-0322-4940-8eae-4c18e6fb729c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities">
+      <UniqueIdentifier>{e0052e3c-42f8-4e77-8cfd-0e70eccec1c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Camera">
+      <UniqueIdentifier>{eeba95de-dec4-480b-b356-14c346138cee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particles">
+      <UniqueIdentifier>{0ab3a20e-824a-4ac7-a5f4-417faf9fa600}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Menus">
+      <UniqueIdentifier>{34d7ac8b-9635-4355-a203-440798dd7d12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{5569664c-4104-4ed4-9434-4293e58f9b24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Inputs">
+      <UniqueIdentifier>{9f0cfdca-7ce8-407e-83d4-e15cdc0f8702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{bc60bcc0-30b3-405f-864f-dc474e5d6e9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Configs">
+      <UniqueIdentifier>{f6564af5-5d56-493b-8bf9-9abaeecf0a84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sounds">
+      <UniqueIdentifier>{6ee66266-ab69-49d3-8e6f-8fb6a5c6f694}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Debug">
+      <UniqueIdentifier>{f4ebeb02-6231-4690-9f27-b5ebd97e12e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources\GameApp\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\AnimEvent.cpp">
+      <Filter>Source Files\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Camera.cpp">
+      <Filter>Source Files\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\CameraController.cpp">
+      <Filter>Source Files\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\ParticleSystem.cpp">
+      <Filter>Source Files\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\GameState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\MenuState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\PauseState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\PlayState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\StateMachine.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\MainMenu.cpp">
+      <Filter>Source Files\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Menu.cpp">
+      <Filter>Source Files\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\HUD.cpp">
+      <Filter>Source Files\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Timer.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\InputController.cpp">
+      <Filter>Source Files\Inputs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\InputManager.cpp">
+      <Filter>Source Files\Inputs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Display.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\SoundEvent.cpp">
+      <Filter>Source Files\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Game.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\World.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Sun.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Skybox.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Config.cpp">
+      <Filter>Source Files\Configs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\ConfigLoader.cpp">
+      <Filter>Source Files\Configs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\SoundManager.cpp">
+      <Filter>Source Files\Sounds</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\SplashScreen.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\DebugGraph.cpp">
+      <Filter>Source Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Precompiled.cpp">
+      <Filter>PCH Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\ProceduralTerrain.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Terrain.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\MediaManager.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Inventory.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\AIRobot.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\ItemStore.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources\GameApp\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\AnimEvent.h">
+      <Filter>Source Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\CameraController.h">
+      <Filter>Source Files\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Camera.h">
+      <Filter>Source Files\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\ParticleSystem.h">
+      <Filter>Source Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\GameState.h">
+      <Filter>Source Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\MenuState.h">
+      <Filter>Source Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\PauseState.h">
+      <Filter>Source Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\PlayState.h">
+      <Filter>Source Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\StateMachine.h">
+      <Filter>Source Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\MainMenu.h">
+      <Filter>Source Files\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Menu.h">
+      <Filter>Source Files\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\HUD.h">
+      <Filter>Source Files\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Timer.h">
+      <Filter>Source Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\InputManager.h">
+      <Filter>Source Files\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\InputController.h">
+      <Filter>Source Files\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\InputKeys.h">
+      <Filter>Source Files\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Display.h">
+      <Filter>Source Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\SoundEvent.h">
+      <Filter>Source Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\GameSceneConstants.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Game.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\World.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Sun.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Skybox.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\ConfigLoaderConstants.h">
+      <Filter>Source Files\Configs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Config.h">
+      <Filter>Source Files\Configs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\ConfigLoader.h">
+      <Filter>Source Files\Configs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\SoundManagerConstants.h">
+      <Filter>Source Files\Sounds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\SoundManager.h">
+      <Filter>Source Files\Sounds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\SplashScreen.h">
+      <Filter>Source Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\DebugGraph.h">
+      <Filter>Source Files\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\GameSmartTypes.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Precompiled.h">
+      <Filter>PCH Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\ProceduralTerrain.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Terrain.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\AweHandle.h">
+      <Filter>Source Files\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\MediaManager.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\Inventory.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\AIRobot.h">
+      <Filter>Source Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\GameApp\ItemStore.h">
+      <Filter>Source Files\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Sources\GameApp\haunted.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\Sources\GameApp\splash.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Config.xml">
+      <Filter>Config Files</Filter>
+    </None>
+    <None Include="..\..\Game\Data\Config.xml.user">
+      <Filter>Config Files</Filter>
+    </None>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\Sources\GameApp\GameApp.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

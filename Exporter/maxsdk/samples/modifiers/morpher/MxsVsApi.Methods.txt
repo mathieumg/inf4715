@@ -1,0 +1,85 @@
+MXS Methods											API methods															MXS implementation	Unit Tested
+																																				Ported
+--------------------------------------------------------------------------------------------------
+IsValidMorpherMod								MaxMorphModifier::IsValidMorphModifier	NO
+
+// UI access
+WM3_RefreshChannelListUI				MaxMorphModifier::RefreshChannelsUI
+WM3_RefreshChannelParamsUI
+WM3_SetChannelPos
+WM3_SetChannelSel
+
+// Morph Channel access
+WM3_NumberOfChannels						MaxMorphChannel::NumChannels						YES								YES
+WM3_MC_BuildFromNode
+WM3_MC_Rebuild
+WM3_MC_Delete										MaxMorphChannel::DeleteChannel					YES								YES
+
+WM3_MC_GetName									MaxMorphChannel::GetName								YES								YES
+WM3_MC_SetName									MaxMorphChannel::SetName								YES								YES
+
+WM3_MC_GetValue									MaxMorphChannel::GetMorphPercent				YES								YES
+WM3_MC_SetValue									MaxMorphChannel::SetMorphPercent				YES								YES
+
+WM3_MC_HasTarget								MaxMorphChannel::GetMorphTarget					YES								YES
+WM3_MC_GetTarget								MaxMorphChannel::GetMorphTarget					YES								YES
+WM3_MC_SetTarget								MaxMorphChannel::SetMorphTarget					YES								YES
+
+WM3_MC_IsValid									MaxMorphChannel::IsValid								YES								YES
+WM3_MC_HasData									MaxMoprhChannel::HasData								YES								YES
+
+WM3_MC_IsActive									MaxMorphChannel::IsActive								YES								YES
+WM3_MC_SetActive								MaxMorphChannel::SetActive							YES								YES
+
+WM3_MC_GetUseLimits
+WM3_MC_SetUseLimits
+
+WM3_MC_GetLimitMAX
+WM3_MC_GetLimitMIN
+WM3_MC_SetLimitMAX
+WM3_MC_SetLimitMIN
+
+WM3_MC_GetUseVertexSel
+WM3_MC_SetUseVertexSel
+
+WM3_MC_GetMemUse
+
+// Lowlevel morph info access
+WM3_MC_NumPts										MaxMorphChannel::NumMorphPoints				YES
+WM3_MC_NumMPts
+WM3_MC_GetMorphPoint						MaxMorphChannel::GetMorphPoint				YES
+WM3_MC_GetMorphWeight						MaxMorphChannel::GetMorphPointWeight	YES
+
+// Cache access
+WM3_RebuildInternalCache
+
+//marker methods
+WM3_NumberOfMarkers
+WM3_GetCurrentMarker
+WM3_SetCurrentMarker
+//create marker	
+WM3_CreateMarker
+//delete marker
+WM3_DeleteMarker
+//get marker info
+WM3_GetMarkerIndex
+WM3_GetMarkerName
+//set marker data
+WM3_SetMarkerData
+
+
+//progessize morph access
+WM3_NumberOfProgressiveMorphs		MaxMorphChannel::NumProgressiveMorphTargets()	YES				YES
+
+WM3_GetProgressiveMorphTension	MaxMorphChannel::GetProgressiveMorphTension()	YES				YES
+WM3_SetProgressiveMorphTension	MaxMorphChannel::SetProgressiveMorphTension		YES				YES
+
+WM3_GetProgressiveMorphWeight		MaxMorphChannel::GetProgressiveMorphWeight	YES					YES
+WM3_SetProgressiveMorphWeight		MaxMorphChannel::SetProgressiveMorphWeight	YES					YES
+
+WM3_GetProgressiveMorphNode			MaxMorphChannel::GetProgressiveMorphTarget	YES					YES
+WM3_AddProgressiveMorphNode			MaxMorphChannel::AddProgressiveMorphTarget	YES					YES
+WM3_DeleteProgressiveMorphNode	MaxMorphChannel::DeleteProgressiveMorphTarget	YES				YES
+
+WM3_SwapMorph										MaxMorphModifier::SwapMorphChannel					YES					YES
+WM3_MoveMorph										MaxMorphModifier::MoveMorphChannel					YES

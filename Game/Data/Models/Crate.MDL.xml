@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VCNModels>
+	<VCNModel Name="CrateModel" version="3.0">
+		<Node Name="Crate" Type="Render" Mesh="Crate" Material="CrateMaterial" posx="0" posy="0" posz="0"  qrotw="1" qrotx="0" qroty="0" qrotz="0"  sclx="1" scly="1" sclz="1">
+            <Components>
+				<AutoRotateComponent RotationPosition="0" SpeedFactor="1" RotationAxis="1 0 0"></AutoRotateComponent>
+			</Components>
+        </Node>
+	</VCNModel>
+</VCNModels>

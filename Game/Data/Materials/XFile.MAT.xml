@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Material Name="XFileMaterial" Version="1">
+	<AmbientColor r="1.0" g="1.0" b="1.0" a="1"></AmbientColor>
+	<DiffuseColor r="0.2" g="0.2" b="0.2" a="1"></DiffuseColor>
+	<SpecularColor r="0" g="0" b="0" a="1" power="30"></SpecularColor>
+	<Effect name="LitTextured">
+    <!-- Material embedded in .x file -->
+    <TextureParam name="DiffuseTexture" value="Textures/NoTexture.jpg"></TextureParam>
+	</Effect>
+</Material>

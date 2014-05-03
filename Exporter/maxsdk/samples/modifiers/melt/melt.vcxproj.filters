@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Library Files">
+      <UniqueIdentifier>{3324b527-9df5-4636-8cbc-f126521bf81a}</UniqueIdentifier>
+      <Extensions>*.LIB</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MELT.CPP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MELT.DEF" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Melt.rc" />
+  </ItemGroup>
+</Project>

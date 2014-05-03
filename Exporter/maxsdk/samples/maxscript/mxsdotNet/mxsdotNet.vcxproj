@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugUnicode|Win32">
+      <Configuration>DebugUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugUnicode|x64">
+      <Configuration>DebugUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="HybridUnicode|Win32">
+      <Configuration>HybridUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="HybridUnicode|x64">
+      <Configuration>HybridUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|Win32">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|x64">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5951C2D5-CB01-4EE6-962B-86084C2F1A79}</ProjectGuid>
+    <RootNamespace>mxsdotNet</RootNamespace>
+    <TargetFrameworkVersion>V4.0</TargetFrameworkVersion>
+    <MaxSDK>../../../../maxsdk</MaxSDK>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(MaxSDK)\ProjectSettings\PropertySheets\3dsmax.general.project.settings.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(MaxSDK)\ProjectSettings\PropertySheets\3dsmax.cpp.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">..\..\..\..\exe\bin\assemblies\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">$(ProjectDir)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">..\..\..\..\x64\exe\bin\assemblies\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">$(ProjectDir)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">..\..\..\..\exe\bin\assemblies\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">$(ProjectDir)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">..\..\..\..\x64\exe\bin\assemblies\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">$(ProjectDir)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">..\..\..\..\exe\bin\assemblies\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">$(ProjectDir)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">..\..\..\..\x64\exe\bin\assemblies\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">$(ProjectDir)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">mxsdotNet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">.dlx</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">mxsdotNet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">.dlx</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">mxsdotNet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">.dlx</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">mxsdotNet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">.dlx</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">mxsdotNet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">.dlx</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">mxsdotNet</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">.dlx</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_SECURE_SCL=0;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/mxsdotNet.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AFXDLL;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /ignore:4013 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>core.lib;maxscrpt.lib;maxutil.lib;assetmanagement.lib;geom.lib;mnmath.lib;bmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mxsdotNet.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\..\exe\stdplugs\mxsdotNet.dlx.pdb</ProgramDatabaseFile>
+      <BaseAddress>$(MaxSDK)\baseaddr.txt,$(TargetName)</BaseAddress>
+      <ImportLibrary>.\Release/mxsdotNet.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_SECURE_SCL=0;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\Release/mxsdotNet.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USRDLL;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>core.lib;maxscrpt.lib;maxutil.lib;assetmanagement.lib;geom.lib;mnmath.lib;bmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mxsdotNet.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <ProgramDatabaseFile>..\..\..\..\x64\Exe\stdplugs\mxsdotNet.dlx.pdb</ProgramDatabaseFile>
+      <BaseAddress>$(MaxSDK)\baseaddr64.txt,$(TargetName)</BaseAddress>
+      <ImportLibrary>.\x64\Release/mxsdotNet.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_HYBRID;IS_HYBRID;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Hybrid/mxsdotNet.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AFXDLL;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /ignore:4013 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>core.lib;maxscrpt.lib;maxutil.lib;assetmanagement.lib;geom.lib;mnmath.lib;bmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mxsdotNet.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\..\exe\stdplugs\mxsdotNet.dlx.pdb</ProgramDatabaseFile>
+      <BaseAddress>
+      </BaseAddress>
+      <ImportLibrary>.\Hybrid/mxsdotNet.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_HYBRID;IS_HYBRID;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\Hybrid/mxsdotNet.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USRDLL;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /ignore:4013 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>core.lib;maxscrpt.lib;maxutil.lib;assetmanagement.lib;geom.lib;mnmath.lib;bmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mxsdotNet.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\..\x64\Exe\stdplugs\mxsdotNet.dlx.pdb</ProgramDatabaseFile>
+      <BaseAddress>
+      </BaseAddress>
+      <ImportLibrary>.\x64\Hybrid/mxsdotNet.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/mxsdotNet.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AFXDLL;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /ignore:4013 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>core.lib;maxscrpt.lib;maxutil.lib;assetmanagement.lib;geom.lib;mnmath.lib;bmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mxsdotNet.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>dbghelp.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <ProgramDatabaseFile>..\..\..\..\exe\stdplugs\mxsdotNet.dlx.pdb</ProgramDatabaseFile>
+      <BaseAddress>
+      </BaseAddress>
+      <ImportLibrary>.\Debug/mxsdotNet.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\Debug/mxsdotNet.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USRDLL;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /ignore:4013 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>core.lib;maxscrpt.lib;maxutil.lib;assetmanagement.lib;geom.lib;mnmath.lib;bmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\mxsdotNet.def</ModuleDefinitionFile>
+      <DelayLoadDLLs>dbghelp.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <ProgramDatabaseFile>..\..\..\..\x64\Exe\stdplugs\mxsdotNet.dlx.pdb</ProgramDatabaseFile>
+      <BaseAddress>
+      </BaseAddress>
+      <ImportLibrary>.\x64\Debug/mxsdotNet.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="mxsdotNet.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="mxsdotNet.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ClassCfg.h" />
+    <ClInclude Include="dotnet_wraps.h" />
+    <ClInclude Include="DotNetClassManaged.h" />
+    <ClInclude Include="DotNetHashTables.h" />
+    <ClInclude Include="DotNetObjectManaged.h" />
+    <ClInclude Include="DotNetObjectWrapper.h" />
+    <ClInclude Include="MaxIncludes.h" />
+    <ClInclude Include="namedefs.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="CDotNetHostWnd.h" />
+    <ClInclude Include="dotNetControl.h" />
+    <ClInclude Include="maxCDotNetHostWnd.h" />
+    <ClInclude Include="maxDotNetButton.h" />
+    <ClInclude Include="maxDotNetControl.h" />
+    <ClInclude Include="mxsCDotNetHostWnd.h" />
+    <ClInclude Include="SkeletonMFC.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssemblyEntry.cpp" />
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="dotNetBase.cpp" />
+    <ClCompile Include="dotNetClass.cpp" />
+    <ClCompile Include="DotNetClassManaged.cpp" />
+    <ClCompile Include="DotNetHashTables.cpp" />
+    <ClCompile Include="dotNetMethod.cpp" />
+    <ClCompile Include="dotNetMXSValue.cpp" />
+    <ClCompile Include="dotNetObject.cpp" />
+    <ClCompile Include="DotNetObjectManaged.cpp" />
+    <ClCompile Include="DotNetObjectWrapper.cpp" />
+    <ClCompile Include="ListViewItemComparer.cpp" />
+    <ClCompile Include="mxsdotNet.cpp" />
+    <ClCompile Include="mxsdotNet_main.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="CDotNetHostWnd.cpp" />
+    <ClCompile Include="dotNetControl.cpp" />
+    <ClCompile Include="maxCDotNetHostWnd.cpp" />
+    <ClCompile Include="maxDotNetButton.cpp" />
+    <ClCompile Include="maxDotNetControl.cpp" />
+    <ClCompile Include="mxsCDotNetHostWnd.cpp" />
+    <ClCompile Include="SkeletonMFC.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="mxsdotNet.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,145 @@
+Event	ID	Name			Wwise Object Path	Notes
+	116903177	Stocking_options_play			\Default Work Unit\Stocking_options_play	
+	145376957	Robots_mouvements_play			\Default Work Unit\Robots_mouvements_play	
+	337567223	Laser_room_stop			\Default Work Unit\Laser_room_stop	
+	341301218	Breaker_stop			\Default Work Unit\Breaker_stop	
+	678154080	Push_block_play			\Default Work Unit\Push_block_play	
+	731035405	Randombots_stop			\Default Work Unit\Randombots_stop	
+	739398180	Fibonacci_play			\Default Work Unit\Fibonacci_play	
+	742897156	Ambiance_music_stop			\Default Work Unit\Ambiance_music_stop	
+	901454101	Hydraulic_bridge_play			\Default Work Unit\Hydraulic_bridge_play	
+	950237290	Lateral_door_play			\Default Work Unit\Lateral_door_play	
+	981340130	Jump_play			\Default Work Unit\Jump_play	
+	1206689299	Footsteps_concrete_stop			\Default Work Unit\Footsteps_concrete_stop	
+	1284828341	Keyring_play			\Default Work Unit\Keyring_play	
+	1448255654	Bed_grit_play			\Default Work Unit\Bed_grit_play	
+	1595583390	Metal_door_play			\Default Work Unit\Metal_door_play	
+	1708462471	Grab_objects_play			\Default Work Unit\Grab_objects_play	
+	1997939040	Breaker_play			\Default Work Unit\Breaker_play	
+	2266898447	Randombots_play			\Default Work Unit\Randombots_play	
+	2312574497	Laser_room_play			\Default Work Unit\Laser_room_play	
+	2363710874	Flush_play			\Default Work Unit\Flush_play	
+	2372692523	Robots_mouvements_stop			\Default Work Unit\Robots_mouvements_stop	
+	2428510351	Switch1_play			\Default Work Unit\Switch1_play	
+	3039589941	Footsteps_concrete_play			\Default Work Unit\Footsteps_concrete_play	
+	3040106926	Block_collision_play			\Default Work Unit\Block_collision_play	
+	3040813216	Paper_clue_play			\Default Work Unit\Paper_clue_play	
+	3580903514	Wood_door_play			\Default Work Unit\Wood_door_play	
+	3597308922	Ambiance_music_play			\Default Work Unit\Ambiance_music_play	
+	3622331774	Switch2_play			\Default Work Unit\Switch2_play	
+	4098134011	Open_stocking_play			\Default Work Unit\Open_stocking_play	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	203286055	Breaker			\Default Work Unit\Breaker	
+	693477459	Fibonacci			\Default Work Unit\Fibonacci	
+
+Switch	ID	Name	Switch Group			Notes
+	489739958	Power_off	Breaker			
+	2623623160	Power_on	Breaker			
+	2917726846	Activated	Breaker			
+	366552496	Wrong	Fibonacci			
+	3893817417	Right	Fibonacci			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	453871992	Levels_music			\Default Work Unit\Levels_music	
+	593961517	Metal_door			\Default Work Unit\Metal_door	
+	1387552353	Wood_door			\Default Work Unit\Wood_door	
+	2951998248	Walk_run			\Default Work Unit\Walk_run	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Levels_music			
+	3966194980	Ending	Levels_music			
+	4237507621	Puzzle2	Levels_music			
+	4237507622	Puzzle1	Levels_music			
+	348763536	Locked_not_openable	Metal_door			
+	748895195	None	Metal_door			
+	3299206614	Opened	Metal_door			
+	4021862602	Locked_openable	Metal_door			
+	348763536	Locked_not_openable	Wood_door			
+	748895195	None	Wood_door			
+	3299206614	Opened	Wood_door			
+	4021862602	Locked_openable	Wood_door			
+	712161704	Run	Walk_run			
+	748895195	None	Walk_run			
+	2108779966	Walk	Walk_run			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\Player	
+	1088520938	Interface			\Default Work Unit\Master Audio Bus\Interface	
+	3332220694	Actions			\Default Work Unit\Master Audio Bus\Actions	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	7050483	hydraulic_bridge	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\hydrolic_bridge_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\hydraulic_bridge		314974
+	23670843	Silence03	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\silence03_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Walk\Glass\Silence03		591354
+	38672568	Laser01	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\lasert01_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Laser_room\Lasers\Laser01		134364
+	39800708	ambiance_robots	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\ambiance_robots_629faa29.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Randombots\ambiance_robots		881352
+	43549529	Footstep2	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep2_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Footsteps_run\Footstep2		44164
+	49005974	broken_glass3_3	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\broken_glass3_3_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Glass\broken_glass3_3		44164
+	53345126	random_robot05	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\random_robot05_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Randombots\Robots\random_robot05		33176
+	62930280	Footstep12	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep12_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Footsteps_run\Footstep12		44164
+	65287357	random_robot04	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\random_robot04_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Randombots\Robots\random_robot04		126154
+	69734701	Keyring	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\keyring1_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Keyring		134638
+	85503452	Footstep10	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep10_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Walk\Footsteps_walk\Footstep10		44164
+	88795628	wind1	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\wind1_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Levels\Drone_puzzle2\Wind\wind1		291678
+	92966791	Dropwater_dripping_01	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\dropwater_dripping_01_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Levels\Drone_puzzle1\Drops\Dropwater_dripping_01		179548
+	101030116	Footstep11	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep11_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Walk\Footsteps_walk\Footstep11		44164
+	101395422	Open_stocking	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\open_stocking_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interface\Stocking\Open_stocking		91542
+	117864563	Fibonacci_right	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\fibonacci_right_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Fibonacci_right_wrong\Fibonacci_right		100204
+	136911956	robots_mouvement	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\robots_mouvement_3d887f91.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\robots_mouvement		307666
+	172000346	Footstep5	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep5_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Footsteps_run\Footstep5		44164
+	182562567	lateral_door_open	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\lateral_door_open_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\lateral_door_open		378672
+	193186957	Footstep6	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep6_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Walk\Footsteps_walk\Footstep6		44164
+	199786132	Push_block	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\push_block_e35c2031.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Blocks\Push_block		265204
+	214882055	Laser03	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\lasert03_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Laser_room\Lasers\Laser03		108076
+	220396978	random_robot02	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\random_robot02_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Randombots\Robots\random_robot02		39760
+	271860721	Switch2	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\switch2_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Switches\Switch2		36272
+	299225995	metal_door_locked	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\metal_door_locked_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\metal_door\metal_door_locked		137900
+	300042600	random_robot06	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\random_robot06_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Randombots\Robots\random_robot06		93464
+	307545742	open_door_wood	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\open_door_wood_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Wood_door\unlock_open\open_door_wood		152506
+	350669575	Footstep7	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep7_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Walk\Footsteps_walk\Footstep7		44164
+	352238056	Pen_paper	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\pen_paper_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interface\Pen_paper		316300
+	355851473	Laser04	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\lasert04_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Laser_room\Lasers\Laser04		113346
+	356059906	Block_collision	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\fix_block_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Blocks\Block_collision		53422
+	364943392	Flush	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\flush2_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Flush		186442
+	373054436	Breaker_poweroff	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\breaker2_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Breaker\Breaker_poweroff		376604
+	376059534	Footstep9	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep9_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Walk\Footsteps_walk\Footstep9		44164
+	376968225	Jump_concrete	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\jump_concrete_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_concrete		87590
+	416302491	Breaker_poweron	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\breaker_poweron_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Breaker\Breaker_poweron		429782
+	431923424	Breaker_actived	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\breaker_actived1_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Breaker\Breaker_actived		78820
+	448456250	Breath	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\breath_7c21c0a4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Breath		1984564
+	454453036	Dropwater_dripping_03	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\dropwater_dripping_01-002_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Levels\Drone_puzzle1\Drops\Dropwater_dripping_03		199528
+	486109209	Footstep01	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep01_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Footsteps_run\Footstep01		44164
+	499823673	Silence02	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\silence02_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Walk\Glass\Silence02		365954
+	522723358	broken_glass3_2	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\broken_glass3_2_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Walk\Glass\broken_glass3_2		44164
+	549588361	Dropwater_dripping_02	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\dropwater_dripping_01-001_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Levels\Drone_puzzle1\Drops\Dropwater_dripping_02		199528
+	553572265	Silence01	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\silence01_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Glass\Silence01		242446
+	558918047	Footstep4	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep4_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Footsteps_run\Footstep4		44164
+	592461489	wind2	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\wind2_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Levels\Drone_puzzle1\Wind\wind2		342394
+	619114872	wood_door_locked_good	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\wood_door_locked_good_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Wood_door\unlock_open\wood_door_locked_good		193610
+	620100431	wind3	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\wind3_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Levels\Drone_puzzle2\Wind\wind3		391138
+	628870754	Footstep13	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep13_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Footsteps_run\Footstep13		44164
+	632834586	metal_door_open	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\metal_door_open_a29000df.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\metal_door\unlock_open\metal_door_open		263914
+	642591912	Fibonacci_wrong	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\fibonacci_wrong_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Fibonacci_right_wrong\Fibonacci_wrong		100204
+	648425785	grab_objects	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\grab_objects_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\grab_objects		143198
+	706728609	random_robot09	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\random_robot09_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Randombots\Robots\random_robot09		37424
+	712740083	Footstep3	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep3_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Footsteps_run\Footstep3		44164
+	720700729	broken_glass3_1	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\broken_glass3_1_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Glass\broken_glass3_1		44164
+	723466852	wood_door_locked_bad	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\wood_door_locked_bad_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Wood_door\wood_door_locked_bad		152192
+	725858428	Switch1	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\switch1_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Switches\Switch1		35734
+	749849308	random_robot01	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\random_robot01_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Randombots\Robots\random_robot01		168290
+	759083603	Music_drone_Puzzle1_01	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\ambiance_drone1_d39329a0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Levels\Drone_puzzle2\Music_drone_Puzzle1_01		24014936
+	773549325	random_robot07	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\random_robot07_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Randombots\Robots\random_robot07		49100
+	789618064	Music_drone_Puzzle2_01	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\ambiance_puzzle2_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Levels\Drone_puzzle2\Music_drone_Puzzle2_01		14537704
+	809337560	Ambiance_ending	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\ambiance_ending_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Levels\Ambiance_ending		11194844
+	851487577	Electric_laser	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\electric_laser_2598c00f.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Laser_room\Electric_laser		435352
+	905004730	random_robot03	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\random_robot03_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Randombots\Robots\random_robot03		135494
+	919603645	Footstep8	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\footstep8_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Run\Footsteps_run\Footstep8		44164
+	941328883	Dropwater_dripping_04	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\dropwater_dripping_01-003_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Levels\Drone_puzzle1\Drops\Dropwater_dripping_04		259016
+	984721684	random_robot08	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\random_robot08_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Randombots\Robots\random_robot08		131560
+	1010316427	Bed_grit	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\bed_grit_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle1\Bed_grit		171094
+	1012773516	Laser02	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\lasert02_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle2\Laser_room\Lasers\Laser02		134422
+	1043760957	Stocking_options	I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\sfx\stocking_options_ddc98ef4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interface\Stocking\Stocking_options		66142
+

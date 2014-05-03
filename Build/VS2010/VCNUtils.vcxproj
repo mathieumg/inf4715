@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AD738CC9-6B15-4142-BB13-D8C533A4C0E0}</ProjectGuid>
+    <RootNamespace>VCNUtils</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Final.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Release.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Sources;$(ProjectDir)..\..\Sources\3rdparty\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\Sources\3rdparty\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Sources;$(ProjectDir)..\..\Sources\3rdparty\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources/VCNUtils\Assert.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Frustum.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Filters.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\PropertyTreeUtils.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Quaternion.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\StackWalker.cpp">
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">false</BufferSecurityCheck>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</BufferSecurityCheck>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCNUtils\StringUtils.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Utilities.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Aabb.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Obb.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Plane.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Polygon.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Ray.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Sphere.cpp" />
+    <ClCompile Include="..\..\Sources/VCNUtils\Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources/VCNUtils\Any.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Assert.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Chrono.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Frustum.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Filters.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Matrix.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Observer.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\PropertyTreeUtils.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Quaternion.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Singleton.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\StackWalker.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\StringHash.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\StringUtils.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Utilities.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Aabb.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Macros.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Obb.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Plane.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Polygon.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Ray.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\SmartTypes.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Sphere.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\TemplateUtils.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Vector.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Precompiled.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Constants.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Error.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\RenderTypes.h" />
+    <ClInclude Include="..\..\Sources/VCNUtils\Types.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StringUtils.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

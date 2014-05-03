@@ -1,0 +1,31 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	453871992	Levels_music			\Default Work Unit\Levels_music	
+	593961517	Metal_door			\Default Work Unit\Metal_door	
+	1387552353	Wood_door			\Default Work Unit\Wood_door	
+	2951998248	Walk_run			\Default Work Unit\Walk_run	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Levels_music			
+	3966194980	Ending	Levels_music			
+	4237507621	Puzzle2	Levels_music			
+	4237507622	Puzzle1	Levels_music			
+	348763536	Locked_not_openable	Metal_door			
+	748895195	None	Metal_door			
+	3299206614	Opened	Metal_door			
+	4021862602	Locked_openable	Metal_door			
+	348763536	Locked_not_openable	Wood_door			
+	748895195	None	Wood_door			
+	3299206614	Opened	Wood_door			
+	4021862602	Locked_openable	Wood_door			
+	712161704	Run	Walk_run			
+	748895195	None	Walk_run			
+	2108779966	Walk	Walk_run			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\Player	
+	1088520938	Interface			\Default Work Unit\Master Audio Bus\Interface	
+	3332220694	Actions			\Default Work Unit\Master Audio Bus\Actions	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+

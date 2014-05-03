@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="2. Source Files">
+      <UniqueIdentifier>{90a28d70-c5c1-4171-8d99-899bb875fdf1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="1. Header Files">
+      <UniqueIdentifier>{79da3af4-df8d-4f77-8a97-2ba094cd42c0}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="3. Resource Files">
+      <UniqueIdentifier>{bd01e90b-0a98-47d8-b5b0-99da4a75694b}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="4. Common">
+      <UniqueIdentifier>{d7531883-acd6-4384-965a-9b8cfd59efb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="6. SimpleFaceDataAttrib">
+      <UniqueIdentifier>{38299dbe-6cfb-446f-8bd6-276c43f310d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="5. SimpleFaceChannel">
+      <UniqueIdentifier>{79653f27-6619-474f-9ebd-b9d466d3ab0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="7. SimpleFaceManager">
+      <UniqueIdentifier>{54ddff17-7962-49a7-bc35-2860136223c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="8. SDK Headers">
+      <UniqueIdentifier>{4fb41945-6e6c-4d9a-9189-c6404685298f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DllEntry.cpp">
+      <Filter>2. Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleFaceDataCommon.cpp">
+      <Filter>4. Common</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleFaceDataAttrib.cpp">
+      <Filter>6. SimpleFaceDataAttrib</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleFaceDataUndo.cpp">
+      <Filter>6. SimpleFaceDataAttrib</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleFaceDataValidator.cpp">
+      <Filter>6. SimpleFaceDataAttrib</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleFaceManager.cpp">
+      <Filter>7. SimpleFaceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleFaceManagerUndo.cpp">
+      <Filter>7. SimpleFaceManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SimpleFaceData.def">
+      <Filter>2. Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SimpleFaceData.h">
+      <Filter>1. Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>3. Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="veroverrides.h">
+      <Filter>3. Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleFaceDataCommon.h">
+      <Filter>4. Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleFaceDataAttrib.h">
+      <Filter>6. SimpleFaceDataAttrib</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleFaceDataUndo.h">
+      <Filter>6. SimpleFaceDataAttrib</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleFaceDataValidator.h">
+      <Filter>6. SimpleFaceDataAttrib</Filter>
+    </ClInclude>
+    <ClInclude Include="ISimpleFPChannel.h">
+      <Filter>5. SimpleFaceChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="PointerFPChannel.h">
+      <Filter>5. SimpleFaceChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleFaceChannel.h">
+      <Filter>5. SimpleFaceChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleFPChannel.h">
+      <Filter>5. SimpleFaceChannel</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleFaceManager.h">
+      <Filter>7. SimpleFaceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleFaceManagerUndo.h">
+      <Filter>7. SimpleFaceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\ISimpleFaceDataChannel.h">
+      <Filter>8. SDK Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\ISimpleFaceDataManager.h">
+      <Filter>8. SDK Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SimpleFaceData.rc">
+      <Filter>3. Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

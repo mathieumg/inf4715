@@ -1,0 +1,280 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PANEL_MODEL DIALOGEX 0, 0, 108, 22
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Export",IDC_BTN_EXPORT_ALL_MODELS,"CustButton",WS_TABSTOP,3,4,101,15
+END
+
+IDD_PANEL_MESH DIALOGEX 0, 0, 108, 123
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Faces",IDC_CHECK_MESH_FACES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,2,96,14
+    CONTROL         "Export",IDC_BTN_EXPORT_MESH_RECURSIVE,"CustButton",WS_TABSTOP,3,104,101,15
+    CONTROL         "Vertex Positions",IDC_CHECK_VERTEX_POS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,16,96,14
+    CONTROL         "Vertex Normals",IDC_CHECK_VERTEX_NORMALS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,49,96,14
+    CONTROL         "Vertex Colors",IDC_CHECK_VERTEX_COLORS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,63,96,14
+    CONTROL         "Texture Coordinates",IDC_CHECK_TEXT_COORD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,77,96,14
+    CONTROL         "Remove Doubles",IDC_CHECK_REMOVE_DOUBLES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,91,96,14
+    CONTROL         "World Space",IDC_RADIO_WORLD_SPACE,"Button",BS_AUTORADIOBUTTON,27,29,55,11
+    CONTROL         "Object Space",IDC_RADIO_OBJECT_SPACE,"Button",BS_AUTORADIOBUTTON,27,40,55,11
+END
+
+IDD_PANEL_GLOBAL_OPTIONS DIALOGEX 0, 0, 108, 59
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Coord. Sys.",IDC_STATIC,6,3,95,49
+    CONTROL         "OpenGL (RH Y up & -Z)",IDC_COORD_SYS_OGL,"Button",BS_AUTORADIOBUTTON | WS_GROUP,9,39,87,12
+    CONTROL         "DirectX (LH Y up & +Z)",IDC_COORD_SYS_D3D,"Button",BS_AUTORADIOBUTTON,9,26,87,12
+    CONTROL         "3ds Max (RH Z up & +Y)",IDC_COORD_SYS_MAX,"Button",BS_AUTORADIOBUTTON,9,13,88,12
+END
+
+IDD_PANEL_ANIM DIALOGEX 0, 0, 108, 100
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Export Animation",IDC_BTN_EXPORT_ANIMATION,"CustButton",WS_TABSTOP,3,83,101,15
+    CONTROL         "Anim. Samples:",IDC_SPIN_ANIM_SAMPLES,"SpinnerControl",WS_TABSTOP,96,69,8,11
+    CONTROL         "",IDC_EDIT_ANIM_SAMPLES,"CustEdit",WS_TABSTOP,75,69,19,11
+    CONTROL         "Export current Key Frames",IDC_RADIO_KF_CURRENT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,4,57,98,12
+    CONTROL         "Sample Animation",IDC_RADIO_KF_SAMPLE,"Button",BS_AUTORADIOBUTTON,4,69,68,12
+    CONTROL         "Position",IDC_CHECK_EXPORT_POS_ANIM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,11,41,14
+    CONTROL         "Rotation",IDC_CHECK_EXPORT_ROT_ANIM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,25,43,14
+    CONTROL         "Scaling",IDC_CHECK_EXPORT_SCL_ANIM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,39,41,14
+    GROUPBOX        "Animation to Export",IDC_STATIC,4,2,99,53
+END
+
+IDD_PANEL_LIGHT DIALOGEX 0, 0, 108, 38
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Export Scene's Lights",IDC_BTN_EXPORT_SCENES_LIGHTS,
+                    "CustButton",WS_DISABLED | WS_TABSTOP,3,3,101,15
+    CONTROL         "Export Selected Lights",IDC_BTN_EXPORT_SELECTED_LIGHTS,
+                    "CustButton",WS_DISABLED | WS_TABSTOP,3,20,101,15
+END
+
+IDD_PANEL_CAMERA DIALOGEX 0, 0, 108, 38
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Export Scene's Cameras",IDC_BTN_EXPORT_SCENES_CAMERAS,
+                    "CustButton",WS_TABSTOP,3,3,101,15
+    CONTROL         "Export Selected Cameras",IDC_BTN_EXPORT_SELECTED_CAMERAS,
+                    "CustButton",WS_DISABLED | WS_TABSTOP,3,20,101,15
+END
+
+IDD_PANEL_MATERIALS DIALOGEX 0, 0, 108, 38
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Export Scene's Materials",IDC_BTN_EXPORT_SCENES_MATERIALS,
+                    "CustButton",WS_DISABLED | WS_TABSTOP,3,3,101,15
+    CONTROL         "Export Selected Materials",IDC_BTN_EXPORT_SELECTED_MATERIALS,
+                    "CustButton",WS_DISABLED | WS_TABSTOP,3,20,101,15
+END
+
+IDD_PANEL_ABOUT DIALOGEX 0, 0, 108, 20
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "About",IDC_BTN_ABOUT,"CustButton",WS_TABSTOP,33,3,42,13
+END
+
+IDD_PANEL_EXPORT DIALOGEX 0, 0, 108, 160
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "Editor",IDC_GROUP_EXPORT,7,7,94,146
+    GROUPBOX        "Game Data Folder",IDC_GROUP_GAME_DATA_FOLDER,12,51,83,46
+    EDITTEXT        IDC_EDIT_GAME_DATA_FOLDER,16,62,77,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Browse",IDC_BUTTON_GAME_DATA_FOLDER_BROWSE,16,80,77,14
+    GROUPBOX        "Vicuna Scene Exporter",IDC_GROUP_VICUNA_SCENE_EXPORTER,12,100,83,46
+    PUSHBUTTON      "Export Entire Scene",IDC_BUTTON_VICUNA_EXPORT_SCENE,16,112,77,14
+    CONTROL         "Enable Editor Mode",IDC_CHECK_ENABLE_EDITOR_MODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,20,80,10
+    PUSHBUTTON      "Reload CSharp Nodes",IDC_BUTTON_RELOAD_DLL,12,33,83,14
+    PUSHBUTTON      "Export Nodes only",IDC_BUTTON_EXPORT_NODES_COMPONENTS,16,128,77,14
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PANEL_MODEL, DIALOG
+    BEGIN
+    END
+
+    IDD_PANEL_MESH, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 121
+    END
+
+    IDD_PANEL_GLOBAL_OPTIONS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_PANEL_ANIM, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_PANEL_CAMERA, DIALOG
+    BEGIN
+    END
+
+    IDD_PANEL_EXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 101
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 153
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_LIBDESCRIPTION      "3DS MAX Exporter for Haunted House Game"
+    IDS_CATEGORY            "Vicuna"
+    IDS_CLASS_NAME          "VCN3dsExporter"
+    IDS_PARAMS              "Model Exporter"
+    IDS_SPIN                "Spin"
+    IDS_MESH_PANEL          "Mesh Exporter"
+    IDS_GLOBAL_OPTIONS_PANEL "Global Options"
+    IDS_ANIM_PANEL          "Animation Exporter"
+    IDS_LIGHT_PANEL         "Light Exporter"
+    IDS_CAMERA_PANEL        "Camera Exporter"
+    IDS_MATERIAL_PANEL      "Material Exporter"
+    IDS_ABOUT_PANEL         "About Vicuña Exporter"
+    IDS_EXPORT_PANEL        "Export To Vicuna"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRC)
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH_CANADIAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000904b0"
+        BEGIN
+            VALUE "CompanyName", "Tech42 - http://www.equals-forty-two.com"
+            VALUE "FileDescription", "Vicuna 3DS Max Exporter"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "VCN3dsEx.dll"
+            VALUE "LegalCopyright", "Copyright (C) 2012"
+            VALUE "OriginalFilename", "VCN3dsEx.dll"
+            VALUE "ProductName", "Vicuna 3DS Max Exporter"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x9, 1200
+    END
+END
+
+#endif    // French (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+ProjectType="Visual C++"
+Version="9.00"
+Name="SampleBase"
+>
+<Platforms>
+<Platform Name="Win32"/>
+</Platforms>
+<Configurations>
+  <Configuration
+    Name="debug|Win32"
+    OutputDirectory="./../../lib/win32"
+    IntermediateDirectory="./Win32/SampleBase/debug"
+    ConfigurationType="4"
+    InheritedPropertySheets=""
+    CharacterSet="2"
+    >
+    <Tool
+      Name="VCCLCompilerTool"
+      AdditionalIncludeDirectories="&quot;./../../PxToolkit/include&quot;;&quot;./../../SampleFramework/framework/include&quot;;&quot;./../../SampleFramework/renderer/include&quot;;&quot;./../../SampleFramework/platform/include&quot;;&quot;./../../../Source/shared/general/shared&quot;;&quot;./../../../Include&quot;;&quot;./../../../Source/foundation/include&quot;;&quot;./../../../Source/Common/src&quot;;&quot;./../../../Source/GeomUtils/src&quot;;&quot;./../../../Source/GeomUtils/headers&quot;;&quot;./../../../Source/GeomUtils/include&quot;;&quot;./../../../Include/RepX&quot;;&quot;./../../../Include/RepXUpgrader&quot;;"
+      PreprocessorDefinitions="PHYSX_PROFILE_SDK;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_DEBUG;PX_CHECKED;PX_SUPPORT_VISUAL_DEBUGGER;"
+      WarningLevel="3"
+      FloatingPointModel="2"
+      EnableEnhancedInstructionSet="2"
+      StringPooling="true"
+      RuntimeTypeInfo="false"
+      WarnAsError="true"
+      BufferSecurityCheck="false"
+      Optimization="3"
+      AdditionalOptions="/MP"
+      ExceptionHandling="0"
+      RuntimeLibrary="1"
+      UsePrecompiledHeader="0"
+      PrecompiledHeaderThrough=""
+      />
+    <Tool Name="VCCustomBuildTool"/>
+    <Tool 
+      Name="VCLibrarianTool" 
+      OutputFile="$(OutDir)/$(ProjectName)DEBUG.lib" 
+      ProgramDatabaseFile="$(OutDir)/$(ProjectName)DEBUG.lib.pdb" 
+      LinkLibraryDependencies="true"
+      AdditionalOptions="/MACHINE:X86"
+      AdditionalDependencies=""
+      AdditionalLibraryDirectories=""
+      />
+    <Tool Name="VCMIDLTool"/>
+    <Tool Name="VCPreBuildEventTool"/>
+    <Tool Name="VCPostBuildEventTool"/>
+    <Tool Name="VCPreLinkEventTool"/>
+    <Tool Name="VCResourceCompilerTool"/>
+    <Tool Name="VCWebServiceProxyGeneratorTool"/>
+    <Tool Name="VCXMLDataGeneratorTool"/>
+    <Tool Name="VCWebDeploymentTool"/>
+    <Tool Name="VCManagedWrapperGeneratorTool"/>
+    <Tool Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+  </Configuration>
+  <Configuration
+    Name="checked|Win32"
+    OutputDirectory="./../../lib/win32"
+    IntermediateDirectory="./Win32/SampleBase/checked"
+    ConfigurationType="4"
+    InheritedPropertySheets=""
+    CharacterSet="2"
+    >
+    <Tool
+      Name="VCCLCompilerTool"
+      AdditionalIncludeDirectories="&quot;./../../PxToolkit/include&quot;;&quot;./../../SampleFramework/framework/include&quot;;&quot;./../../SampleFramework/renderer/include&quot;;&quot;./../../SampleFramework/platform/include&quot;;&quot;./../../../Source/shared/general/shared&quot;;&quot;./../../../Include&quot;;&quot;./../../../Source/foundation/include&quot;;&quot;./../../../Source/Common/src&quot;;&quot;./../../../Source/GeomUtils/src&quot;;&quot;./../../../Source/GeomUtils/headers&quot;;&quot;./../../../Source/GeomUtils/include&quot;;&quot;./../../../Include/RepX&quot;;&quot;./../../../Include/RepXUpgrader&quot;;"
+      PreprocessorDefinitions="PHYSX_PROFILE_SDK;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NDEBUG;PX_CHECKED;PX_SUPPORT_VISUAL_DEBUGGER;"
+      WarningLevel="3"
+      FloatingPointModel="2"
+      EnableEnhancedInstructionSet="2"
+      StringPooling="true"
+      RuntimeTypeInfo="false"
+      WarnAsError="true"
+      BufferSecurityCheck="false"
+      Optimization="3"
+      AdditionalOptions="/MP"
+      ExceptionHandling="0"
+      RuntimeLibrary="0"
+      UsePrecompiledHeader="0"
+      PrecompiledHeaderThrough=""
+      />
+    <Tool Name="VCCustomBuildTool"/>
+    <Tool 
+      Name="VCLibrarianTool" 
+      OutputFile="$(OutDir)/$(ProjectName)CHECKED.lib" 
+      ProgramDatabaseFile="$(OutDir)/$(ProjectName)CHECKED.lib.pdb" 
+      LinkLibraryDependencies="true"
+      AdditionalOptions="/MACHINE:X86"
+      AdditionalDependencies=""
+      AdditionalLibraryDirectories=""
+      />
+    <Tool Name="VCMIDLTool"/>
+    <Tool Name="VCPreBuildEventTool"/>
+    <Tool Name="VCPostBuildEventTool"/>
+    <Tool Name="VCPreLinkEventTool"/>
+    <Tool Name="VCResourceCompilerTool"/>
+    <Tool Name="VCWebServiceProxyGeneratorTool"/>
+    <Tool Name="VCXMLDataGeneratorTool"/>
+    <Tool Name="VCWebDeploymentTool"/>
+    <Tool Name="VCManagedWrapperGeneratorTool"/>
+    <Tool Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+  </Configuration>
+  <Configuration
+    Name="profile|Win32"
+    OutputDirectory="./../../lib/win32"
+    IntermediateDirectory="./Win32/SampleBase/profile"
+    ConfigurationType="4"
+    InheritedPropertySheets=""
+    CharacterSet="2"
+    >
+    <Tool
+      Name="VCCLCompilerTool"
+      AdditionalIncludeDirectories="&quot;./../../PxToolkit/include&quot;;&quot;./../../SampleFramework/framework/include&quot;;&quot;./../../SampleFramework/renderer/include&quot;;&quot;./../../SampleFramework/platform/include&quot;;&quot;./../../../Source/shared/general/shared&quot;;&quot;./../../../Include&quot;;&quot;./../../../Source/foundation/include&quot;;&quot;./../../../Source/Common/src&quot;;&quot;./../../../Source/GeomUtils/src&quot;;&quot;./../../../Source/GeomUtils/headers&quot;;&quot;./../../../Source/GeomUtils/include&quot;;&quot;./../../../Include/RepX&quot;;&quot;./../../../Include/RepXUpgrader&quot;;"
+      PreprocessorDefinitions="PHYSX_PROFILE_SDK;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NDEBUG;PX_PROFILE;PX_SUPPORT_VISUAL_DEBUGGER;_SECURE_SCL=0;_ITERATOR_DEBUG_LEVEL=0;"
+      WarningLevel="3"
+      FloatingPointModel="2"
+      EnableEnhancedInstructionSet="2"
+      StringPooling="true"
+      RuntimeTypeInfo="false"
+      WarnAsError="true"
+      BufferSecurityCheck="false"
+      Optimization="3"
+      AdditionalOptions="/MP"
+      ExceptionHandling="0"
+      RuntimeLibrary="0"
+      UsePrecompiledHeader="0"
+      PrecompiledHeaderThrough=""
+      />
+    <Tool Name="VCCustomBuildTool"/>
+    <Tool 
+      Name="VCLibrarianTool" 
+      OutputFile="$(OutDir)/$(ProjectName)PROFILE.lib" 
+      ProgramDatabaseFile="$(OutDir)/$(ProjectName)PROFILE.lib.pdb" 
+      LinkLibraryDependencies="true"
+      AdditionalOptions="/MACHINE:X86"
+      AdditionalDependencies=""
+      AdditionalLibraryDirectories=""
+      />
+    <Tool Name="VCMIDLTool"/>
+    <Tool Name="VCPreBuildEventTool"/>
+    <Tool Name="VCPostBuildEventTool"/>
+    <Tool Name="VCPreLinkEventTool"/>
+    <Tool Name="VCResourceCompilerTool"/>
+    <Tool Name="VCWebServiceProxyGeneratorTool"/>
+    <Tool Name="VCXMLDataGeneratorTool"/>
+    <Tool Name="VCWebDeploymentTool"/>
+    <Tool Name="VCManagedWrapperGeneratorTool"/>
+    <Tool Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+  </Configuration>
+  <Configuration
+    Name="release|Win32"
+    OutputDirectory="./../../lib/win32"
+    IntermediateDirectory="./Win32/SampleBase/release"
+    ConfigurationType="4"
+    InheritedPropertySheets=""
+    CharacterSet="2"
+    >
+    <Tool
+      Name="VCCLCompilerTool"
+      AdditionalIncludeDirectories="&quot;./../../PxToolkit/include&quot;;&quot;./../../SampleFramework/framework/include&quot;;&quot;./../../SampleFramework/renderer/include&quot;;&quot;./../../SampleFramework/platform/include&quot;;&quot;./../../../Source/shared/general/shared&quot;;&quot;./../../../Include&quot;;&quot;./../../../Source/foundation/include&quot;;&quot;./../../../Source/Common/src&quot;;&quot;./../../../Source/GeomUtils/src&quot;;&quot;./../../../Source/GeomUtils/headers&quot;;&quot;./../../../Source/GeomUtils/include&quot;;&quot;./../../../Include/RepX&quot;;&quot;./../../../Include/RepXUpgrader&quot;;"
+      PreprocessorDefinitions="PHYSX_PROFILE_SDK;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NDEBUG;_SECURE_SCL=0;_ITERATOR_DEBUG_LEVEL=0;"
+      WarningLevel="3"
+      FloatingPointModel="2"
+      EnableEnhancedInstructionSet="2"
+      StringPooling="true"
+      RuntimeTypeInfo="false"
+      WarnAsError="true"
+      BufferSecurityCheck="false"
+      Optimization="3"
+      AdditionalOptions="/MP"
+      ExceptionHandling="0"
+      RuntimeLibrary="0"
+      UsePrecompiledHeader="0"
+      PrecompiledHeaderThrough=""
+      />
+    <Tool Name="VCCustomBuildTool"/>
+    <Tool 
+      Name="VCLibrarianTool" 
+      OutputFile="$(OutDir)/$(ProjectName).lib" 
+      ProgramDatabaseFile="$(OutDir)/$(ProjectName).lib.pdb" 
+      LinkLibraryDependencies="true"
+      AdditionalOptions="/MACHINE:X86"
+      AdditionalDependencies=""
+      AdditionalLibraryDirectories=""
+      />
+    <Tool Name="VCMIDLTool"/>
+    <Tool Name="VCPreBuildEventTool"/>
+    <Tool Name="VCPostBuildEventTool"/>
+    <Tool Name="VCPreLinkEventTool"/>
+    <Tool Name="VCResourceCompilerTool"/>
+    <Tool Name="VCWebServiceProxyGeneratorTool"/>
+    <Tool Name="VCXMLDataGeneratorTool"/>
+    <Tool Name="VCWebDeploymentTool"/>
+    <Tool Name="VCManagedWrapperGeneratorTool"/>
+    <Tool Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+  </Configuration>
+</Configurations>
+<References></References>
+<Files>
+  <Filter Name="Particle systems" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleBase\ParticleEmitter.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\ParticleEmitter.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\ParticleEmitterPressure.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\ParticleEmitterPressure.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\ParticleEmitterRate.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\ParticleEmitterRate.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\ParticleFactory.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\ParticleFactory.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\ParticleSystem.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\ParticleSystem.h">
+    </File>
+  </Filter>
+  <Filter Name="Render actors" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleBase\RenderBaseActor.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderBaseActor.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderBaseObject.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderBaseObject.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderBoxActor.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderBoxActor.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderCapsuleActor.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderCapsuleActor.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderGridActor.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderGridActor.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderMaterial.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderMaterial.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderMeshActor.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderMeshActor.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderParticleSystemActor.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderParticleSystemActor.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderSphereActor.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderSphereActor.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderTexture.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderTexture.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderClothActor.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderClothActor.h">
+    </File>
+  </Filter>
+  <Filter Name="SampleBase" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleBase\RaycastCCD.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RaycastCCD.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleCamera.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleCamera.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleCameraController.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleCameraController.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleConsole.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleConsole.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleMain.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SamplePreprocessor.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleStepper.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleStepper.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleUtils.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\Test.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleArray.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\TestGroup.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\TestGroup.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\PhysXSample.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\PhysXSample.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\PhysXSampleApplication.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\PhysXSampleApplication.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleInputMappingAsset.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleInputMappingAsset.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleBaseInputEventIds.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleUserInputDefines.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\Picking.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\Picking.h">
+    </File>
+  </Filter>
+  <Filter Name="Helpers" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleBase\RawLoader.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RawLoader.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleAllocator.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleAllocator.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleAllocatorSDKClasses.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleMouseFilter.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleMouseFilter.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleRandomPrecomputed.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleRandomPrecomputed.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderPhysX3Debug.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\RenderPhysX3Debug.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\wavefront.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\wavefront.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleCharacterHelpers.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\SampleCharacterHelpers.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\AcclaimLoader.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\AcclaimLoader.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\TestMotionGenerator.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\TestMotionGenerator.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\TestGeometryHelpers.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\TestGeometryHelpers.h">
+    </File>
+    <File RelativePath="..\..\SampleBase\TestClothHelpers.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBase\TestClothHelpers.h">
+    </File>
+  </Filter>
+</Files>
+<Globals></Globals>
+</VisualStudioProject>

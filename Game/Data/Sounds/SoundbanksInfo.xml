@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" SchemaVersion="9">
+	<RootPaths>
+		<ProjectRoot>I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\</ProjectRoot>
+		<SourceFilesRoot>I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents />
+	<StreamedFiles />
+	<SoundBanks>
+		<SoundBank Id="523689745" Language="SFX">
+			<ShortName>Vicuna</ShortName>
+			<Path>Vicuna.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3575144598" Name="Ambiance_puzzle1_play" />
+				<Event Id="10714664" Name="Ambiance_puzzle1_stop" />
+				<Event Id="1997939040" Name="Breaker_play" />
+				<Event Id="341301218" Name="Breaker_stop" />
+				<Event Id="3039589941" Name="Footsteps_concrete_play" />
+				<Event Id="1206689299" Name="Footsteps_concrete_stop" />
+			</IncludedEvents>
+			<IncludedDialogueEvents />
+			<ReferencedStreamedFiles />
+			<IncludedFullFiles>
+				<File Id="1012429667" Language="SFX">
+					<ShortName>ambiance_drone1.wav</ShortName>
+					<Path>sfx\ambiance_drone1_d39329a0.wem</Path>
+				</File>
+				<File Id="373054436" Language="SFX">
+					<ShortName>breaker2.wav</ShortName>
+					<Path>sfx\breaker2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="431923424" Language="SFX">
+					<ShortName>Breaker_actived1.wav</ShortName>
+					<Path>sfx\breaker_actived1_ddc98ef4.wem</Path>
+				</File>
+				<File Id="416302491" Language="SFX">
+					<ShortName>Breaker_poweron.wav</ShortName>
+					<Path>sfx\breaker_poweron_ddc98ef4.wem</Path>
+				</File>
+				<File Id="448456250" Language="SFX">
+					<ShortName>Breath.wav</ShortName>
+					<Path>sfx\breath_7c21c0a4.wem</Path>
+				</File>
+				<File Id="720700729" Language="SFX">
+					<ShortName>broken_glass3_1.wav</ShortName>
+					<Path>sfx\broken_glass3_1_ddc98ef4.wem</Path>
+				</File>
+				<File Id="522723358" Language="SFX">
+					<ShortName>broken_glass3_2.wav</ShortName>
+					<Path>sfx\broken_glass3_2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="49005974" Language="SFX">
+					<ShortName>broken_glass3_3.wav</ShortName>
+					<Path>sfx\broken_glass3_3_ddc98ef4.wem</Path>
+				</File>
+				<File Id="442812448" Language="SFX">
+					<ShortName>Collision.wav</ShortName>
+					<Path>sfx\collision_16119352.wem</Path>
+				</File>
+				<File Id="549588361" Language="SFX">
+					<ShortName>Dropwater_dripping_01-001.wav</ShortName>
+					<Path>sfx\dropwater_dripping_01-001_ddc98ef4.wem</Path>
+				</File>
+				<File Id="454453036" Language="SFX">
+					<ShortName>Dropwater_dripping_01-002.wav</ShortName>
+					<Path>sfx\dropwater_dripping_01-002_ddc98ef4.wem</Path>
+				</File>
+				<File Id="941328883" Language="SFX">
+					<ShortName>Dropwater_dripping_01-003.wav</ShortName>
+					<Path>sfx\dropwater_dripping_01-003_ddc98ef4.wem</Path>
+				</File>
+				<File Id="92966791" Language="SFX">
+					<ShortName>Dropwater_dripping_01.wav</ShortName>
+					<Path>sfx\dropwater_dripping_01_ddc98ef4.wem</Path>
+				</File>
+				<File Id="486109209" Language="SFX">
+					<ShortName>Footstep01.wav</ShortName>
+					<Path>sfx\footstep01_ddc98ef4.wem</Path>
+				</File>
+				<File Id="85503452" Language="SFX">
+					<ShortName>Footstep10.wav</ShortName>
+					<Path>sfx\footstep10_ddc98ef4.wem</Path>
+				</File>
+				<File Id="101030116" Language="SFX">
+					<ShortName>Footstep11.wav</ShortName>
+					<Path>sfx\footstep11_ddc98ef4.wem</Path>
+				</File>
+				<File Id="62930280" Language="SFX">
+					<ShortName>Footstep12.wav</ShortName>
+					<Path>sfx\footstep12_ddc98ef4.wem</Path>
+				</File>
+				<File Id="628870754" Language="SFX">
+					<ShortName>Footstep13.wav</ShortName>
+					<Path>sfx\footstep13_ddc98ef4.wem</Path>
+				</File>
+				<File Id="43549529" Language="SFX">
+					<ShortName>Footstep2.wav</ShortName>
+					<Path>sfx\footstep2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="712740083" Language="SFX">
+					<ShortName>Footstep3.wav</ShortName>
+					<Path>sfx\footstep3_ddc98ef4.wem</Path>
+				</File>
+				<File Id="558918047" Language="SFX">
+					<ShortName>Footstep4.wav</ShortName>
+					<Path>sfx\footstep4_ddc98ef4.wem</Path>
+				</File>
+				<File Id="172000346" Language="SFX">
+					<ShortName>Footstep5.wav</ShortName>
+					<Path>sfx\footstep5_ddc98ef4.wem</Path>
+				</File>
+				<File Id="193186957" Language="SFX">
+					<ShortName>Footstep6.wav</ShortName>
+					<Path>sfx\footstep6_ddc98ef4.wem</Path>
+				</File>
+				<File Id="350669575" Language="SFX">
+					<ShortName>Footstep7.wav</ShortName>
+					<Path>sfx\footstep7_ddc98ef4.wem</Path>
+				</File>
+				<File Id="919603645" Language="SFX">
+					<ShortName>Footstep8.wav</ShortName>
+					<Path>sfx\footstep8_ddc98ef4.wem</Path>
+				</File>
+				<File Id="376059534" Language="SFX">
+					<ShortName>Footstep9.wav</ShortName>
+					<Path>sfx\footstep9_ddc98ef4.wem</Path>
+				</File>
+				<File Id="32219106" Language="SFX">
+					<ShortName>Menu.wav</ShortName>
+					<Path>sfx\menu_cee1e577.wem</Path>
+				</File>
+				<File Id="545721235" Language="SFX">
+					<ShortName>wind1.wav</ShortName>
+					<Path>sfx\wind1_ddc98ef4.wem</Path>
+				</File>
+				<File Id="592461489" Language="SFX">
+					<ShortName>wind2.wav</ShortName>
+					<Path>sfx\wind2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="1002099249" Language="SFX">
+					<ShortName>wind3.wav</ShortName>
+					<Path>sfx\wind3_ddc98ef4.wem</Path>
+				</File>
+			</IncludedFullFiles>
+			<IncludedPrefetchFiles />
+			<ExternalSources />
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<IncludedEvents />
+			<IncludedDialogueEvents />
+			<ReferencedStreamedFiles />
+			<IncludedFullFiles />
+			<IncludedPrefetchFiles />
+			<ExternalSources />
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

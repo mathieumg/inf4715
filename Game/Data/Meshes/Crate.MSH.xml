@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VCNMeshes>
+	<VCNMesh Name="Crate" version="3.0">
+		<Faces size="12">
+			<Face id="0" VertIndex.x="0" VertIndex.y="1" VertIndex.z="2"></Face>
+			<Face id="1" VertIndex.x="1" VertIndex.y="0" VertIndex.z="3"></Face>
+			<Face id="2" VertIndex.x="4" VertIndex.y="5" VertIndex.z="6"></Face>
+			<Face id="3" VertIndex.x="5" VertIndex.y="4" VertIndex.z="7"></Face>
+			<Face id="4" VertIndex.x="8" VertIndex.y="9" VertIndex.z="10"></Face>
+			<Face id="5" VertIndex.x="9" VertIndex.y="8" VertIndex.z="11"></Face>
+			<Face id="6" VertIndex.x="12" VertIndex.y="13" VertIndex.z="14"></Face>
+			<Face id="7" VertIndex.x="13" VertIndex.y="12" VertIndex.z="15"></Face>
+			<Face id="8" VertIndex.x="16" VertIndex.y="17" VertIndex.z="18"></Face>
+			<Face id="9" VertIndex.x="17" VertIndex.y="16" VertIndex.z="19"></Face>
+			<Face id="10" VertIndex.x="20" VertIndex.y="21" VertIndex.z="22"></Face>
+			<Face id="11" VertIndex.x="21" VertIndex.y="20" VertIndex.z="23"></Face>
+		</Faces>
+		<VertsPos size="24">
+			<VertPos id="0"  Pos.x="-1.15108" Pos.y="0"        Pos.z="-1.195153"></VertPos>
+			<VertPos id="1"  Pos.x="1.15108"  Pos.y="0"        Pos.z="1.195153"></VertPos>
+			<VertPos id="2"  Pos.x="-1.15108" Pos.y="0"        Pos.z="1.195153"></VertPos>
+			<VertPos id="3"  Pos.x="1.15108"  Pos.y="0"        Pos.z="-1.195153"></VertPos>
+			<VertPos id="4"  Pos.x="-1.15108" Pos.y="2.333831" Pos.z="-1.195153"></VertPos>
+			<VertPos id="5"  Pos.x="1.15108"  Pos.y="2.333831" Pos.z="1.195153"></VertPos>
+			<VertPos id="6"  Pos.x="1.15108"  Pos.y="2.333831" Pos.z="-1.195153"></VertPos>
+			<VertPos id="7"  Pos.x="-1.15108" Pos.y="2.333831" Pos.z="1.195153"></VertPos>
+			<VertPos id="8"  Pos.x="-1.15108" Pos.y="0"        Pos.z="-1.195153"></VertPos>
+			<VertPos id="9"  Pos.x="1.15108"  Pos.y="2.333831" Pos.z="-1.195153"></VertPos>
+			<VertPos id="10" Pos.x="1.15108"  Pos.y="0"        Pos.z="-1.195153"></VertPos>
+			<VertPos id="11" Pos.x="-1.15108" Pos.y="2.333831" Pos.z="-1.195153"></VertPos>
+			<VertPos id="12" Pos.x="1.15108"  Pos.y="0"        Pos.z="-1.195153"></VertPos>
+			<VertPos id="13" Pos.x="1.15108"  Pos.y="2.333831" Pos.z="1.195153"></VertPos>
+			<VertPos id="14" Pos.x="1.15108"  Pos.y="0"        Pos.z="1.195153"></VertPos>
+			<VertPos id="15" Pos.x="1.15108"  Pos.y="2.333831" Pos.z="-1.195153"></VertPos>
+			<VertPos id="16" Pos.x="1.15108"  Pos.y="0"        Pos.z="1.195153"></VertPos>
+			<VertPos id="17" Pos.x="-1.15108" Pos.y="2.333831" Pos.z="1.195153"></VertPos>
+			<VertPos id="18" Pos.x="-1.15108" Pos.y="0"        Pos.z="1.195153"></VertPos>
+			<VertPos id="19" Pos.x="1.15108"  Pos.y="2.333831" Pos.z="1.195153"></VertPos>
+			<VertPos id="20" Pos.x="-1.15108" Pos.y="0"        Pos.z="1.195153"></VertPos>
+			<VertPos id="21" Pos.x="-1.15108" Pos.y="2.333831" Pos.z="-1.195153"></VertPos>
+			<VertPos id="22" Pos.x="-1.15108" Pos.y="0"        Pos.z="-1.195153"></VertPos>
+			<VertPos id="23" Pos.x="-1.15108" Pos.y="2.333831" Pos.z="1.195153"></VertPos>
+		</VertsPos>
+		<VertsNormals size="24">
+			<VertNormal id="0" Normal.x="0" Normal.y="-1" Normal.z="0"></VertNormal>
+			<VertNormal id="1" Normal.x="0" Normal.y="-1" Normal.z="0"></VertNormal>
+			<VertNormal id="2" Normal.x="0" Normal.y="-1" Normal.z="0"></VertNormal>
+			<VertNormal id="3" Normal.x="0" Normal.y="-1" Normal.z="0"></VertNormal>
+			<VertNormal id="4" Normal.x="0" Normal.y="1" Normal.z="0"></VertNormal>
+			<VertNormal id="5" Normal.x="0" Normal.y="1" Normal.z="0"></VertNormal>
+			<VertNormal id="6" Normal.x="0" Normal.y="1" Normal.z="0"></VertNormal>
+			<VertNormal id="7" Normal.x="0" Normal.y="1" Normal.z="0"></VertNormal>
+			<VertNormal id="8" Normal.x="0" Normal.y="0" Normal.z="-1"></VertNormal>
+			<VertNormal id="9" Normal.x="0" Normal.y="0" Normal.z="-1"></VertNormal>
+			<VertNormal id="10" Normal.x="0" Normal.y="0" Normal.z="-1"></VertNormal>
+			<VertNormal id="11" Normal.x="0" Normal.y="0" Normal.z="-1"></VertNormal>
+			<VertNormal id="12" Normal.x="1" Normal.y="0" Normal.z="0"></VertNormal>
+			<VertNormal id="13" Normal.x="1" Normal.y="0" Normal.z="0"></VertNormal>
+			<VertNormal id="14" Normal.x="1" Normal.y="0" Normal.z="0"></VertNormal>
+			<VertNormal id="15" Normal.x="1" Normal.y="0" Normal.z="0"></VertNormal>
+			<VertNormal id="16" Normal.x="0" Normal.y="0" Normal.z="1"></VertNormal>
+			<VertNormal id="17" Normal.x="0" Normal.y="0" Normal.z="1"></VertNormal>
+			<VertNormal id="18" Normal.x="0" Normal.y="0" Normal.z="1"></VertNormal>
+			<VertNormal id="19" Normal.x="0" Normal.y="0" Normal.z="1"></VertNormal>
+			<VertNormal id="20" Normal.x="-1" Normal.y="0" Normal.z="0"></VertNormal>
+			<VertNormal id="21" Normal.x="-1" Normal.y="0" Normal.z="0"></VertNormal>
+			<VertNormal id="22" Normal.x="-1" Normal.y="0" Normal.z="0"></VertNormal>
+			<VertNormal id="23" Normal.x="-1" Normal.y="0" Normal.z="0"></VertNormal>
+		</VertsNormals>
+		<VertsColors size="24">
+      <VertColor id="0"  Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="1"  Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="2"  Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="3"  Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="4"  Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="5"  Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="6"  Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="7"  Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="8"  Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="9"  Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="10" Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="11" Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="12" Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="13" Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="14" Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="15" Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="16" Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="17" Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="18" Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="19" Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="20" Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+			<VertColor id="21" Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="22" Color.x="1.0" Color.y="1.0" Color.z="1.0" />
+			<VertColor id="23" Color.x="0.5" Color.y="0.5" Color.z="0.5" />
+		</VertsColors>
+		<DiffuseUVs size="24">
+			<VertUV id="0" UV.x="1" UV.y="0"></VertUV>
+			<VertUV id="1" UV.x="0" UV.y="-1"></VertUV>
+			<VertUV id="2" UV.x="1" UV.y="-1"></VertUV>
+			<VertUV id="3" UV.x="0" UV.y="0"></VertUV>
+			<VertUV id="4" UV.x="0" UV.y="0"></VertUV>
+			<VertUV id="5" UV.x="1" UV.y="-1"></VertUV>
+			<VertUV id="6" UV.x="1" UV.y="0"></VertUV>
+			<VertUV id="7" UV.x="0" UV.y="-1"></VertUV>
+			<VertUV id="8" UV.x="0" UV.y="0"></VertUV>
+			<VertUV id="9" UV.x="1" UV.y="-1"></VertUV>
+			<VertUV id="10" UV.x="1" UV.y="0"></VertUV>
+			<VertUV id="11" UV.x="0" UV.y="-1"></VertUV>
+			<VertUV id="12" UV.x="0" UV.y="0"></VertUV>
+			<VertUV id="13" UV.x="1" UV.y="-1"></VertUV>
+			<VertUV id="14" UV.x="1" UV.y="0"></VertUV>
+			<VertUV id="15" UV.x="0" UV.y="-1"></VertUV>
+			<VertUV id="16" UV.x="0" UV.y="0"></VertUV>
+			<VertUV id="17" UV.x="1" UV.y="-1"></VertUV>
+			<VertUV id="18" UV.x="1" UV.y="0"></VertUV>
+			<VertUV id="19" UV.x="0" UV.y="-1"></VertUV>
+			<VertUV id="20" UV.x="0" UV.y="0"></VertUV>
+			<VertUV id="21" UV.x="1" UV.y="-1"></VertUV>
+			<VertUV id="22" UV.x="1" UV.y="0"></VertUV>
+			<VertUV id="23" UV.x="0" UV.y="-1"></VertUV>
+		</DiffuseUVs>
+	</VCNMesh>
+</VCNMeshes>

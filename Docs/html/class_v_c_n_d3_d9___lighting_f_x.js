@@ -1,0 +1,26 @@
+var class_v_c_n_d3_d9___lighting_f_x =
+[
+    [ "VCND3D9_LightingFX", "class_v_c_n_d3_d9___lighting_f_x.html#aa1cf217de40e63f0a5728b14f4ba4d25", null ],
+    [ "~VCND3D9_LightingFX", "class_v_c_n_d3_d9___lighting_f_x.html#a0032fb41ae7fe7c47d10dd4c7f72b7c2", null ],
+    [ "CreateParameterHandles", "class_v_c_n_d3_d9___lighting_f_x.html#a8da0e7b0efba30f1d81fb2ce9dfb8b59", null ],
+    [ "InitAmbientPass", "class_v_c_n_d3_d9___lighting_f_x.html#af3036a134056e8981aae9dd74d2605f5", null ],
+    [ "InitLightPass", "class_v_c_n_d3_d9___lighting_f_x.html#aed3b12816329d0ef5c4009191e8f7873", null ],
+    [ "SetLightType", "class_v_c_n_d3_d9___lighting_f_x.html#aafacc71ae72760d71accf46973ad0c60", null ],
+    [ "mLightAmbientColor", "class_v_c_n_d3_d9___lighting_f_x.html#a4f62f9771999d2dc0a32cf8979bcd975", null ],
+    [ "mLightConstantAttenuation", "class_v_c_n_d3_d9___lighting_f_x.html#a6b10f422ceb3a99e9b895b615d05dbf0", null ],
+    [ "mLightDiffuseColor", "class_v_c_n_d3_d9___lighting_f_x.html#a43d2b263c3feaa959b58de517d671397", null ],
+    [ "mLightDirection", "class_v_c_n_d3_d9___lighting_f_x.html#af05e0144253deb6228889b685484503d", null ],
+    [ "mLightFalloff", "class_v_c_n_d3_d9___lighting_f_x.html#a4dd04e40e63bbdf57b709d05533d5d0d", null ],
+    [ "mLightInnerAngle", "class_v_c_n_d3_d9___lighting_f_x.html#a8de31e29364fc702dd0a4c01d133fd6f", null ],
+    [ "mLightLinearAttenuation", "class_v_c_n_d3_d9___lighting_f_x.html#a271aaf8da3c1dddef21a885090208594", null ],
+    [ "mLightMaxRange", "class_v_c_n_d3_d9___lighting_f_x.html#a3403dde504b80af0a3ee2e4c706a0a43", null ],
+    [ "mLightOuterAngle", "class_v_c_n_d3_d9___lighting_f_x.html#ab4eb0776a4f565e8bc0c2ef04763db19", null ],
+    [ "mLightPosition", "class_v_c_n_d3_d9___lighting_f_x.html#a85c5d0b5872d9e9123b06ada48e2b4ca", null ],
+    [ "mLightQuadAttenuation", "class_v_c_n_d3_d9___lighting_f_x.html#a9118b56f70022a554fcdffd1736427a0", null ],
+    [ "mLightRange", "class_v_c_n_d3_d9___lighting_f_x.html#ab99b83351435831a43c2bd6f180aad44", null ],
+    [ "mLightSpecularColor", "class_v_c_n_d3_d9___lighting_f_x.html#a94ec3338db580f670429cb328a9b085b", null ],
+    [ "mLightTypeAmbient", "class_v_c_n_d3_d9___lighting_f_x.html#a9c670cf8f96058b8e71a578d9be901cc", null ],
+    [ "mLightTypeDir", "class_v_c_n_d3_d9___lighting_f_x.html#acc7a910a22dd1fbd4d26cb9133beb73e", null ],
+    [ "mLightTypePoint", "class_v_c_n_d3_d9___lighting_f_x.html#ab2446c374973791861de4f7cea9e6532", null ],
+    [ "mLightTypeSpot", "class_v_c_n_d3_d9___lighting_f_x.html#aadafed3d21f6d52e9776ad05f363c290", null ]
+];

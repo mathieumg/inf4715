@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<Material Name="CrateMaterial" Version="1">
+  <AmbientColor r="0.3" g="0.3" b="0.3" a="1.0"/>
+  <DiffuseColor r="0.3" g="0.3" b="0.3" a="1.0"/>
+  <SpecularColor r="0.01" g="0.01" b="0.01" a="1.0" power="32.0"/>
+
+  <UseLighting value="1"/>
+
+  <Effect name="LitTextured">
+    <TextureParam name="DiffuseTexture" value="Textures/crate.jpg"/>
+  </Effect>
+
+</Material>

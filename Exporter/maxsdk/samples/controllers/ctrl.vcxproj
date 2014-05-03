@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugUnicode|Win32">
+      <Configuration>DebugUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugUnicode|x64">
+      <Configuration>DebugUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="HybridUnicode|Win32">
+      <Configuration>HybridUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="HybridUnicode|x64">
+      <Configuration>HybridUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|Win32">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|x64">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5BEC1EF6-15F7-443C-96F4-6CBCB4A5984F}</ProjectGuid>
+    <RootNamespace>ctrl</RootNamespace>
+    <MaxSDK>../../../maxsdk</MaxSDK>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(MaxSDK)\ProjectSettings\PropertySheets\3dsmax.general.project.settings.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(MaxSDK)\ProjectSettings\PropertySheets\3dsmax.cpp.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">..\..\..\exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">..\..\..\x64\Exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">x64\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">..\..\..\exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">..\..\..\x64\Exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">x64\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">..\..\..\exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">..\..\..\x64\Exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">x64\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">ctrl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">.dlc</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">ctrl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">.dlc</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">ctrl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">.dlc</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">ctrl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">.dlc</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">ctrl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">.dlc</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">ctrl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">.dlc</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\midl\Win32\ctrl.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>ctrl.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;expr.lib;maxscrpt.lib;paramblk2.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\exe\stdplugs\ctrl.dlc</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\ctrl.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\exe\stdplugs\ctrl.dlc.pdb</ProgramDatabaseFile>
+      <BaseAddress>$(MaxSDK)\baseaddr.txt,$(TargetName)</BaseAddress>
+      <ImportLibrary>.\release\ctrl.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\midl\x64\ctrl.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>ctrl.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/opt:lbr   /ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;expr.lib;maxscrpt.lib;paramblk2.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\x64\Exe\stdplugs\ctrl.dlc</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;..\..\..\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\ctrl.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\x64\Exe\stdplugs\ctrl.dlc.pdb</ProgramDatabaseFile>
+      <BaseAddress>$(MaxSDK)\baseaddr64.txt,$(TargetName)</BaseAddress>
+      <ImportLibrary>.\x64\Release\ctrl.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\midl\Win32\ctrl.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>ctrl.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;expr.lib;maxscrpt.lib;paramblk2.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\exe\stdplugs\ctrl.dlc</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\ctrl.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\exe\stdplugs\ctrl.dlc.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\debug\ctrl.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\midl\x64\ctrl.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>ctrl.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;expr.lib;maxscrpt.lib;paramblk2.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\x64\Exe\stdplugs\ctrl.dlc</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;..\..\..\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\ctrl.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\x64\Exe\stdplugs\ctrl.dlc.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\x64\Debug\ctrl.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\midl\Win32\ctrl.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>ctrl.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;expr.lib;maxscrpt.lib;paramblk2.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\exe\stdplugs\ctrl.dlc</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\ctrl.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\exe\stdplugs\ctrl.dlc.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\hybrid\ctrl.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\midl\x64\ctrl.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>ctrl.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;expr.lib;maxscrpt.lib;paramblk2.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\x64\Exe\stdplugs\ctrl.dlc</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;..\..\..\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\ctrl.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\x64\Exe\stdplugs\ctrl.dlc.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\x64\Hybrid\ctrl.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="attach.cpp" />
+    <ClCompile Include="boolctrl.cpp" />
+    <ClCompile Include="ctrl.cpp">
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">true</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">Create</PrecompiledHeader>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">true</UseFullPaths>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">true</BufferSecurityCheck>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">Create</PrecompiledHeader>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">true</UseFullPaths>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">true</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">Create</PrecompiledHeader>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">true</UseFullPaths>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">true</BufferSecurityCheck>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">Create</PrecompiledHeader>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">true</UseFullPaths>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">MaxSpeed</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">true</IntrinsicFunctions>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">Speed</FavorSizeOrSpeed>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">false</OmitFramePointers>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">Default</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">Create</PrecompiledHeader>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">true</UseFullPaths>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">MaxSpeed</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">true</IntrinsicFunctions>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">Speed</FavorSizeOrSpeed>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">false</OmitFramePointers>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">Async</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">Default</BasicRuntimeChecks>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">false</BufferSecurityCheck>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">Create</PrecompiledHeader>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">true</UseFullPaths>
+    </ClCompile>
+    <ClCompile Include="eulrctrl.cpp" />
+    <ClCompile Include="exprctrl.cpp" />
+    <ClCompile Include="followu.cpp" />
+    <ClCompile Include="indepos.cpp" />
+    <ClCompile Include="indescale.cpp" />
+    <ClCompile Include="layerctrl.cpp" />
+    <ClCompile Include="LimitController.cpp" />
+    <ClCompile Include="Link_cnstrnt.cpp" />
+    <ClCompile Include="link_timectrl.cpp" />
+    <ClCompile Include="listctrl.cpp" />
+    <ClCompile Include="loceulrc.cpp" />
+    <ClCompile Include="lodctrl.cpp" />
+    <ClCompile Include="LookAt_cnstrnt.cpp" />
+    <ClCompile Include="NodeMonitor.cpp" />
+    <ClCompile Include="NodeTransformMonitor.cpp" />
+    <ClCompile Include="noizctrl.cpp" />
+    <ClCompile Include="Orientation_cnstrnt.cpp" />
+    <ClCompile Include="Path_cnstrnt.cpp" />
+    <ClCompile Include="perlin.cpp" />
+    <ClCompile Include="Position_cnstrnt.cpp" />
+    <ClCompile Include="RefTargMonitorClass.cpp" />
+    <ClCompile Include="surfctrl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="control.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ctrl.def" />
+    <None Include="ico00001.ico" />
+    <None Include="ico00002.ico" />
+    <None Include="icon1.ico" />
+    <None Include="icon2.ico" />
+    <None Include="locked.ico" />
+    <None Include="unlocked2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="attach.h" />
+    <ClInclude Include="CTRL.H" />
+    <ClInclude Include="eulrctrl.h" />
+    <ClInclude Include="iexprctrl.h" />
+    <ClInclude Include="layerctrl.h" />
+    <ClInclude Include="LimitController.h" />
+    <ClInclude Include="Link_cnstrnt.h" />
+    <ClInclude Include="link_timectrl.h" />
+    <ClInclude Include="listctrl.h" />
+    <ClInclude Include="loceulrc.h" />
+    <ClInclude Include="NodeMonitor.h" />
+    <ClInclude Include="NodeTransformMonitor.h" />
+    <ClInclude Include="noise.h" />
+    <ClInclude Include="RefTargMonitorClass.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets"></ImportGroup>
+</Project>

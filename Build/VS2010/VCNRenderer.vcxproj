@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{804FBA67-D67D-4710-A07A-6A3DFD6B570C}</ProjectGuid>
+    <RootNamespace>VCNRenderer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Final.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Release.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources/VCNRenderer\Effect.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\EffectCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\GPUProfiling.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\LightingCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\MaterialCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\RenderCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\Shader.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\ShaderCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\StateBlock.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\XformCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\DirectionalLight.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\PointLight.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\SpotLight.cpp" />
+    <ClCompile Include="..\..\Sources/VCNRenderer\Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources/VCNRenderer\Declaration.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\DeclarationElement.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\Effect.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\EffectCore.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\GPUProfiling.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\LightingCore.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\MaterialCore.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\RenderCore.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\Shader.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\ShaderCore.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\StateBlock.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\XformCore.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\DirectionalLight.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\PointLight.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\SpotLight.h" />
+    <ClInclude Include="..\..\Sources/VCNRenderer\Precompiled.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

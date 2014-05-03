@@ -1,0 +1,1189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{aa6ff541-ee5c-41a0-aafe-5c13187fb41c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{bd620675-2bd2-4e2a-8e57-da2b47726f81}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{0367829f-8f6a-4ccf-bdb9-a35d37957acf}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Operators">
+      <UniqueIdentifier>{65a134b0-bd67-4eea-9b06-ab03e3d5fefa}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\SimpleBirth">
+      <UniqueIdentifier>{c7cb49e3-d07a-48b8-bcb0-9b16638a3734}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\SimplePosition">
+      <UniqueIdentifier>{0c289597-8202-4f3d-98d6-b4ad69f25149}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\SimpleSpeed">
+      <UniqueIdentifier>{c47ef60f-0b71-4ccc-a218-7d8ebecfbd3b}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\SimpleOrientation">
+      <UniqueIdentifier>{35c338cf-4065-44e3-a1c4-ef5c24a9c6e6}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\SimpleShape">
+      <UniqueIdentifier>{6f1cf5e9-919b-4ac9-94de-a28ace0ce2d5}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\InstanceShape">
+      <UniqueIdentifier>{77dfbc6c-d304-4848-b2da-8dcd1b29b2fe}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\FacingShape">
+      <UniqueIdentifier>{a6b5eadf-7707-41f5-8b72-f1f019a15183}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\MarkShape">
+      <UniqueIdentifier>{0d8b074e-2f96-4d9a-971d-8dc83d0f64ec}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\ForceSpaceWarp">
+      <UniqueIdentifier>{68954a86-57cb-4fcf-bec7-63038c04f27b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Operators\SimpleSpin">
+      <UniqueIdentifier>{291bc84a-a7d6-42a4-9356-da788b827c19}</UniqueIdentifier>
+      <Extensions>*.h,*.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\Exit">
+      <UniqueIdentifier>{965fc9f2-5cc3-41c3-92cd-aa8075ce0c32}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\SimpleMapping">
+      <UniqueIdentifier>{07fef9d0-2136-4a7b-aa79-d1666316f915}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\PositionOnObject">
+      <UniqueIdentifier>{d4210e4f-1104-4764-8fe6-8cfa723b3a20}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\SpeedSurfaceNormals">
+      <UniqueIdentifier>{cf45fb38-be42-444e-8294-4fedae51d3d6}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\SpeedCopy">
+      <UniqueIdentifier>{3e048ad8-7e95-450d-9581-a3bc3e20df02}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\SpeedKeepApart">
+      <UniqueIdentifier>{850097b9-75c8-4343-b6d0-f2bc13fa18a0}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\Comments">
+      <UniqueIdentifier>{f1ca7287-1957-4e8e-8baf-c82358a45b7a}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\SimpleScale">
+      <UniqueIdentifier>{46f76cf8-7976-4260-aa72-f2be8cc85781}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\Display">
+      <UniqueIdentifier>{ec6efc8c-45c9-4c0c-a372-f6ff84755dcb}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\Render">
+      <UniqueIdentifier>{a6ff56c0-34ed-4bb8-9692-56ce98f318c8}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\MaterialStatic">
+      <UniqueIdentifier>{2298014e-3a97-4632-b2bb-944581cc4be1}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\MaterialDynamic">
+      <UniqueIdentifier>{c6cb4842-06b3-4d8f-bad9-e06942f62361}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Operators\MaterialFrequency">
+      <UniqueIdentifier>{a6f747e0-0312-473c-8457-74cc1463b666}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{4fbec91a-d378-4622-97f5-51aebdf7fddc}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\Duration">
+      <UniqueIdentifier>{d239b8a1-71df-4ce8-b249-1e6e9da50313}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\Spawn">
+      <UniqueIdentifier>{256ab9b2-8adb-45d5-bb7a-1fbcc1daff2b}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\SpawnOnCollision">
+      <UniqueIdentifier>{6995498a-f8ed-4500-aecd-3c2a6e7f4632}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\CollisionSpaceWarp">
+      <UniqueIdentifier>{b715d126-aa5e-4471-81ff-90adaf415471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\SpeedGoToTarget">
+      <UniqueIdentifier>{83a1b748-21bf-4009-9d85-99d28050ca0e}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\GoToNextEvent">
+      <UniqueIdentifier>{fb2f5e50-1dd4-4dd9-b700-2094e102d977}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\SplitByAmount">
+      <UniqueIdentifier>{fab5c314-cb8d-40fe-8ac8-d5bff1e77dfc}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\SplitBySource">
+      <UniqueIdentifier>{fd787493-2be2-470a-b143-929c662d685e}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\SplitSelected">
+      <UniqueIdentifier>{d5db9302-b2da-4db5-b8cf-aefb6b13bf4f}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\GoToRotation">
+      <UniqueIdentifier>{66c9718e-eeef-4189-8034-47280bfba93e}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\ScaleTest">
+      <UniqueIdentifier>{8e01b2b2-fe89-4f15-ba52-2ffe8cd1b4cb}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+    <Filter Include="Tests\SpeedTest">
+      <UniqueIdentifier>{612993fe-1fce-49a6-b17a-08b88f1efa83}</UniqueIdentifier>
+      <Extensions>*.h *.cpp</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Actions.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Birth_DepotIconMask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CollisionSpaceWarp_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CollisionSpaceWarp_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CollisionSpaceWarp_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CollisionSpaceWarp_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Comments_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Comments_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Comments_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Display_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Display_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Display_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Duration_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Duration_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Duration_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Duration_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exit_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exit_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Exit_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FacingShape_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FacingShape_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FacingShape_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ForceSpaceWarp_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ForceSpaceWarp_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ForceSpaceWarp_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="GoToNextEvent_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="GoToNextEvent_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="GoToNextEvent_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="GoToNextEvent_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="GoToRotation_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="GoToRotation_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="GoToRotation_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="GoToRotation_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="InstanceShape_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="InstanceShape_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="InstanceShape_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MarkShape_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MarkShape_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MarkShape_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Material_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="operator.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Operator_DepotIconMask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PositionOnObject_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PositionOnObject_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PositionOnObject_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Render_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Render_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Render_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ScaleTest_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ScaleTest_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ScaleTest_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ScaleTest_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleBirth_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleBirth_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleBirth_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleMapping_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleOrientation_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleOrientation_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleOrientation_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimplePosition_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimplePosition_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimplePosition_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleScale_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleScale_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleScale_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleShape_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleShape_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleShape_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleSpeed_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleSpeed_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleSpeed_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleSpin_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleSpin_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SimpleSpin_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Spawn_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Spawn_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Spawn_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Spawn_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpawnOnCollision_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpawnOnCollision_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpawnOnCollision_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpawnOnCollision_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedAvoidCollisions_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedAvoidCollisions_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedAvoidCollisions_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedCopy_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedCopy_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedCopy_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedFollowLeader_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedGoToTarget_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedGoToTarget_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedGoToTarget_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedGoToTarget_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedGoToTarget_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedKeepApart_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedSurfaceNormals_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedTest_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedTest_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedTest_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SpeedTest_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitByAmount_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitByAmount_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitByAmount_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitByAmount_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitBySource_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitBySource_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitBySource_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitBySource_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitSelected_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitSelected_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitSelected_FalseIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SplitSelected_TrueIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Test_DepotIconMask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ViewportRender_ActiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ViewportRender_DepotIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ViewportRender_InactiveIcon.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Actions.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DLLMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PFActions_GlobalFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PFActions_GlobalVariables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PFActions_Icon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PFActions_SysUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMaterial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleBirth.cpp">
+      <Filter>Operators\SimpleBirth</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleBirth_ParamBlock.cpp">
+      <Filter>Operators\SimpleBirth</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleBirthDesc.cpp">
+      <Filter>Operators\SimpleBirth</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimplePosition.cpp">
+      <Filter>Operators\SimplePosition</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimplePosition_ParamBlock.cpp">
+      <Filter>Operators\SimplePosition</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimplePositionDesc.cpp">
+      <Filter>Operators\SimplePosition</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleSpeed.cpp">
+      <Filter>Operators\SimpleSpeed</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleSpeed_ParamBlock.cpp">
+      <Filter>Operators\SimpleSpeed</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleSpeedDesc.cpp">
+      <Filter>Operators\SimpleSpeed</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleOrientation.cpp">
+      <Filter>Operators\SimpleOrientation</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleOrientation_ParamBlock.cpp">
+      <Filter>Operators\SimpleOrientation</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleOrientationDesc.cpp">
+      <Filter>Operators\SimpleOrientation</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleShape.cpp">
+      <Filter>Operators\SimpleShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleShape_ParamBlock.cpp">
+      <Filter>Operators\SimpleShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleShapeDesc.cpp">
+      <Filter>Operators\SimpleShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorInstanceShape.cpp">
+      <Filter>Operators\InstanceShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorInstanceShape_ParamBlock.cpp">
+      <Filter>Operators\InstanceShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorInstanceShapeDesc.cpp">
+      <Filter>Operators\InstanceShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorFacingShape.cpp">
+      <Filter>Operators\FacingShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorFacingShape_ParamBlock.cpp">
+      <Filter>Operators\FacingShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorFacingShapeDesc.cpp">
+      <Filter>Operators\FacingShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMarkShape.cpp">
+      <Filter>Operators\MarkShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMarkShape_ParamBlock.cpp">
+      <Filter>Operators\MarkShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMarkShapeDesc.cpp">
+      <Filter>Operators\MarkShape</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorForceSpaceWarp.cpp">
+      <Filter>Operators\ForceSpaceWarp</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorForceSpaceWarp_ParamBlock.cpp">
+      <Filter>Operators\ForceSpaceWarp</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorForceSpaceWarpDesc.cpp">
+      <Filter>Operators\ForceSpaceWarp</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleSpin.cpp">
+      <Filter>Operators\SimpleSpin</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleSpin_ParamBlock.cpp">
+      <Filter>Operators\SimpleSpin</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleSpinDesc.cpp">
+      <Filter>Operators\SimpleSpin</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorExit.cpp">
+      <Filter>Operators\Exit</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorExit_ParamBlock.cpp">
+      <Filter>Operators\Exit</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorExitDesc.cpp">
+      <Filter>Operators\Exit</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleMapping.cpp">
+      <Filter>Operators\SimpleMapping</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleMapping_ParamBlock.cpp">
+      <Filter>Operators\SimpleMapping</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleMappingDesc.cpp">
+      <Filter>Operators\SimpleMapping</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorPositionOnObject.cpp">
+      <Filter>Operators\PositionOnObject</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorPositionOnObject_ParamBlock.cpp">
+      <Filter>Operators\PositionOnObject</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorPositionOnObjectDesc.cpp">
+      <Filter>Operators\PositionOnObject</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSpeedSurfaceNormals.cpp">
+      <Filter>Operators\SpeedSurfaceNormals</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSpeedSurfaceNormals_ParamBlock.cpp">
+      <Filter>Operators\SpeedSurfaceNormals</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSpeedSurfaceNormalsDesc.cpp">
+      <Filter>Operators\SpeedSurfaceNormals</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSpeedCopy.cpp">
+      <Filter>Operators\SpeedCopy</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSpeedCopy_ParamBlock.cpp">
+      <Filter>Operators\SpeedCopy</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSpeedCopyDesc.cpp">
+      <Filter>Operators\SpeedCopy</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSpeedKeepApart.cpp">
+      <Filter>Operators\SpeedKeepApart</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSpeedKeepApart_ParamBlock.cpp">
+      <Filter>Operators\SpeedKeepApart</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSpeedKeepApartDesc.cpp">
+      <Filter>Operators\SpeedKeepApart</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorComments.cpp">
+      <Filter>Operators\Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorComments_ParamBlock.cpp">
+      <Filter>Operators\Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorCommentsDesc.cpp">
+      <Filter>Operators\Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleScale.cpp">
+      <Filter>Operators\SimpleScale</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleScale_ParamBlock.cpp">
+      <Filter>Operators\SimpleScale</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorSimpleScaleDesc.cpp">
+      <Filter>Operators\SimpleScale</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorDisplay.cpp">
+      <Filter>Operators\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorDisplay_ParamBlock.cpp">
+      <Filter>Operators\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorDisplayDesc.cpp">
+      <Filter>Operators\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorRender.cpp">
+      <Filter>Operators\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorRender_ParamBlock.cpp">
+      <Filter>Operators\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorRenderDesc.cpp">
+      <Filter>Operators\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMaterialStatic.cpp">
+      <Filter>Operators\MaterialStatic</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMaterialStatic_ParamBlock.cpp">
+      <Filter>Operators\MaterialStatic</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMaterialStaticDesc.cpp">
+      <Filter>Operators\MaterialStatic</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMaterialDynamic.cpp">
+      <Filter>Operators\MaterialDynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMaterialDynamic_ParamBlock.cpp">
+      <Filter>Operators\MaterialDynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMaterialDynamicDesc.cpp">
+      <Filter>Operators\MaterialDynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMaterialFrequency.cpp">
+      <Filter>Operators\MaterialFrequency</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMaterialFrequency_ParamBlock.cpp">
+      <Filter>Operators\MaterialFrequency</Filter>
+    </ClCompile>
+    <ClCompile Include="PFOperatorMaterialFrequencyDesc.cpp">
+      <Filter>Operators\MaterialFrequency</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestDuration.cpp">
+      <Filter>Tests\Duration</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestDuration_ParamBlock.cpp">
+      <Filter>Tests\Duration</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestDurationDesc.cpp">
+      <Filter>Tests\Duration</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpawn.cpp">
+      <Filter>Tests\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpawn_ParamBlock.cpp">
+      <Filter>Tests\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpawnDesc.cpp">
+      <Filter>Tests\Spawn</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpawnOnCollision.cpp">
+      <Filter>Tests\SpawnOnCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpawnOnCollision_ParamBlock.cpp">
+      <Filter>Tests\SpawnOnCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpawnOnCollisionDesc.cpp">
+      <Filter>Tests\SpawnOnCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestCollisionSpaceWarp.cpp">
+      <Filter>Tests\CollisionSpaceWarp</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestCollisionSpaceWarp_ParamBlock.cpp">
+      <Filter>Tests\CollisionSpaceWarp</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestCollisionSpaceWarpDesc.cpp">
+      <Filter>Tests\CollisionSpaceWarp</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpeedGoToTarget.cpp">
+      <Filter>Tests\SpeedGoToTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpeedGoToTarget_ParamBlock.cpp">
+      <Filter>Tests\SpeedGoToTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpeedGoToTargetDesc.cpp">
+      <Filter>Tests\SpeedGoToTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestGoToNextEvent.cpp">
+      <Filter>Tests\GoToNextEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestGoToNextEvent_ParamBlock.cpp">
+      <Filter>Tests\GoToNextEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestGoToNextEventDesc.cpp">
+      <Filter>Tests\GoToNextEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSplitByAmount.cpp">
+      <Filter>Tests\SplitByAmount</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSplitByAmount_ParamBlock.cpp">
+      <Filter>Tests\SplitByAmount</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSplitByAmountDesc.cpp">
+      <Filter>Tests\SplitByAmount</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSplitBySource.cpp">
+      <Filter>Tests\SplitBySource</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSplitBySource_ParamBlock.cpp">
+      <Filter>Tests\SplitBySource</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSplitBySourceDesc.cpp">
+      <Filter>Tests\SplitBySource</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSplitSelected.cpp">
+      <Filter>Tests\SplitSelected</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSplitSelected_ParamBlock.cpp">
+      <Filter>Tests\SplitSelected</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSplitSelectedDesc.cpp">
+      <Filter>Tests\SplitSelected</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestGoToRotation.cpp">
+      <Filter>Tests\GoToRotation</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestGoToRotation_ParamBlock.cpp">
+      <Filter>Tests\GoToRotation</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestGoToRotationDesc.cpp">
+      <Filter>Tests\GoToRotation</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestScale.cpp">
+      <Filter>Tests\ScaleTest</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestScale_ParamBlock.cpp">
+      <Filter>Tests\ScaleTest</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestScaleDesc.cpp">
+      <Filter>Tests\ScaleTest</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpeed.cpp">
+      <Filter>Tests\SpeedTest</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpeed_ParamBlock.cpp">
+      <Filter>Tests\SpeedTest</Filter>
+    </ClCompile>
+    <ClCompile Include="PFTestSpeedDesc.cpp">
+      <Filter>Tests\SpeedTest</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PFActions_GlobalFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PFActions_GlobalVariables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PFActions_Icon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PFActions_SysUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMaterial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleBirth.h">
+      <Filter>Operators\SimpleBirth</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleBirth_ParamBlock.h">
+      <Filter>Operators\SimpleBirth</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleBirthDesc.h">
+      <Filter>Operators\SimpleBirth</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimplePosition.h">
+      <Filter>Operators\SimplePosition</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimplePosition_ParamBlock.h">
+      <Filter>Operators\SimplePosition</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimplePositionDesc.h">
+      <Filter>Operators\SimplePosition</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleSpeed.h">
+      <Filter>Operators\SimpleSpeed</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleSpeed_ParamBlock.h">
+      <Filter>Operators\SimpleSpeed</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleSpeedDesc.h">
+      <Filter>Operators\SimpleSpeed</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleOrientation.h">
+      <Filter>Operators\SimpleOrientation</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleOrientation_ParamBlock.h">
+      <Filter>Operators\SimpleOrientation</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleOrientationDesc.h">
+      <Filter>Operators\SimpleOrientation</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleShape.h">
+      <Filter>Operators\SimpleShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleShape_ParamBlock.h">
+      <Filter>Operators\SimpleShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleShapeDesc.h">
+      <Filter>Operators\SimpleShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorInstanceShape.h">
+      <Filter>Operators\InstanceShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorInstanceShape_ParamBlock.h">
+      <Filter>Operators\InstanceShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorInstanceShapeDesc.h">
+      <Filter>Operators\InstanceShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorFacingShape.h">
+      <Filter>Operators\FacingShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorFacingShape_ParamBlock.h">
+      <Filter>Operators\FacingShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorFacingShapeDesc.h">
+      <Filter>Operators\FacingShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMarkShape.h">
+      <Filter>Operators\MarkShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMarkShape_ParamBlock.h">
+      <Filter>Operators\MarkShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMarkShapeDesc.h">
+      <Filter>Operators\MarkShape</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorForceSpaceWarp.h">
+      <Filter>Operators\ForceSpaceWarp</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorForceSpaceWarp_ParamBlock.h">
+      <Filter>Operators\ForceSpaceWarp</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorForceSpaceWarpDesc.h">
+      <Filter>Operators\ForceSpaceWarp</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleSpin.h">
+      <Filter>Operators\SimpleSpin</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleSpin_ParamBlock.h">
+      <Filter>Operators\SimpleSpin</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleSpinDesc.h">
+      <Filter>Operators\SimpleSpin</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorExit.h">
+      <Filter>Operators\Exit</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorExit_ParamBlock.h">
+      <Filter>Operators\Exit</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorExitDesc.h">
+      <Filter>Operators\Exit</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleMapping.h">
+      <Filter>Operators\SimpleMapping</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleMapping_ParamBlock.h">
+      <Filter>Operators\SimpleMapping</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleMappingDesc.h">
+      <Filter>Operators\SimpleMapping</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorPositionOnObject.h">
+      <Filter>Operators\PositionOnObject</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorPositionOnObject_ParamBlock.h">
+      <Filter>Operators\PositionOnObject</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorPositionOnObjectDesc.h">
+      <Filter>Operators\PositionOnObject</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSpeedSurfaceNormals.h">
+      <Filter>Operators\SpeedSurfaceNormals</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSpeedSurfaceNormals_ParamBlock.h">
+      <Filter>Operators\SpeedSurfaceNormals</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSpeedSurfaceNormalsDesc.h">
+      <Filter>Operators\SpeedSurfaceNormals</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSpeedCopy.h">
+      <Filter>Operators\SpeedCopy</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSpeedCopy_ParamBlock.h">
+      <Filter>Operators\SpeedCopy</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSpeedCopyDesc.h">
+      <Filter>Operators\SpeedCopy</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSpeedKeepApart.h">
+      <Filter>Operators\SpeedKeepApart</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSpeedKeepApart_ParamBlock.h">
+      <Filter>Operators\SpeedKeepApart</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSpeedKeepApartDesc.h">
+      <Filter>Operators\SpeedKeepApart</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorComments.h">
+      <Filter>Operators\Comments</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorComments_ParamBlock.h">
+      <Filter>Operators\Comments</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorCommentsDesc.h">
+      <Filter>Operators\Comments</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleScale.h">
+      <Filter>Operators\SimpleScale</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleScale_ParamBlock.h">
+      <Filter>Operators\SimpleScale</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorSimpleScaleDesc.h">
+      <Filter>Operators\SimpleScale</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorDisplay.h">
+      <Filter>Operators\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorDisplay_ParamBlock.h">
+      <Filter>Operators\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorDisplayDesc.h">
+      <Filter>Operators\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorRender.h">
+      <Filter>Operators\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorRender_ParamBlock.h">
+      <Filter>Operators\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorRenderDesc.h">
+      <Filter>Operators\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMaterialStatic.h">
+      <Filter>Operators\MaterialStatic</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMaterialStatic_ParamBlock.h">
+      <Filter>Operators\MaterialStatic</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMaterialStaticDesc.h">
+      <Filter>Operators\MaterialStatic</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMaterialDynamic.h">
+      <Filter>Operators\MaterialDynamic</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMaterialDynamic_ParamBlock.h">
+      <Filter>Operators\MaterialDynamic</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMaterialDynamicDesc.h">
+      <Filter>Operators\MaterialDynamic</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMaterialFrequency.h">
+      <Filter>Operators\MaterialFrequency</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMaterialFrequency_ParamBlock.h">
+      <Filter>Operators\MaterialFrequency</Filter>
+    </ClInclude>
+    <ClInclude Include="PFOperatorMaterialFrequencyDesc.h">
+      <Filter>Operators\MaterialFrequency</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestDuration.h">
+      <Filter>Tests\Duration</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestDuration_ParamBlock.h">
+      <Filter>Tests\Duration</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestDurationDesc.h">
+      <Filter>Tests\Duration</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpawn.h">
+      <Filter>Tests\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpawn_ParamBlock.h">
+      <Filter>Tests\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpawnDesc.h">
+      <Filter>Tests\Spawn</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpawnOnCollision.h">
+      <Filter>Tests\SpawnOnCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpawnOnCollision_ParamBlock.h">
+      <Filter>Tests\SpawnOnCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpawnOnCollisionDesc.h">
+      <Filter>Tests\SpawnOnCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestCollisionSpaceWarp.h">
+      <Filter>Tests\CollisionSpaceWarp</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestCollisionSpaceWarp_ParamBlock.h">
+      <Filter>Tests\CollisionSpaceWarp</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestCollisionSpaceWarpDesc.h">
+      <Filter>Tests\CollisionSpaceWarp</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpeedGoToTarget.h">
+      <Filter>Tests\SpeedGoToTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpeedGoToTarget_ParamBlock.h">
+      <Filter>Tests\SpeedGoToTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpeedGoToTargetDesc.h">
+      <Filter>Tests\SpeedGoToTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestGoToNextEvent.h">
+      <Filter>Tests\GoToNextEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestGoToNextEvent_ParamBlock.h">
+      <Filter>Tests\GoToNextEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestGoToNextEventDesc.h">
+      <Filter>Tests\GoToNextEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSplitByAmount.h">
+      <Filter>Tests\SplitByAmount</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSplitByAmount_ParamBlock.h">
+      <Filter>Tests\SplitByAmount</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSplitByAmountDesc.h">
+      <Filter>Tests\SplitByAmount</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSplitBySource.h">
+      <Filter>Tests\SplitBySource</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSplitBySource_ParamBlock.h">
+      <Filter>Tests\SplitBySource</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSplitBySourceDesc.h">
+      <Filter>Tests\SplitBySource</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSplitSelected.h">
+      <Filter>Tests\SplitSelected</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSplitSelected_ParamBlock.h">
+      <Filter>Tests\SplitSelected</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSplitSelectedDesc.h">
+      <Filter>Tests\SplitSelected</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestGoToRotation.h">
+      <Filter>Tests\GoToRotation</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestGoToRotation_ParamBlock.h">
+      <Filter>Tests\GoToRotation</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestGoToRotationDesc.h">
+      <Filter>Tests\GoToRotation</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestScale.h">
+      <Filter>Tests\ScaleTest</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestScale_ParamBlock.h">
+      <Filter>Tests\ScaleTest</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestScaleDesc.h">
+      <Filter>Tests\ScaleTest</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpeed.h">
+      <Filter>Tests\SpeedTest</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpeed_ParamBlock.h">
+      <Filter>Tests\SpeedTest</Filter>
+    </ClInclude>
+    <ClInclude Include="PFTestSpeedDesc.h">
+      <Filter>Tests\SpeedTest</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

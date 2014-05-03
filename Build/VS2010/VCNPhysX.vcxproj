@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D96135BA-AE7C-4A33-84CB-F3FFB9A536D4}</ProjectGuid>
+    <RootNamespace>VCNPhysX</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Final.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Release.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../Sources/3rdparty/$(PhysXDir)/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;PX_PHYSX_CHARACTER_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>../../Sources/3rdparty/$(PhysXDir)/Lib/win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>PhysX3CHECKED_x86.lib;PhysX3CommonCHECKED_x86.lib;PhysX3ExtensionsCHECKED.lib;PhysXProfileSDKCHECKED.lib;PhysX3CookingCHECKED_x86.lib;PhysXVisualDebuggerSDKCHECKED.lib;PxTaskCHECKED.lib;PhysX3CharacterKinematicCHECKED_x86.lib</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4006 /IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>../../Sources/3rdparty/$(PhysXDir)/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>../../Sources/3rdparty/$(PhysXDir)/Lib/win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>PhysX3_x86.lib;PhysX3Common_x86.lib;PhysX3Extensions.lib;PhysXProfileSDK.lib;PhysX3Cooking_x86.lib;PhysXVisualDebuggerSDK.lib;PxTask.lib;PhysX3CharacterKinematic_x86.lib</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4006 /IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../Sources/3rdparty/$(PhysXDir)/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;FINAL;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>../../Sources/3rdparty/$(PhysXDir)/Lib/win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>PhysX3_x86.lib;PhysX3Common_x86.lib;PhysX3Extensions.lib;PhysXProfileSDK.lib;PhysX3Cooking_x86.lib;PhysXVisualDebuggerSDK.lib;PxTask.lib;PhysX3CharacterKinematic_x86.lib</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4006 /IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources/VCNPhysX\PhysxActor.cpp" />
+    <ClCompile Include="..\..\Sources/VCNPhysX\PhysxCoreImpl.cpp" />
+    <ClCompile Include="..\..\Sources/VCNPhysX\PhysxErrorCallback.cpp" />
+    <ClCompile Include="..\..\Sources/VCNPhysX\PhysxStream.cpp" />
+    <ClCompile Include="..\..\Sources/VCNPhysX\PhysxUserAllocator.cpp" />
+    <ClCompile Include="..\..\Sources/VCNPhysX\PhysxCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCNPhysX\PhysxUtils.cpp" />
+    <ClCompile Include="..\..\Sources/VCNPhysX\Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\VCNPhysX\Jump.cpp" />
+    <ClCompile Include="..\..\Sources\VCNPhysX\PhysXCollisionCallback.cpp" />
+    <ClCompile Include="..\..\Sources\VCNPhysX\PhysxController.cpp" />
+    <ClCompile Include="..\..\Sources\VCNPhysX\PhysXRaycast.cpp" />
+    <ClCompile Include="..\..\Sources\VCNPhysX\PhysxRaycastCallback.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources/VCNPhysX\PhysxActor.h" />
+    <ClInclude Include="..\..\Sources/VCNPhysX\PhysxCoreImpl.h" />
+    <ClInclude Include="..\..\Sources/VCNPhysX\PhysxErrorCallback.h" />
+    <ClInclude Include="..\..\Sources/VCNPhysX\PhysxStream.h" />
+    <ClInclude Include="..\..\Sources/VCNPhysX\PhysxUserAllocator.h" />
+    <ClInclude Include="..\..\Sources/VCNPhysX\PhysxCore.h" />
+    <ClInclude Include="..\..\Sources/VCNPhysX\PhysxUtils.h" />
+    <ClInclude Include="..\..\Sources/VCNPhysX\Precompiled.h" />
+    <ClInclude Include="..\..\Sources\VCNPhysX\Jump.h" />
+    <ClInclude Include="..\..\Sources\VCNPhysX\PhysXCollisionCallback.h" />
+    <ClInclude Include="..\..\Sources\VCNPhysX\PhysxController.h" />
+    <ClInclude Include="..\..\Sources\VCNPhysX\PhysXRaycast.h" />
+    <ClInclude Include="..\..\Sources\VCNPhysX\PhysxRaycastCallback.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="VCNPhysic.vcxproj">
+      <Project>{ee042fa8-0776-4ebf-9acd-c2a763fadd66}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

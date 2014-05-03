@@ -1,0 +1,50 @@
+Prison Escape - Change list
+
+# v1.1 (23/04/2014)
+
+-Added new sounds
+-Fixed bridge gap of death
+-Fixed end door not requiring to activate maze switches
+
+# v1.01 (11/04/2014)
+
+-Minor fix for final version
+
+# v1.0 (11/04/2014)
+
+-Final version
+
+# v0.5 (10/04/2014)
+
+-Added new sounds
+-Blocked access from more areas in level
+
+# v0.42 (09/04/2014)
+
+-Properly fixed crashing issues with 0.4 version
+
+# v0.41 (09/04/2014)
+
+-Less optimized version of 0.4 (For testing purposes)
+
+# v0.4 (09/04/2014)
+
+-New puzzles
+-More sound integration
+-Improved level design
+-One simply walks into more doors
+
+# v0.3 (04/04/2014)
+
+-Improved level design
+-Working doors
+
+# v0.2 (17/03/2014)
+
+-Integrated starting level (no physics or collisions yet)
+-Better feedback when equipping an item.
+-Added new interactive sounds.
+
+# v0.1 (23/02/2014)
+
+-Initial version

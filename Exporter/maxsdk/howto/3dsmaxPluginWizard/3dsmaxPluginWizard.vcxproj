@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugUnicode|Win32">
+      <Configuration>DebugUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugUnicode|x64">
+      <Configuration>DebugUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|Win32">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|x64">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F7B22C96-9E6A-4E14-B8C9-A9374EF454B1}</ProjectGuid>
+    <RootNamespace>3dsmaxPluginWizard</RootNamespace>
+    <Keyword>CustomAppWizProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="..\..\ProjectSettings\PropertySheets\3dsmax.general.project.settings.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\..\ProjectSettings\PropertySheets\3dsmax.cpp.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">x64\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">x64\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/opt:lbr   /ignore:4013   %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Templates\1033\3dsmaxsdk_preinclude.h" />
+    <ClInclude Include="Templates\1033\resource.h" />
+    <ClInclude Include="Templates\1033\root.h" />
+    <ClInclude Include="Templates\1033\veroverrides.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Templates\1033\ATMOSPHERIC_TYPE_Atmospheric.cpp" />
+    <ClCompile Include="Templates\1033\CAMERA_TYPE_CameraObject.cpp" />
+    <ClCompile Include="Templates\1033\CAMERA_TYPE_GenCamera.cpp" />
+    <ClCompile Include="Templates\1033\COLPICK_TYPE_ColPick.cpp" />
+    <ClCompile Include="Templates\1033\CONTROLLER_TYPE_Control.cpp" />
+    <ClCompile Include="Templates\1033\CONTROLLER_TYPE_StdControl.cpp" />
+    <ClCompile Include="Templates\1033\dllentry.cpp" />
+    <ClCompile Include="Templates\1033\FILE_EXPORT_3DXI_TYPE_SceneExport.cpp" />
+    <ClCompile Include="Templates\1033\FILE_EXPORT_TYPE_SceneExport.cpp" />
+    <ClCompile Include="Templates\1033\FILE_IMPORT_TYPE_SceneImport.cpp" />
+    <ClCompile Include="Templates\1033\FILE_LIST_TYPE_None.cpp" />
+    <ClCompile Include="Templates\1033\FILTER_KERNEL_TYPE_FilterKernel.cpp" />
+    <ClCompile Include="Templates\1033\GRID_OBJECT_TYPE_None.cpp" />
+    <ClCompile Include="Templates\1033\GUP_TYPE_GUP.cpp" />
+    <ClCompile Include="Templates\1033\HELPER_OBJECT_TYPE_ConstObject.cpp" />
+    <ClCompile Include="Templates\1033\HELPER_OBJECT_TYPE_HelperObject.cpp" />
+    <ClCompile Include="Templates\1033\IK_TYPE_IKSolver.cpp" />
+    <ClCompile Include="Templates\1033\IMAGE_FILTER_COMPOSITOR_TYPE_ImageFilter.cpp" />
+    <ClCompile Include="Templates\1033\IMAGE_LOADER_SAVER_TYPE_BitmapIO.cpp" />
+    <ClCompile Include="Templates\1033\IMAGE_VIEWER_TYPE_ViewFile.cpp" />
+    <ClCompile Include="Templates\1033\LIGHT_TYPE_GenLight.cpp" />
+    <ClCompile Include="Templates\1033\LIGHT_TYPE_LightObject.cpp" />
+    <ClCompile Include="Templates\1033\MANIP_TYPE_Manipulator.cpp" />
+    <ClCompile Include="Templates\1033\MANIP_TYPE_SimpleManipulator.cpp" />
+    <ClCompile Include="Templates\1033\MATERIAL_TYPE_Mtl.cpp" />
+    <ClCompile Include="Templates\1033\MODIFIER_TYPE_Modifier.cpp" />
+    <ClCompile Include="Templates\1033\MODIFIER_TYPE_SimpleMod2.cpp" />
+    <ClCompile Include="Templates\1033\NURBS_OBJECT_TYPE_None.cpp" />
+    <ClCompile Include="Templates\1033\PARTICLE_TYPE_ParticleObject.cpp" />
+    <ClCompile Include="Templates\1033\PARTICLE_TYPE_SimpleParticle.cpp" />
+    <ClCompile Include="Templates\1033\PATCH_OBJECT_TYPE_PatchObject.cpp" />
+    <ClCompile Include="Templates\1033\PROCEDURAL_OBJECT_TYPE_GeomObject.cpp" />
+    <ClCompile Include="Templates\1033\PROCEDURAL_OBJECT_TYPE_SimpleObject2.cpp" />
+    <ClCompile Include="Templates\1033\RENDER_EFFECT_TYPE_Effect.cpp" />
+    <ClCompile Include="Templates\1033\RENDERER_TYPE_Renderer.cpp" />
+    <ClCompile Include="Templates\1033\SAMPLER_TYPE_Sampler.cpp" />
+    <ClCompile Include="Templates\1033\SHADER_TYPE_Shader.cpp" />
+    <ClCompile Include="Templates\1033\SHADOW_TYPE_ShadowType.cpp" />
+    <ClCompile Include="Templates\1033\SKIN_GIZMO_TYPE_GizmoClass.cpp" />
+    <ClCompile Include="Templates\1033\SOUND_TYPE_SoundObj.cpp" />
+    <ClCompile Include="Templates\1033\SPACE_WARP_TYPE_SimpleWSMMod.cpp" />
+    <ClCompile Include="Templates\1033\TEXTURE_2D_TYPE_Texmap.cpp" />
+    <ClCompile Include="Templates\1033\TEXTURE_3D_TYPE_Tex3D.cpp" />
+    <ClCompile Include="Templates\1033\TEXTURE_3D_TYPE_Texmap.cpp" />
+    <ClCompile Include="Templates\1033\TRACK_VIEW_UTILITY_TYPE_TrackViewUtility.cpp" />
+    <ClCompile Include="Templates\1033\UTILITY_TYPE_UtilityObj.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Templates\1033\root.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HTML\1033\default.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="HTML\1033\Page_2.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="HTML\1033\Page_3.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="HTML\1033\plugarray.js" />
+    <None Include="Scripts\1033\default.js" />
+    <None Include="3dsmaxPluginWizard.ico" />
+    <None Include="3dsmaxPluginWizard.vsdir" />
+    <None Include="3dsmaxPluginWizard.vsz" />
+    <None Include="1033\styles.css" />
+    <None Include="Templates\1033\Templates.inf" />
+    <None Include="Images\3dsmaxPluginWizard.gif" />
+    <None Include="Images\3dsmaxPluginWizard_BG.gif" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets"></ImportGroup>
+</Project>

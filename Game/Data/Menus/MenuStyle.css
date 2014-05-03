@@ -1,0 +1,56 @@
+#Body
+{
+  background-color: black; /* Black background until image loads */
+  background-image: url(images/bgmetal1_small.jpg); /* Taken at https://secure.flickr.com/photos/chrysti/2348621264 */
+  background-size: 100%;
+}
+
+#Logo
+{
+  /* Position the background image in the center of the page */ /*position: absolute;*/
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin-top: -41px;
+  margin-left: -450px;
+}
+
+#newgame_button
+{
+  background-image: url(buttons/NewGame.png);
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  top: 75%;
+  margin-left: -155px; /* Half of image lenght */
+  margin-top: -90px; /* Random value that gives good result */
+  height: 60px;
+  width: 310px;
+}
+
+#newgame_button:hover
+{
+  background-image: url(buttons/NewGameOver.png);
+}
+
+#quit_button
+{
+  background-image: url(buttons/Quit.png);
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  top: 75%;
+  margin-left: -155px; /* Half of image lenght */
+  margin-top: -10px; /* Random value that gives good result */
+  height: 60px;
+  width: 310px;
+}
+
+#quit_button:hover
+{
+  background-image: url(buttons/QuitOver.png);
+}

@@ -1,0 +1,47 @@
+Project File: 'C:\Users\Miha\Desktop\Version_SansPlugin\Audio_prison_escape\Vicuna_v5-2_23_04_2014.wproj'
+
+Originals Folder:
+	* Setting Level: Project
+	* Path: 'C:\Users\Miha\Desktop\Version_SansPlugin\Audio_prison_escape\Originals'
+	* File Count: 183
+
+Operating System: 'Microsoft Windows NT 6.1.7601 Service Pack 1'
+	* 64-bit (x64)
+
+CPUs/Cores:
+	* Count: 8
+	* Speed: 1,386 GHz
+
+Memory:
+	* Total: Unable to determine
+	* Free: 2,7 GB
+Disk Drives:
+	* Drive C:\
+		- Drive type: Fixed
+		- Volume label: 
+		- File system: NTFS
+		- Available space to current user:       192,3 GB
+		- Total available space:                 192,3 GB
+		- Total size of drive:                   672,5 GB
+	* Drive D:\
+		- Drive type: Fixed
+		- Volume label: Recovery
+		- File system: NTFS
+		- Available space to current user:         2,3 GB
+		- Total available space:                   2,3 GB
+		- Total size of drive:                    21,9 GB
+	* Drive E:\
+		- Drive type: Fixed
+		- Volume label: HP_TOOLS
+		- File system: FAT32
+		- Available space to current user:         1,1 GB
+		- Total available space:                   1,1 GB
+		- Total size of drive:                     4,0 GB
+	* Drive F:\
+		- Drive type: CDRom
+		- Volume label: Audio CD
+		- File system: CDFS
+		- Available space to current user:        0 bytes
+		- Total available space:                  0 bytes
+		- Total size of drive:                    0 bytes
+

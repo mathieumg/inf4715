@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+ProjectType="Visual C++"
+Version="9.00"
+Name="Samples"
+>
+<Platforms>
+<Platform Name="x64"/>
+</Platforms>
+<Configurations>
+  <Configuration
+    Name="debug|x64"
+    OutputDirectory="./../../../bin/win64"
+    IntermediateDirectory="./x64/Samples/debug"
+    ConfigurationType="1"
+    InheritedPropertySheets=""
+    CharacterSet="2"
+    >
+    <Tool
+      Name="VCCLCompilerTool"
+      AdditionalIncludeDirectories="&quot;./../../SampleBase&quot;;&quot;./../../../Source/shared/general/shared&quot;;&quot;./../../PxToolkit/include&quot;;&quot;./../../SampleFramework/framework/include&quot;;&quot;./../../SampleFramework/renderer/include&quot;;&quot;./../../SampleFramework/platform/include&quot;;&quot;./../../../Include&quot;;&quot;./../../../Source/foundation/include&quot;;&quot;./../../../Source/Common/src&quot;;&quot;./../../../Source/GeomUtils/src&quot;;&quot;./../../../Source/GeomUtils/headers&quot;;&quot;./../../../Source/GeomUtils/include&quot;;&quot;./../../../Include/RepX&quot;;&quot;./../../../Include/RepXUpgrader&quot;;&quot;./../../SampleCCTSharedCode&quot;;"
+      PreprocessorDefinitions="WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;PHYSX_PROFILE_SDK;_DEBUG;PX_CHECKED;PX_SUPPORT_VISUAL_DEBUGGER;"
+      WarningLevel="4"
+      FloatingPointModel="2"
+      StringPooling="true"
+      RuntimeTypeInfo="false"
+      WarnAsError="true"
+      BufferSecurityCheck="false"
+      Optimization="3"
+      AdditionalOptions="/MP"
+      ExceptionHandling="0"
+      RuntimeLibrary="1"
+      UsePrecompiledHeader="0"
+      PrecompiledHeaderThrough=""
+      />
+    <Tool Name="VCCustomBuildTool"/>
+    <Tool 
+      Name="VCLinkerTool" 
+      OutputFile="$(OutDir)/$(ProjectName)DEBUG.exe" 
+      ProgramDatabaseFile="$(OutDir)/$(ProjectName)DEBUG.exe.pdb" 
+      AdditionalOptions="Winmm.lib /LIBPATH:../../../Common/lib/win64 /LIBPATH:../../lib/win64 /LIBPATH:../../../Lib/win64 PhysX3CommonDEBUG_x64.lib PhysX3DEBUG_x64.lib PhysX3CookingDEBUG_x64.lib PhysX3CharacterKinematicDEBUG_x64.lib PhysX3ExtensionsDEBUG.lib PhysX3VehicleDEBUG.lib RepX3DEBUG.lib RepXUpgrader3DEBUG.lib PhysXProfileSDKDEBUG.lib PhysXVisualDebuggerSDKDEBUG.lib PxTaskDEBUG.lib /DEBUG /MACHINE:X64"
+      AdditionalDependencies=""
+      AdditionalLibraryDirectories=""
+      ImportLibrary="$(OutDir)/$(TargetName).lib"
+      GenerateMapFile="TRUE"
+      MapFileName="$(OutDir)/$(ProjectName)DEBUG.exe.map"
+      SubSystem="1"
+      />
+    <Tool Name="VCMIDLTool"/>
+    <Tool Name="VCPreBuildEventTool"/>
+    <Tool Name="VCPostBuildEventTool"/>
+    <Tool Name="VCPreLinkEventTool"/>
+    <Tool Name="VCResourceCompilerTool"/>
+    <Tool Name="VCWebServiceProxyGeneratorTool"/>
+    <Tool Name="VCXMLDataGeneratorTool"/>
+    <Tool Name="VCWebDeploymentTool"/>
+    <Tool Name="VCManagedWrapperGeneratorTool"/>
+    <Tool Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+  </Configuration>
+  <Configuration
+    Name="checked|x64"
+    OutputDirectory="./../../../bin/win64"
+    IntermediateDirectory="./x64/Samples/checked"
+    ConfigurationType="1"
+    InheritedPropertySheets=""
+    CharacterSet="2"
+    >
+    <Tool
+      Name="VCCLCompilerTool"
+      AdditionalIncludeDirectories="&quot;./../../SampleBase&quot;;&quot;./../../../Source/shared/general/shared&quot;;&quot;./../../PxToolkit/include&quot;;&quot;./../../SampleFramework/framework/include&quot;;&quot;./../../SampleFramework/renderer/include&quot;;&quot;./../../SampleFramework/platform/include&quot;;&quot;./../../../Include&quot;;&quot;./../../../Source/foundation/include&quot;;&quot;./../../../Source/Common/src&quot;;&quot;./../../../Source/GeomUtils/src&quot;;&quot;./../../../Source/GeomUtils/headers&quot;;&quot;./../../../Source/GeomUtils/include&quot;;&quot;./../../../Include/RepX&quot;;&quot;./../../../Include/RepXUpgrader&quot;;&quot;./../../SampleCCTSharedCode&quot;;"
+      PreprocessorDefinitions="WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;PHYSX_PROFILE_SDK;NDEBUG;PX_CHECKED;PX_SUPPORT_VISUAL_DEBUGGER;"
+      WarningLevel="4"
+      FloatingPointModel="2"
+      StringPooling="true"
+      RuntimeTypeInfo="false"
+      WarnAsError="true"
+      BufferSecurityCheck="false"
+      Optimization="3"
+      AdditionalOptions="/MP"
+      ExceptionHandling="0"
+      RuntimeLibrary="0"
+      UsePrecompiledHeader="0"
+      PrecompiledHeaderThrough=""
+      />
+    <Tool Name="VCCustomBuildTool"/>
+    <Tool 
+      Name="VCLinkerTool" 
+      OutputFile="$(OutDir)/$(ProjectName)CHECKED.exe" 
+      ProgramDatabaseFile="$(OutDir)/$(ProjectName)CHECKED.exe.pdb" 
+      AdditionalOptions="Winmm.lib /LIBPATH:../../../Common/lib/win64 /LIBPATH:../../lib/win64 /LIBPATH:../../../Lib/win64 PhysX3CommonCHECKED_x64.lib PhysX3CHECKED_x64.lib PhysX3CookingCHECKED_x64.lib PhysX3CharacterKinematicCHECKED_x64.lib PhysX3ExtensionsCHECKED.lib PhysX3VehicleCHECKED.lib RepX3CHECKED.lib RepXUpgrader3CHECKED.lib PhysXProfileSDKCHECKED.lib PhysXVisualDebuggerSDKCHECKED.lib PxTaskCHECKED.lib /MACHINE:X64"
+      AdditionalDependencies=""
+      AdditionalLibraryDirectories=""
+      ImportLibrary="$(OutDir)/$(TargetName).lib"
+      GenerateMapFile="TRUE"
+      MapFileName="$(OutDir)/$(ProjectName)CHECKED.exe.map"
+      SubSystem="1"
+      />
+    <Tool Name="VCMIDLTool"/>
+    <Tool Name="VCPreBuildEventTool"/>
+    <Tool Name="VCPostBuildEventTool"/>
+    <Tool Name="VCPreLinkEventTool"/>
+    <Tool Name="VCResourceCompilerTool"/>
+    <Tool Name="VCWebServiceProxyGeneratorTool"/>
+    <Tool Name="VCXMLDataGeneratorTool"/>
+    <Tool Name="VCWebDeploymentTool"/>
+    <Tool Name="VCManagedWrapperGeneratorTool"/>
+    <Tool Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+  </Configuration>
+  <Configuration
+    Name="profile|x64"
+    OutputDirectory="./../../../bin/win64"
+    IntermediateDirectory="./x64/Samples/profile"
+    ConfigurationType="1"
+    InheritedPropertySheets=""
+    CharacterSet="2"
+    >
+    <Tool
+      Name="VCCLCompilerTool"
+      AdditionalIncludeDirectories="&quot;./../../SampleBase&quot;;&quot;./../../../Source/shared/general/shared&quot;;&quot;./../../PxToolkit/include&quot;;&quot;./../../SampleFramework/framework/include&quot;;&quot;./../../SampleFramework/renderer/include&quot;;&quot;./../../SampleFramework/platform/include&quot;;&quot;./../../../Include&quot;;&quot;./../../../Source/foundation/include&quot;;&quot;./../../../Source/Common/src&quot;;&quot;./../../../Source/GeomUtils/src&quot;;&quot;./../../../Source/GeomUtils/headers&quot;;&quot;./../../../Source/GeomUtils/include&quot;;&quot;./../../../Include/RepX&quot;;&quot;./../../../Include/RepXUpgrader&quot;;&quot;./../../SampleCCTSharedCode&quot;;"
+      PreprocessorDefinitions="WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;PHYSX_PROFILE_SDK;NDEBUG;PX_PROFILE;PX_SUPPORT_VISUAL_DEBUGGER;_SECURE_SCL=0;_ITERATOR_DEBUG_LEVEL=0;"
+      WarningLevel="4"
+      FloatingPointModel="2"
+      StringPooling="true"
+      RuntimeTypeInfo="false"
+      WarnAsError="true"
+      BufferSecurityCheck="false"
+      Optimization="3"
+      AdditionalOptions="/MP"
+      ExceptionHandling="0"
+      RuntimeLibrary="0"
+      UsePrecompiledHeader="0"
+      PrecompiledHeaderThrough=""
+      />
+    <Tool Name="VCCustomBuildTool"/>
+    <Tool 
+      Name="VCLinkerTool" 
+      OutputFile="$(OutDir)/$(ProjectName)PROFILE.exe" 
+      ProgramDatabaseFile="$(OutDir)/$(ProjectName)PROFILE.exe.pdb" 
+      AdditionalOptions="Winmm.lib /LIBPATH:../../../Common/lib/win64 /LIBPATH:../../lib/win64 /LIBPATH:../../../Lib/win64 PhysX3CommonPROFILE_x64.lib PhysX3PROFILE_x64.lib PhysX3CookingPROFILE_x64.lib PhysX3CharacterKinematicPROFILE_x64.lib PhysX3ExtensionsPROFILE.lib PhysX3VehiclePROFILE.lib RepX3PROFILE.lib RepXUpgrader3PROFILE.lib PhysXProfileSDKPROFILE.lib PhysXVisualDebuggerSDKPROFILE.lib PxTaskPROFILE.lib /DEBUG /MACHINE:X64"
+      AdditionalDependencies=""
+      AdditionalLibraryDirectories=""
+      ImportLibrary="$(OutDir)/$(TargetName).lib"
+      GenerateMapFile="TRUE"
+      MapFileName="$(OutDir)/$(ProjectName)PROFILE.exe.map"
+      SubSystem="1"
+      />
+    <Tool Name="VCMIDLTool"/>
+    <Tool Name="VCPreBuildEventTool"/>
+    <Tool Name="VCPostBuildEventTool"/>
+    <Tool Name="VCPreLinkEventTool"/>
+    <Tool Name="VCResourceCompilerTool"/>
+    <Tool Name="VCWebServiceProxyGeneratorTool"/>
+    <Tool Name="VCXMLDataGeneratorTool"/>
+    <Tool Name="VCWebDeploymentTool"/>
+    <Tool Name="VCManagedWrapperGeneratorTool"/>
+    <Tool Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+  </Configuration>
+  <Configuration
+    Name="release|x64"
+    OutputDirectory="./../../../bin/win64"
+    IntermediateDirectory="./x64/Samples/release"
+    ConfigurationType="1"
+    InheritedPropertySheets=""
+    CharacterSet="2"
+    >
+    <Tool
+      Name="VCCLCompilerTool"
+      AdditionalIncludeDirectories="&quot;./../../SampleBase&quot;;&quot;./../../../Source/shared/general/shared&quot;;&quot;./../../PxToolkit/include&quot;;&quot;./../../SampleFramework/framework/include&quot;;&quot;./../../SampleFramework/renderer/include&quot;;&quot;./../../SampleFramework/platform/include&quot;;&quot;./../../../Include&quot;;&quot;./../../../Source/foundation/include&quot;;&quot;./../../../Source/Common/src&quot;;&quot;./../../../Source/GeomUtils/src&quot;;&quot;./../../../Source/GeomUtils/headers&quot;;&quot;./../../../Source/GeomUtils/include&quot;;&quot;./../../../Include/RepX&quot;;&quot;./../../../Include/RepXUpgrader&quot;;&quot;./../../SampleCCTSharedCode&quot;;"
+      PreprocessorDefinitions="WIN64;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;PHYSX_PROFILE_SDK;NDEBUG;_SECURE_SCL=0;_ITERATOR_DEBUG_LEVEL=0;"
+      WarningLevel="4"
+      FloatingPointModel="2"
+      StringPooling="true"
+      RuntimeTypeInfo="false"
+      WarnAsError="true"
+      BufferSecurityCheck="false"
+      Optimization="3"
+      AdditionalOptions="/MP"
+      ExceptionHandling="0"
+      RuntimeLibrary="0"
+      UsePrecompiledHeader="0"
+      PrecompiledHeaderThrough=""
+      />
+    <Tool Name="VCCustomBuildTool"/>
+    <Tool 
+      Name="VCLinkerTool" 
+      OutputFile="$(OutDir)/$(ProjectName).exe" 
+      ProgramDatabaseFile="$(OutDir)/$(ProjectName).exe.pdb" 
+      AdditionalOptions="Winmm.lib /LIBPATH:../../../Common/lib/win64 /LIBPATH:../../lib/win64 /LIBPATH:../../../Lib/win64 PhysX3Common_x64.lib PhysX3_x64.lib PhysX3Cooking_x64.lib PhysX3CharacterKinematic_x64.lib PhysX3Extensions.lib PhysX3Vehicle.lib RepX3.lib RepXUpgrader3.lib PhysXProfileSDK.lib PhysXVisualDebuggerSDK.lib PxTask.lib /MACHINE:X64"
+      AdditionalDependencies=""
+      AdditionalLibraryDirectories=""
+      ImportLibrary="$(OutDir)/$(TargetName).lib"
+      GenerateMapFile="TRUE"
+      MapFileName="$(OutDir)/$(ProjectName).exe.map"
+      SubSystem="1"
+      />
+    <Tool Name="VCMIDLTool"/>
+    <Tool Name="VCPreBuildEventTool"/>
+    <Tool Name="VCPostBuildEventTool"/>
+    <Tool Name="VCPreLinkEventTool"/>
+    <Tool Name="VCResourceCompilerTool"/>
+    <Tool Name="VCWebServiceProxyGeneratorTool"/>
+    <Tool Name="VCXMLDataGeneratorTool"/>
+    <Tool Name="VCWebDeploymentTool"/>
+    <Tool Name="VCManagedWrapperGeneratorTool"/>
+    <Tool Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+  </Configuration>
+</Configurations>
+<References></References>
+<Files>
+  <Filter Name="SampleHelloWorld" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleHelloWorld\SampleHelloWorld.cpp">
+    </File>
+    <File RelativePath="..\..\SampleHelloWorld\SampleHelloWorld.h">
+    </File>
+  </Filter>
+  <Filter Name="SampleBridges" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleBridges\SampleBridges.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBridges\SampleBridgesCCT.cpp">
+    </File>
+    <File RelativePath="..\..\SampleBridges\SampleBridges.h">
+    </File>
+    <File RelativePath="..\..\SampleBridges\SampleBridgesInputEventIds.h">
+    </File>
+    <File RelativePath="..\..\SampleBridges\SampleBridgesSettings.h">
+    </File>
+  </Filter>
+  <Filter Name="SampleCharacterCloth" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterClothCameraController.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterClothFlag.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterClothJump.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterCloth_CCT.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterCloth_ClothController.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterCloth_Main.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterCloth_TerrainBuilder.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterCloth.h">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterClothCameraController.h">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterClothFlag.h">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterClothInputEventIds.h">
+    </File>
+    <File RelativePath="..\..\SampleCharacterCloth\SampleCharacterClothJump.h">
+    </File>
+  </Filter>
+  <Filter Name="SampleVehicle" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle.cpp">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicleDebugRender.cpp">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicleTerrain.cpp">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_CameraController.cpp">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_ControlInputs.cpp">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_GameLogic.cpp">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_SceneQuery.cpp">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_VehicleController.cpp">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_VehicleCooking.cpp">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_VehicleManager.cpp">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle.h">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicleInputEventIds.h">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_CameraController.h">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_ControlInputs.h">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_GameLogic.h">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_SceneQuery.h">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_VehicleController.h">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_VehicleCooking.h">
+    </File>
+    <File RelativePath="..\..\SampleVehicle\SampleVehicle_VehicleManager.h">
+    </File>
+  </Filter>
+  <Filter Name="SampleParticles" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleParticles\SampleParticles.cpp">
+    </File>
+    <File RelativePath="..\..\SampleParticles\SampleParticles.h">
+    </File>
+    <File RelativePath="..\..\SampleParticles\SampleParticlesInputEventIds.h">
+    </File>
+  </Filter>
+  <Filter Name="SampleSubmarine" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleSubmarine\Crab.cpp">
+    </File>
+    <File RelativePath="..\..\SampleSubmarine\SampleSubmarine.cpp">
+    </File>
+    <File RelativePath="..\..\SampleSubmarine\Crab.h">
+    </File>
+    <File RelativePath="..\..\SampleSubmarine\SampleSubmarine.h">
+    </File>
+    <File RelativePath="..\..\SampleSubmarine\SampleSubmarineInputEventIds.h">
+    </File>
+    <File RelativePath="..\..\SampleSubmarine\SubmarineCameraController.h">
+    </File>
+  </Filter>
+  <Filter Name="SampleNorthPole" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleNorthPole\SampleNorthPole.cpp">
+    </File>
+    <File RelativePath="..\..\SampleNorthPole\SampleNorthPoleBuilder.cpp">
+    </File>
+    <File RelativePath="..\..\SampleNorthPole\SampleNorthPoleCameraController.cpp">
+    </File>
+    <File RelativePath="..\..\SampleNorthPole\SampleNorthPoleCCT.cpp">
+    </File>
+    <File RelativePath="..\..\SampleNorthPole\SampleNorthPoleDynamics.cpp">
+    </File>
+    <File RelativePath="..\..\SampleNorthPole\SampleNorthPoleFilterShader.cpp">
+    </File>
+    <File RelativePath="..\..\SampleNorthPole\SampleNorthPole.h">
+    </File>
+    <File RelativePath="..\..\SampleNorthPole\SampleNorthPoleCameraController.h">
+    </File>
+    <File RelativePath="..\..\SampleNorthPole\SampleNorthPoleInputEventIds.h">
+    </File>
+  </Filter>
+  <Filter Name="SampleCustomGravity" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleCustomGravity\Planet.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCustomGravity\SampleCustomGravity.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCustomGravity\SampleCustomGravityBuilder.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCustomGravity\SampleCustomGravityCameraController.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCustomGravity\SampleCustomGravityFilterShader.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCustomGravity\SampleCustomGravity_CCT.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCustomGravity\Planet.h">
+    </File>
+    <File RelativePath="..\..\SampleCustomGravity\SampleCustomGravity.h">
+    </File>
+    <File RelativePath="..\..\SampleCustomGravity\SampleCustomGravityCameraController.h">
+    </File>
+    <File RelativePath="..\..\SampleCustomGravity\SampleCustomGravityInputEventIds.h">
+    </File>
+  </Filter>
+  <Filter Name="Shared CCT code" Filter=""> <!--  -->
+    <File RelativePath="..\..\SampleCCTSharedCode\KinematicPlatform.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCCTSharedCode\SampleCCTActor.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCCTSharedCode\SampleCCTCameraController.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCCTSharedCode\SampleCCTJump.cpp">
+    </File>
+    <File RelativePath="..\..\SampleCCTSharedCode\KinematicPlatform.h">
+    </File>
+    <File RelativePath="..\..\SampleCCTSharedCode\SampleCCTActor.h">
+    </File>
+    <File RelativePath="..\..\SampleCCTSharedCode\SampleCCTCameraController.h">
+    </File>
+    <File RelativePath="..\..\SampleCCTSharedCode\SampleCCTJump.h">
+    </File>
+  </Filter>
+</Files>
+<Globals></Globals>
+</VisualStudioProject>

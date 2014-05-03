@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemDefinitionGroup>
+		<!-- Compiler common settings -->
+		<ClCompile >
+			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+			<WarningLevel>Level3</WarningLevel>
+			<WholeProgramOptimization>false</WholeProgramOptimization>
+			<PreprocessorDefinitions>WINVER=0x0502;_WIN32_WINNT=0x0502;_WIN32_WINDOWS=0x0502;_WIN32_IE=0x0800;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;ISOLATION_AWARE_ENABLED=1;MODULE_NAME=$(TargetFileName);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<AdditionalOptions>/GR /we4706 /we4390 /we4557 /we4546 /we4545 /we4295 /we4310 /we4130 /we4611 /we4213 /we4121 /we4715 /w34701 /w34265 /wd4244 /wd4018 /wd4819 %(AdditionalOptions)</AdditionalOptions>
+			<ExceptionHandling>Async</ExceptionHandling>
+			<FloatingPointModel>Fast</FloatingPointModel>
+			<RuntimeTypeInfo>true</RuntimeTypeInfo>
+			<UseFullPaths>true</UseFullPaths>
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+			<PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+			<EnableEnhancedInstructionSet Condition="'$(CLRSupport)' == 'true'">NotSet</EnableEnhancedInstructionSet>
+		</ClCompile>
+
+		<!-- Linker Common Settings -->
+		<Link>
+			<LinkIncremental>false</LinkIncremental>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<SubSystem>Windows</SubSystem>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+		</Link>
+
+		<!-- Extract MUI Resource DLL -->
+		<PostBuildEvent>
+			<Command Condition="'$(TargetExt)' != '.lib' AND '$(MaxSDK)' != ''">
+				<!-- the extra slash before the closing double quote is required -->
+				"$(ProjectDir)/$(MaxSDK)/tools/RunMUIRCT.exe" "$(MSBuildProjectDirectory)\$(OutDir)\" $(TargetFileName)
+			</Command>
+		</PostBuildEvent>
+
+		<ResourceCompile>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<Culture>0x0409</Culture>
+		</ResourceCompile>
+		
+	</ItemDefinitionGroup>
+</Project>

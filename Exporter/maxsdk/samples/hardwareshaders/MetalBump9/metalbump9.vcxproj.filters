@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{84acfd56-e9bb-422c-b0a4-b2d83fcb58a6}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3daba0e6-4eb6-464e-a52e-d9eeb7b10ac7}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{1ea2a7a4-3040-46aa-9854-f72db516626e}</UniqueIdentifier>
+      <Extensions>nvv;nvp</Extensions>
+    </Filter>
+    <Filter Include="Shaders\Vertex">
+      <UniqueIdentifier>{1c12dc93-0c92-434e-adda-3b2b766fae3e}</UniqueIdentifier>
+      <Extensions>nvv</Extensions>
+    </Filter>
+    <Filter Include="Shaders\Pixel">
+      <UniqueIdentifier>{57160224-8032-4ec8-96df-ebadc17e439a}</UniqueIdentifier>
+      <Extensions>nvp</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{e8c83a5c-ef76-410c-aa46-b71921a051d6}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChannelMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DllEntry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lighting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MatMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MetalBump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Movie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MSEmulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderMat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MetalBump.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Shaders\Ambient.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\Diffuse.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\DiffuseReflect.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\DirLight.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\DirLightNormal.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\DirLightNormalSpec.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\DirLightSpec.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\NormalReflect.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\OmniLight.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\OmniLightNormal.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\OmniLightNormalSpec.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\OmniLightSpec.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\Reflect.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\Specular.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\SpotLight.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\SpotLightNormal.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\SpotLightNormalSpec.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\SpotLightSpec.nvv">
+      <Filter>Shaders\Vertex</Filter>
+    </None>
+    <None Include="Shaders\Ambient.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\DiffMixAlpha.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\DiffMixReflect.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\DiffMixReflectAlpha.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\DiffuseAlpha.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\DiffuseReflect.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\DiffuseReflectAlpha.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\DirLight.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\DirLightNormal.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\DirLightNormalSpec.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\DirLightSpec.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\NormalReflect.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\OmniLight.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\OmniLightNormal.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\OmniLightNormalSpec.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\OmniLightSpec.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\Specular.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\SpotLight.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\SpotLightNormal.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\SpotLightNormalSpec.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="Shaders\SpotLightSpec.nvp">
+      <Filter>Shaders\Pixel</Filter>
+    </None>
+    <None Include="GAM1.tga" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MetalBump.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChannelMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Lighting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MatMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MetalBump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Movie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MSEmulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nvtexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderConst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderMat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

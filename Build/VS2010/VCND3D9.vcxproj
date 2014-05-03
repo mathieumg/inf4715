@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>VCND3D9</ProjectName>
+    <ProjectGuid>{0A2AA1B9-40AE-4B9D-95D4-70D6FCB43E78}</ProjectGuid>
+    <RootNamespace>VCNDirect3D</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Final.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Release.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)/Lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dxguid.lib;d3d9.lib;d3dx9.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)/Lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dxguid.lib;d3d9.lib;d3dx9.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;FINAL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Lib />
+    <Lib>
+      <AdditionalDependencies>dxguid.lib;d3d9.lib;d3dx9.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)/Lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Allocator.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Animator.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Converter.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Help.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9ModelLoader.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Types.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_LightingFX.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_LitTexSkinnedFX.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_TerrainFX.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9StateBlock.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Cache.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Declaration.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Effect.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9EffectCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9MaterialCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Mesh.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Shader.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9ShaderConstants.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9ShaderCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\D3D9Texture.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_BasicFX.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_LitFX.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_LitTexturedFX.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_ShadowMapFX.cpp" />
+    <ClCompile Include="..\..\Sources/VCND3D9\Effects\D3D9_TexturedFX.cpp" />
+    <ClCompile Include="..\..\Sources\VCND3D9\Effects\D3D9_SelectionFX.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Allocator.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Animator.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Converter.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Help.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9ModelLoader.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Types.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_LightingFX.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_LitTexSkinnedFX.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_TerrainFX.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9ObjectWrapper.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9StateBlock.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\Precompiled.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Cache.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Declaration.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Effect.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9EffectCore.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9MaterialCore.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Mesh.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Shader.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9ShaderConstants.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9ShaderCore.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\D3D9Texture.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_BasicFX.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_LitFX.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_LitTexturedFX.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_ShadowMapFX.h" />
+    <ClInclude Include="..\..\Sources/VCND3D9\Effects\D3D9_TexturedFX.h" />
+    <ClInclude Include="..\..\Sources\VCND3D9\Effects\D3D9_SelectionFX.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Game\Data\Shaders\BasicGeometry.fx" />
+    <None Include="..\..\Game\Data\Shaders\ColorFunctions.fx" />
+    <None Include="..\..\Game\Data\Shaders\DummyShader.fx" />
+    <None Include="..\..\Game\Data\Shaders\LightingFunctions.fx" />
+    <None Include="..\..\Game\Data\Shaders\LitGeometry.fx" />
+    <None Include="..\..\Game\Data\Shaders\LitTexturedGeometry.fx" />
+    <None Include="..\..\Game\Data\Shaders\LitTexturedSkinned.fx" />
+    <None Include="..\..\Game\Data\Shaders\NoiseFunctions.fx" />
+    <None Include="..\..\Game\Data\Shaders\ParamPool.fx" />
+    <None Include="..\..\Game\Data\Shaders\Particles.fx" />
+    <None Include="..\..\Game\Data\Shaders\Selection.fx" />
+    <None Include="..\..\Game\Data\Shaders\ShaderUtils.fx" />
+    <None Include="..\..\Game\Data\Shaders\ShadowMap.fx" />
+    <None Include="..\..\Game\Data\Shaders\SkinningFunctions.fx" />
+    <None Include="..\..\Game\Data\Shaders\Terrain.fx" />
+    <None Include="..\..\Game\Data\Shaders\TexturedGeometry.fx" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

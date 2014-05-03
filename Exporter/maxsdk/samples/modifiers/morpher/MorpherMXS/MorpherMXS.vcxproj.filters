@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3607e12b-8e6d-4978-aff2-1a9c6d644bd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implimentations">
+      <UniqueIdentifier>{9894fe14-cb64-42bf-aeeb-b2f9df28e096}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MorpherMXS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MCFunc.cpp">
+      <Filter>Implimentations</Filter>
+    </ClCompile>
+    <ClCompile Include="UIFunc.cpp">
+      <Filter>Implimentations</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="morphermxs.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Plugin.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Commands.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MorpherMXS.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="veroverrides.h" />
+  </ItemGroup>
+</Project>

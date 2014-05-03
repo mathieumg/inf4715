@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<Material Name="BarrelMaterial" Version="1">
+  <AmbientColor r="0.3" g="0.3" b="0.3" a="1.0"/>
+  <DiffuseColor r="0.3" g="0.3" b="0.3" a="1.0"/>
+  <SpecularColor r="0.0" g="0.0" b="0.0" a="1.0" power="32.0"/>
+
+  <Effect name="LitTextured">
+    <TextureParam name="DiffuseTexture" value="Textures/barrel_wood.tga"/>
+  </Effect>
+
+</Material>

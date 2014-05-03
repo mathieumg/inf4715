@@ -1,0 +1,46 @@
+*\rar.log
+*.sdf 
+*.opensdf 
+*.ncb 
+*.suo 
+*.aps 
+*.user
+*.pdb 
+*.ilk
+*\snapshot\*.rar
+*.log
+*.tss
+*.vshost.*
+*Safe Browsing Bloom*
+*GameAppD.exe*
+*GameAppR.exe*
+*\Sources\3rdparty\PhysX-3.2.2_PC_SDK_Core
+*\Sources\3rdparty\PhysX-3.2.2_PC_SDK_Core\*
+*\Sources\3rdparty\Wwise v2012.2.2 build 4430
+*\Sources\3rdparty\Wwise v2012.2.2 build 4430\*
+*\Sources\3rdparty\include\boost
+*\Sources\3rdparty\include\boost\*
+*\.svn 
+*\.svn\* 
+*\Output 
+*\Output\* 
+*\debug 
+*\debug\* 
+*\x64 
+*\x64\*
+*\release 
+*\release\* 
+*\hybrid 
+*\hybrid\* 
+*\final 
+*\final\* 
+*\release-lib32
+*\release-lib32\*
+*\ipch 
+*\ipch\*
+*\Tools\Requirements\*
+*\Docs\Private
+*\Docs\Private\*
+*\Docs\Game Design
+*\Docs\Game Design\*
+*\Docs\Screenshots\*

@@ -1,0 +1,26 @@
+var class_v_c_n_cache =
+[
+    [ "VCNCache", "class_v_c_n_cache.html#a8dcc4e6977dedab5499b434dbbe98ada", null ],
+    [ "~VCNCache", "class_v_c_n_cache.html#a458d832d46689b4049134547fd8fb957", null ],
+    [ "GetBuffer", "class_v_c_n_cache.html#a2c5dfb6aecf9f79d3c5b097e50257269", null ],
+    [ "GetBuffer", "class_v_c_n_cache.html#a9fdf5c3f2fe6b5b784669e69ae40e8a4", null ],
+    [ "GetBufferSize", "class_v_c_n_cache.html#acfb7591ec86d2fdbef7615f4236a19b1", null ],
+    [ "GetCount", "class_v_c_n_cache.html#a9b576fd67ad97582e4258dbb7c1ce0db", null ],
+    [ "GetStride", "class_v_c_n_cache.html#a0871889a885945815eca771dd8d579be", null ],
+    [ "IsFilled", "class_v_c_n_cache.html#ab03b0d5cd50de703bfef0dfab15d0ad0", null ],
+    [ "IsIndexBuffer", "class_v_c_n_cache.html#a458a9583c93291b123a1bf5ed3e0c9aa", null ],
+    [ "IsValid", "class_v_c_n_cache.html#a535549ac4e24b3921a90608138902eee", null ],
+    [ "IsVertexBuffer", "class_v_c_n_cache.html#a0729143a857cf60e1b6c27c2c2c707b7", null ],
+    [ "LoadIndexBuffer", "class_v_c_n_cache.html#af233f473e592fc8d423c43ac6053dbc9", null ],
+    [ "LoadVertexBuffer", "class_v_c_n_cache.html#a9f3526753b156db1b80f468ecb4194c7", null ],
+    [ "Lock", "class_v_c_n_cache.html#a29db78816e1a1c5156d2a0ea5a4022d9", null ],
+    [ "Lock", "class_v_c_n_cache.html#af44818725a677f2e5b2d106f584e2cff", null ],
+    [ "Unlock", "class_v_c_n_cache.html#acb34b57c0d8659bc1c279907bafe9c8b", null ],
+    [ "mBufferHandle", "class_v_c_n_cache.html#a1f5e184aa893923eb0b97819477bc3a7", null ],
+    [ "mBufferSize", "class_v_c_n_cache.html#a855808fb0664f0f9ac74b5779901d24e", null ],
+    [ "mCacheFlags", "class_v_c_n_cache.html#ab13d9ae25b39b7603720dd0b40943e8c", null ],
+    [ "mCacheType", "class_v_c_n_cache.html#aa84ea378a11f166fa9928bae39bb9046", null ],
+    [ "mCount", "class_v_c_n_cache.html#a71f58f95975154afe4eff6453def396d", null ],
+    [ "mFilled", "class_v_c_n_cache.html#aeadbf60a10920cfac0eecd0e54902d8a", null ],
+    [ "mStride", "class_v_c_n_cache.html#a64d1e6c72d31f872e8e2e5dfb57634d3", null ]
+];

@@ -1,0 +1,468 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:VCN3dsExporterPropertyEditor"
+        xmlns:VCNNodesCSharp="clr-namespace:VCNNodesCSharp;assembly=VCNNodesCSharp" x:Class="VCN3dsExporterPropertyEditor.NewPropertyEditor"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+        Title="Property Editor" Height="350" Width="525" WindowStyle="ToolWindow">
+    <Window.Resources>
+        <local:InvertBooleanInverter  x:Key="boolInverse"/>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        <DataTemplate x:Key="genericElementTemplate">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="120"/>
+        			<ColumnDefinition Width="100"/>
+        			<ColumnDefinition Width="*"/>
+        		</Grid.ColumnDefinitions>
+        		<Label Grid.Column="0"  Content="{Binding Name}"/>
+        		<Label Grid.Column="1"  Content="{Binding Type}"/>
+        		<TextBox Grid.Column="2"  Text="{Binding Value}"/>
+        	</Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="stringElementTemplate">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="120"/>
+        			<ColumnDefinition MinWidth="100" Width="250"/>
+        		</Grid.ColumnDefinitions>
+        		<Label Grid.Column="0"  Content="{Binding Name}"/>
+        		<TextBox Grid.Column="1"  Text="{Binding Path=ValueAsString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        	</Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="luaTriggerElementTemplate">
+            <StackPanel Orientation="Vertical">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition MinWidth="100" Width="110"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition MinWidth="100" Width="150"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"  Content="{Binding Name}"/>
+                    <Label Grid.Column="1"  Content="Trigger Name"/>
+                    <TextBox Grid.Column="3"  Text="{Binding Path=Value.TriggerName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition MinWidth="100" Width="110"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition MinWidth="100" Width="150"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1"  Content="Trigger Type"/>
+                    <TextBox Grid.Column="3"  Text="{Binding Path=Value.TriggerType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="intElementTemplate">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="120"/>
+        			<ColumnDefinition Width="250"/>
+        			<ColumnDefinition Width="50"/>
+        		</Grid.ColumnDefinitions>
+        		<Label Grid.Column="0"  Content="{Binding Name}"/>
+        		<Slider Grid.Column="1" Orientation="Horizontal" 
+        			Value="{Binding ValueAsInt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}" SmallChange="1" LargeChange="3"
+        			IsSnapToTickEnabled="True" TickFrequency="1"/>
+                <xctk:IntegerUpDown Grid.Column="2" Value="{Binding ValueAsInt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"/>
+        	</Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="doubleElementTemplate">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="120"/>
+        			<ColumnDefinition Width="250"/>
+        			<ColumnDefinition Width="50"/>
+        		</Grid.ColumnDefinitions>
+        		<Label Grid.Column="0"  Content="{Binding Name}"/>
+        		<Slider Grid.Column="1" Orientation="Horizontal" 
+        			Value="{Binding ValueAsDouble, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+                <xctk:DoubleUpDown Grid.Column="2" FormatString="F1" Value="{Binding ValueAsDouble, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        			Increment="0.1" Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}" />
+        	</Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="floatElementTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0"  Content="{Binding Name}"/>
+                <Slider Grid.Column="1" Orientation="Horizontal" 
+        			Value="{Binding ValueAsFloat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+                <xctk:DoubleUpDown Grid.Column="2" FormatString="F1" Value="{Binding ValueAsFloat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        			Increment="0.1" Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="vector2ElementTemplate">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="150"/>
+        			<ColumnDefinition Width="45"/>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="150"/>
+        			<ColumnDefinition Width="45"/>
+        		</Grid.ColumnDefinitions>
+        		<Grid.RowDefinitions>
+        			<RowDefinition/>
+        			<RowDefinition/>
+        		</Grid.RowDefinitions>
+        		<Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Content="{Binding Name}"/>
+        		<!--X-->
+        		<Label Grid.Column="0" Grid.Row="1" Content="X"/>
+        		<Slider Grid.Column="1" Grid.Row="1" Orientation="Horizontal" 
+        			Value="{Binding Value.x, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+        		<Label Grid.Column="2" Grid.Row="1" Content="{Binding Value.x}"/>
+        		<!--Y-->
+        		<Label Grid.Column="3"  Grid.Row="1" Content="Y"/>
+        		<Slider Grid.Column="4" Grid.Row="1" Orientation="Horizontal" 
+        			Value="{Binding Value.y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+        		<Label Grid.Column="5" Grid.Row="1" Content="{Binding Value.y}"/>
+        	</Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="vector3ElementTemplate">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="150"/>
+        			<ColumnDefinition Width="45"/>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="150"/>
+        			<ColumnDefinition Width="45"/>
+        		</Grid.ColumnDefinitions>
+        		<Grid.RowDefinitions>
+        			<RowDefinition/>
+        			<RowDefinition/>
+        			<RowDefinition/>
+        		</Grid.RowDefinitions>
+        		<Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Content="{Binding Name}"/>
+        		<!--X-->
+        		<Label Grid.Column="0" Grid.Row="1" Content="X"/>
+        		<Slider Grid.Column="1" Grid.Row="1" Orientation="Horizontal" 
+        			Value="{Binding Value.x, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+        		<Label Grid.Column="2" Grid.Row="1" Content="{Binding Value.x}"/>
+        		<!--Y-->
+        		<Label Grid.Column="3"  Grid.Row="1" Content="Y"/>
+        		<Slider Grid.Column="4" Grid.Row="1" Orientation="Horizontal" 
+        			Value="{Binding Value.y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+        		<Label Grid.Column="5" Grid.Row="1" Content="{Binding Value.y}"/>
+        		<!--Z-->
+        		<Label Grid.Column="0" Grid.Row="2" Content="Z"/>
+        		<Slider Grid.Column="1" Grid.Row="2" Orientation="Horizontal" 
+        			Value="{Binding Value.z, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+        		<Label Grid.Column="2" Grid.Row="2" Content="{Binding Value.z}"/>
+        	</Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="vector4ElementTemplate">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="150"/>
+        			<ColumnDefinition Width="45"/>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="150"/>
+        			<ColumnDefinition Width="45"/>
+        		</Grid.ColumnDefinitions>
+        		<Grid.RowDefinitions>
+        			<RowDefinition/>
+        			<RowDefinition/>
+        			<RowDefinition/>
+        		</Grid.RowDefinitions>
+        		<Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Content="{Binding Name}"/>
+        		<!--X-->
+        		<Label Grid.Column="0" Grid.Row="1" Content="X"/>
+        		<Slider Grid.Column="1" Grid.Row="1" Orientation="Horizontal" 
+        			Value="{Binding Value.x, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+        		<Label Grid.Column="2" Grid.Row="1" Content="{Binding Value.x}"/>
+        		<!--Y-->
+        		<Label Grid.Column="3"  Grid.Row="1" Content="Y"/>
+        		<Slider Grid.Column="4" Grid.Row="1" Orientation="Horizontal" 
+        			Value="{Binding Value.y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+        		<Label Grid.Column="5" Grid.Row="1" Content="{Binding Value.y}"/>
+        		<!--Z-->
+        		<Label Grid.Column="0" Grid.Row="2" Content="Z"/>
+        		<Slider Grid.Column="1" Grid.Row="2" Orientation="Horizontal" 
+        			Value="{Binding Value.z, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+        		<Label Grid.Column="2" Grid.Row="2" Content="{Binding Value.z}"/>
+        		<!--W-->
+        		<Label Grid.Column="3"  Grid.Row="2" Content="W"/>
+        		<Slider Grid.Column="4" Grid.Row="2" Orientation="Horizontal" 
+        			Value="{Binding Value.w, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			Minimum="{Binding MinValue}" Maximum="{Binding MaxValue}"
+        			SmallChange="0.1" LargeChange="10"/>
+        		<Label Grid.Column="5" Grid.Row="2" Content="{Binding Value.w}"/>
+        	</Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="intElementTemplateNoSlider">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="100"/>
+        		</Grid.ColumnDefinitions>
+        		<Label Grid.Column="0"  Content="{Binding Name}"/>
+                <Border Grid.Column="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="IntegerUpDown_MouseDown" MouseMove="IntegerUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:IntegerUpDown  Value="{Binding ValueAsInt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </Border>
+        	</Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="doubleElementTemplateNoSlider">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="120"/>
+        			<ColumnDefinition Width="100"/>
+        		</Grid.ColumnDefinitions>
+        		<Label Grid.Column="0"  Content="{Binding Name}"/>
+                <Border Grid.Column="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding ValueAsDouble, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+        	</Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="floatElementTemplateNoSlider">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0"  Content="{Binding Name}"/>
+                <Border Grid.Column="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding ValueAsFloat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="vector2ElementTemplateNoSlider">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="150"/>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="150"/>
+        		</Grid.ColumnDefinitions>
+        		<Grid.RowDefinitions>
+        			<RowDefinition/>
+        			<RowDefinition/>
+        		</Grid.RowDefinitions>
+        		<Label Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Content="{Binding Name}"/>
+        		<!--X-->
+        		<Label Grid.Column="0" Grid.Row="1" Content="X"/>
+                <Border Grid.Column="1" Grid.Row="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding Value.x, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+                <!--Y-->
+        		<Label Grid.Column="2"  Grid.Row="1" Content="Y"/>
+                <Border Grid.Column="3" Grid.Row="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding Value.y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="vector3ElementTemplateNoSlider">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="100"/>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="100"/>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="100"/>
+        		</Grid.ColumnDefinitions>
+        		<Grid.RowDefinitions>
+        			<RowDefinition/>
+        			<RowDefinition/>
+        		</Grid.RowDefinitions>
+        		<Label Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="0" Content="{Binding Name}"/>
+        		<!--X-->
+        		<Label Grid.Column="0" Grid.Row="1" Content="X"/>
+                <Border Grid.Column="1" Grid.Row="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding Value.x, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+                <!--Y-->
+        		<Label Grid.Column="2"  Grid.Row="1" Content="Y"/>
+                <Border Grid.Column="3" Grid.Row="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding Value.y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+                <!--Z-->
+        		<Label Grid.Column="4"  Grid.Row="1" Content="Z"/>
+                <Border Grid.Column="5" Grid.Row="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding Value.z, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="vector4ElementTemplateNoSlider">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="80"/>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="80"/>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="80"/>
+        			<ColumnDefinition Width="20"/>
+        			<ColumnDefinition Width="80"/>
+        		</Grid.ColumnDefinitions>
+        		<Grid.RowDefinitions>
+        			<RowDefinition/>
+        			<RowDefinition/>
+        		</Grid.RowDefinitions>
+        		<Label Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="0" Content="{Binding Name}"/>
+        		<!--X-->
+        		<Label Grid.Column="0" Grid.Row="1" Content="X"/>
+                <Border Grid.Column="1" Grid.Row="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding Value.x, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+                <!--Y-->
+        		<Label Grid.Column="2"  Grid.Row="1" Content="Y"/>
+                <Border Grid.Column="3" Grid.Row="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding Value.y, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+                <!--Z-->
+        		<Label Grid.Column="4"  Grid.Row="1" Content="Z"/>
+                <Border Grid.Column="5" Grid.Row="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding Value.z, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+                <!--W-->
+        		<Label Grid.Column="6"  Grid.Row="1" Content="W"/>
+                <Border Grid.Column="7" Grid.Row="1" CornerRadius="5"  Background="LightGray" Margin="0"  Padding="15 0 5 0" MouseDown="DoubleUpDown_MouseDown" MouseMove="DoubleUpDown_MouseMove" MouseUp="UpDown_MouseUp">
+                    <xctk:DoubleUpDown Value="{Binding Value.w, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+        			    FormatString="N2" Increment="0.1"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="colorElementTemplate">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="120"/>
+        			<ColumnDefinition Width="250"/>
+        		</Grid.ColumnDefinitions>
+        		<Label Grid.Column="0"  Content="{Binding Name}"/>
+        		<xctk:ColorPicker Grid.Column="1" />
+        	</Grid>
+        </DataTemplate>
+		<DataTemplate x:Key="boolElementTemplate">
+        	<Grid>
+        		<Grid.ColumnDefinitions>
+        			<ColumnDefinition Width="120"/>
+        			<ColumnDefinition Width="100"/>
+        		</Grid.ColumnDefinitions>
+        		<Label Grid.Column="0"  Content="{Binding Name}"/>
+                <CheckBox Grid.Column="1" IsChecked="{Binding ValueAsBool}"/>
+        	</Grid>
+        </DataTemplate>
+        <local:ElementTemplateSelector 
+                StringElementTemplate="{StaticResource stringElementTemplate}" 
+                LuaTriggerElementTemplate="{StaticResource luaTriggerElementTemplate}" 
+                IntElementTemplate="{StaticResource intElementTemplate}" 
+                DoubleElementTemplate="{StaticResource doubleElementTemplate}" 
+                FloatElementTemplate="{StaticResource floatElementTemplate}" 
+                GenericElementTemplate="{StaticResource genericElementTemplate}" 
+                Vector2ElementTemplate="{StaticResource vector2ElementTemplate}" 
+                Vector3ElementTemplate="{StaticResource vector3ElementTemplate}" 
+                Vector4ElementTemplate="{StaticResource vector4ElementTemplate}" 
+                IntElementTemplateNoSlider="{StaticResource intElementTemplateNoSlider}" 
+                DoubleElementTemplateNoSlider="{StaticResource doubleElementTemplateNoSlider}"
+                FloatElementTemplateNoSlider="{StaticResource floatElementTemplateNoSlider}"
+                Vector2ElementTemplateNoSlider="{StaticResource vector2ElementTemplateNoSlider}" 
+                Vector3ElementTemplateNoSlider="{StaticResource vector3ElementTemplateNoSlider}" 
+                Vector4ElementTemplateNoSlider="{StaticResource vector4ElementTemplateNoSlider}" 
+                ColorElementTemplate="{StaticResource colorElementTemplate}" 
+				BoolElementTemplate="{StaticResource boolElementTemplate}" 
+                x:Key="elementTemplateSelector" />
+        <DataTemplate x:Key="ComponentsTemplate">
+            <Grid Margin="2">
+                <Border BorderThickness="2" BorderBrush="LightGray">
+        	        <StackPanel Width="450">
+                        <StackPanel Orientation="Horizontal">
+        		            <Label Content="{Binding Name}" FontWeight="Bold"/>
+                            <Button Content="Remove" Height="15" FontSize="8" Click="RemoveComponent" Tag="{Binding Name}" />
+                        </StackPanel>
+                        <ItemsControl x:Name="taskList" Margin="30 0 0 0"  ItemsSource="{Binding Attributes}" 
+        			        ItemTemplateSelector="{StaticResource elementTemplateSelector}"/>
+        	        </StackPanel>
+                </Border>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+	<Window.DataContext>
+		<local:EditorWindowViewModel>
+            <local:EditorWindowViewModel.HasInvalidSelection>
+                True
+            </local:EditorWindowViewModel.HasInvalidSelection>
+			<local:EditorWindowViewModel.Components>
+				<VCNNodesCSharp:UIComponent Name="ComponentBool">
+					<VCNNodesCSharp:UIComponent.Attributes>
+						<VCNNodesCSharp:UIAttributeBool Name="MyBool1" Value="true"/>
+                        <VCNNodesCSharp:UIAttributeLuaTrigger Name="LuaTrigger">
+                            <VCNNodesCSharp:UIAttributeLuaTrigger.Value>
+                                <VCNNodesCSharp:LuaTrigger TriggerName="myLuaTriggername" TriggerType="myLuaTriggerType" />
+                            </VCNNodesCSharp:UIAttributeLuaTrigger.Value>
+                        </VCNNodesCSharp:UIAttributeLuaTrigger>
+					</VCNNodesCSharp:UIComponent.Attributes>
+				</VCNNodesCSharp:UIComponent>
+				<VCNNodesCSharp:UIAttributeInt Name="Integer"/>
+			</local:EditorWindowViewModel.Components>
+		</local:EditorWindowViewModel>
+	</Window.DataContext>
+	<ScrollViewer VerticalScrollBarVisibility="Auto">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+            <Label Grid.Row="0" x:Name="ErrorLabel" Visibility="{Binding HasInvalidSelection, Converter={StaticResource BoolToVis}}"  Content="Selection is not supported. You must select exactly one node." HorizontalAlignment="Left" VerticalAlignment="Top" Height="28.627" Width="517" FontSize="13.333"/>
+            <ItemsControl Grid.Row="0" ItemsSource="{Binding Components, Mode=TwoWay}" x:Name="ComponentsListBox" ItemTemplate="{DynamicResource ComponentsTemplate}"/>
+			<StackPanel Grid.Row="1">
+				<Separator HorizontalAlignment="Left" Width="500" Height="10"/>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="300"/>
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<ComboBox Grid.Column="0" x:Name="NewComponentType" ItemsSource="{Binding AvailableComponents}"  HorizontalAlignment="Center" Width="200"/>
+                    <Button Grid.Column="1" IsEnabled="{Binding HasInvalidSelection, Converter={StaticResource boolInverse}}"  x:Name="BtnAddComponent" HorizontalAlignment="Center" Width="100" Click="AddSelectedComponent"  Content="Add Component"/>
+					<Label Grid.Row="1" x:Name="LblAddComponent" Foreground="Red"/>
+				</Grid>
+
+			</StackPanel>
+		</Grid>
+	</ScrollViewer>
+</Window>
+

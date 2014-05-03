@@ -1,0 +1,13 @@
+name            blood
+texture         BloodDrop.png
+accel           0 -8.5 0
+start_color     0.235 0.017 0.017 0.1
+end_color       0.025 0.010 0.010 0.5
+blend_type      alpha
+emitter_life    -1
+particle_life   1.0
+rate            2
+velocity        0.7
+size            0.22
+variance        1000.0
+rotation_rate   20.2

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{027DC5B9-57D4-4781-8558-9AB31AFFED78}" SchemaVersion="62">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{027DC5B9-57D4-4781-8558-9AB31AFFED78}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Vicuna" ID="{1E099FDB-D2F2-413A-8C35-EC279F0C2AAD}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Default Work Unit" ID="{C1961BC0-4EB1-4921-AE46-9008B08C072D}" WorkUnitID="{C1961BC0-4EB1-4921-AE46-9008B08C072D}" Filter="7" Origin="Manual" />
+						<ObjectRef Name="Default Work Unit" ID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" Filter="7" Origin="Manual" />
+					</ObjectInclusionList>
+					<ObjectExclusionList />
+					<GameSyncExclusionList />
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

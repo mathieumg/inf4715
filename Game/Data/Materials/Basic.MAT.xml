@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<Material Name="BasicMaterial" Version="1">
+  <AmbientColor r="0.3" g="0.3" b="0.3" a="1.0"/>
+
+  <Effect name="Basic">
+  </Effect>
+</Material>

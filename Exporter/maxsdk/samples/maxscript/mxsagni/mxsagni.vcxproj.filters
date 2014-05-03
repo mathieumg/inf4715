@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{b78d1722-06ae-4dbf-a628-0071c3605d10}</UniqueIdentifier>
+      <Extensions>lib</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{606b434e-6fad-4740-b773-c6e2ed4f4b68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ac8ce616-d603-4163-8e0c-4add2c37594a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{27e29012-8adc-46fd-8b95-92f8839bb523}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="check.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="checksel.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CROSSHR1.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="disabled.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="hand.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="submenu.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="submenusel.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MXSAgni.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MXSAgni.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AngleCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="avg_DLX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BinStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clipboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common_funcs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="i3_func.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="i3_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="i3_ui_progbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="i3_ui_timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ik.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImgTag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lam_ctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="le_wraps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="meshop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MOUSTRAK.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mxs_units.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mxs_variables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MXSAgni.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MXSAgni_main.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="polyop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="polyops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="refs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="registry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rk_wraps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sysInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="systemTools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tabbedDialogAccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testonly.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIExtend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="viewport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="agnidefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="avg_dlx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="avg_maxver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="binstream_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bit_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clipboard_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtClass_glbls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtFuncs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtGlbls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsWindow_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="i3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ICustMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ik_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lam_glbls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lam_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="le_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="meshop_defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mxs_units.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mxs_variables_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MXSAgni.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="namedefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="refs_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="registry_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rk_glbls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rk_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sysInfo_glbls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sysInfo_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="systemTools_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testonly.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="viewport_glbls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="viewport_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows_wraps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WSMClasses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

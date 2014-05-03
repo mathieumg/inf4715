@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Morph Plugin">
+      <UniqueIdentifier>{c7c10030-6524-4b5c-aae0-a3de687aeb5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Morph Plugin\Resources">
+      <UniqueIdentifier>{b6461603-5725-43c9-98c2-c1970c863a1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Morph Plugin\Resources\Resource Files">
+      <UniqueIdentifier>{525bfe42-5c3a-49a7-b542-adb6c54316d2}</UniqueIdentifier>
+      <Extensions>*.bmp;*.ico;*.cur</Extensions>
+    </Filter>
+    <Filter Include="Morph Core">
+      <UniqueIdentifier>{f669e978-ab77-40a5-907d-8ab64a825d70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Morph Material">
+      <UniqueIdentifier>{020e4267-2ee1-40de-9ebf-9c16b1c79696}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Morph API">
+      <UniqueIdentifier>{f4baabe3-58bb-45d2-9fef-09c072ed4c84}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="wM3.h">
+      <Filter>Morph Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Morph Plugin\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MorpherClassID.h">
+      <Filter>Morph API</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MorpherExport.h">
+      <Filter>Morph API</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MorpherApi.h">
+      <Filter>Morph API</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="wM3_cache.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_channel.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_dlg-fns.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_dlg.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_impexp.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_io.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_main.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_pick.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_plugin.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_subdlg.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_undo.cpp">
+      <Filter>Morph Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_core.cpp">
+      <Filter>Morph Core</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_material.cpp">
+      <Filter>Morph Material</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_material_dlg.cpp">
+      <Filter>Morph Material</Filter>
+    </ClCompile>
+    <ClCompile Include="wM3_material_pick.cpp">
+      <Filter>Morph Material</Filter>
+    </ClCompile>
+    <ClCompile Include="morpherApi.cpp">
+      <Filter>Morph API</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="wM3.rc">
+      <Filter>Morph Plugin\Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="morph16.bmp">
+      <Filter>Morph Plugin\Resources\Resource Files</Filter>
+    </None>
+    <None Include="morph16m.bmp">
+      <Filter>Morph Plugin\Resources\Resource Files</Filter>
+    </None>
+    <None Include="morph32.bmp">
+      <Filter>Morph Plugin\Resources\Resource Files</Filter>
+    </None>
+    <None Include="morph32m.bmp">
+      <Filter>Morph Plugin\Resources\Resource Files</Filter>
+    </None>
+    <None Include="wM3.def" />
+    <None Include="MxsVsApi.Methods.txt" />
+  </ItemGroup>
+</Project>

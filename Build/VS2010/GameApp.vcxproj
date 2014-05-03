@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D449B251-0614-4579-9A02-5A4AE44010CE}</ProjectGuid>
+    <RootNamespace>GameApp</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>GameApp</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Final.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Release.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\Game\Bin\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">..\..\Game\Bin\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\Game\Bin\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>../../Sources/3rdparty/include/lua;../../Sources/3rdparty/$(PhysXDir)/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Awesomium.lib;AntTweakBar.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/IGNORE:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ProjectReference />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;USE_SOUND;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>../../Sources/3rdparty/$(PhysXDir)/Include;../../Sources/3rdparty/include/lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Awesomium.lib;Winmm.lib;vfw32.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dsound.lib;dinput8.lib;AntTweakBar.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)/Lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>../../Sources/3rdparty/$(PhysXDir)/Include;../../Sources/3rdparty/include/lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Awesomium.lib;Winmm.lib;vfw32.lib;dxguid.lib;d3d9.lib;d3dx9.lib;dsound.lib;dinput8.lib;AntTweakBar.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)/Lib/x86;$(WWISESDK)\Win32_vc100\Debug(StaticCRT)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources\GameApp\AIRobot.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\AnimEvent.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Camera.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\CameraController.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Config.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\ConfigLoader.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\DebugGraph.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Display.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Game.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Inventory.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\ItemStore.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\MediaManager.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\GameState.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\HUD.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\InputController.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\InputManager.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Main.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\MainMenu.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Menu.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\MenuState.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\ParticleSystem.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\PauseState.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\PlayState.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Skybox.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\SoundEvent.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\SoundManager.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\SplashScreen.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\StateMachine.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\GameApp\Sun.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\ProceduralTerrain.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Terrain.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\Timer.cpp" />
+    <ClCompile Include="..\..\Sources\GameApp\World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources\GameApp\AIRobot.h" />
+    <ClInclude Include="..\..\Sources\GameApp\AweHandle.h" />
+    <ClInclude Include="..\..\Sources\GameApp\DebugGraph.h" />
+    <ClInclude Include="..\..\Sources\GameApp\GameSmartTypes.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Inventory.h" />
+    <ClInclude Include="..\..\Sources\GameApp\ItemStore.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Sun.h" />
+    <ClInclude Include="..\..\Sources\GameApp\ProceduralTerrain.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Terrain.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Timer.h" />
+    <ClInclude Include="..\..\Sources\GameApp\World.h" />
+    <ClInclude Include="..\..\Sources\GameApp\AnimEvent.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Camera.h" />
+    <ClInclude Include="..\..\Sources\GameApp\CameraController.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Config.h" />
+    <ClInclude Include="..\..\Sources\GameApp\ConfigLoader.h" />
+    <ClInclude Include="..\..\Sources\GameApp\ConfigLoaderConstants.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Display.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Game.h" />
+    <ClInclude Include="..\..\Sources\GameApp\MediaManager.h" />
+    <ClInclude Include="..\..\Sources\GameApp\GameSceneConstants.h" />
+    <ClInclude Include="..\..\Sources\GameApp\GameState.h" />
+    <ClInclude Include="..\..\Sources\GameApp\HUD.h" />
+    <ClInclude Include="..\..\Sources\GameApp\InputController.h" />
+    <ClInclude Include="..\..\Sources\GameApp\InputKeys.h" />
+    <ClInclude Include="..\..\Sources\GameApp\InputManager.h" />
+    <ClInclude Include="..\..\Sources\GameApp\MainMenu.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Menu.h" />
+    <ClInclude Include="..\..\Sources\GameApp\MenuState.h" />
+    <ClInclude Include="..\..\Sources\GameApp\ParticleSystem.h" />
+    <ClInclude Include="..\..\Sources\GameApp\PauseState.h" />
+    <ClInclude Include="..\..\Sources\GameApp\PlayState.h" />
+    <ClInclude Include="..\..\Sources\GameApp\resource.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Skybox.h" />
+    <ClInclude Include="..\..\Sources\GameApp\SoundEvent.h" />
+    <ClInclude Include="..\..\Sources\GameApp\SoundManager.h" />
+    <ClInclude Include="..\..\Sources\GameApp\SoundManagerConstants.h" />
+    <ClInclude Include="..\..\Sources\GameApp\SplashScreen.h" />
+    <ClInclude Include="..\..\Sources\GameApp\StateMachine.h" />
+    <ClInclude Include="..\..\Sources\GameApp\Precompiled.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Game\Data\Config.xml" />
+    <None Include="..\..\Game\Data\Config.xml.user" />
+    <None Include="..\..\Sources\GameApp\haunted.ico" />
+    <None Include="..\..\Sources\GameApp\splash.bmp" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\Sources\GameApp\GameApp.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="MessageBox.vcxproj">
+      <Project>{196ff958-4c4d-443a-a9a8-798eac4331b9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNAnim.vcxproj">
+      <Project>{990bf051-b519-4f21-9ac4-f701418e43d7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNAudio.vcxproj">
+      <Project>{bdc354df-7dc1-4634-8c8d-0a6458bea5a9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNCore.vcxproj">
+      <Project>{6c336355-a8f0-4d4c-9c2b-04810e1c166a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCND3D9.vcxproj">
+      <Project>{0a2aa1b9-40ae-4b9d-95d4-70d6fcb43e78}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNFMODSound.vcxproj">
+      <Project>{429bcecc-4abd-476f-9354-81b16f3106cc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNImporter.vcxproj">
+      <Project>{c6830e20-3c67-41f1-81fc-9443de5d629d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNLog.vcxproj">
+      <Project>{48fac6ed-9d0e-43f4-8dbd-4400df91bbc6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNLua.vcxproj">
+      <Project>{3e88538c-e008-455a-b9db-b55f61852b8c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNNodes.vcxproj">
+      <Project>{d0d6c8ba-0ebd-4239-b14d-5a5705f186e9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNParticles.vcxproj">
+      <Project>{05f522aa-d15f-4806-aba1-ce7443f33fed}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNPhysic.vcxproj">
+      <Project>{ee042fa8-0776-4ebf-9acd-c2a763fadd66}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNPhysX.vcxproj">
+      <Project>{d96135ba-ae7c-4a33-84cb-f3ffb9a536d4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNRenderer.vcxproj">
+      <Project>{804fba67-d67d-4710-a07a-6a3dfd6b570c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNResources.vcxproj">
+      <Project>{cc5253fe-f467-4552-b149-d814c3cf8272}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNScripting.vcxproj">
+      <Project>{c59f1b9d-8d69-44ad-8c7f-1d42881862ea}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNUI.vcxproj">
+      <Project>{361adb50-40e5-4171-8edd-6489bf259642}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNUtils.vcxproj">
+      <Project>{ad738cc9-6b15-4142-bb13-d8c533a4c0e0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNWindows.vcxproj">
+      <Project>{549bdd99-ee0b-4d89-8ddf-1ff92ff3c9ba}</Project>
+    </ProjectReference>
+    <ProjectReference Include="VCNWwise.vcxproj">
+      <Project>{d81cf041-44f6-4d89-90a6-71f16621a920}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,129 @@
+﻿+-----------------+
+| 2012.12 (@r172) |
++-----------------+
+
+Added a custom exception handler to dump the exception in the log file.
+Added alpha testing to shadow maps
+Added an animation Fixed applying bone transforms
+Added event system Added component system
+Added physic to barrel in the room
+Added pivot support to the exporter
+Added some production scripts
+Added the ability to see which render nodes are in the frustum view
+Adds logger
+Adds new D3D9 model loader
+Adds render state block support Removes some D3D9 dependencies in GameApp 
+Adds Unicode support to logger
+Building new interior scene
+Creates VCNAnim project
+Defines UNICODE in Release for VCNTests
+Delete big 3rd party installer
+Fixed camera cross product using proper left hand system
+Fixed compilation error
+Fixed mesh bounding sphere computation 
+Fixed point light bounding sphere computation 
+Fixed shading modes (use F3 to toggle modes)
+Fixed skinning homogeneous coordinate (was causing unwanted scaling) 
+Fixes compilation
+Fixes fullscreen mode
+Fixes includes
+Fixes node deallocation
+Fixes scaling of physic static mesh Tries another physic simulation loop 
+Fixes some leaks
+Makes VCNTests use Unicode
+Many NRVO optimizations
+Many optimizations
+Merged littexture shader and effect (only one remaining)
+Merged terrain shader and effect
+Minor tweaks
+Moved solutions files to Build/
+Moves 3rdparty MessageBox library to the 3rdparty/ folder
+Optimized matrix GetRotation
+Optimized particle core by 20X
+Reduced the size of VCNNode from 260 bytes to 184 bytes
+Refactor precompiled headers Adds a performance graph to track performance results through revisions
+Refactored shader/effect code for simplification (no more D3D9 dependencies other than in VCND3D9)
+Refactored the animation system a bit Changed the terrain static mesh
+Refactored Vector classes
+Refactored view normal matrix usage Optimized VCNRenderNode size from 272 bytes to 208 bytes
+Refactors Awesomium handles
+Removed ambiguous matrix * vector operator
+Removed file prefix VCN
+Removed SSAO effect
+Removes an unneeded copy of the Awesomium rendering buffer (save ~5 FPS)
+Removes some D3D9 dependencies in GameApp
+Renames AnimatedNode to AnimationController
+Renames shaders Adds support for mesh skins
+Reversed matrix multiplication order (i.e MVP = M * V * P)
+Reverted the PhysX simulation loop, was causing issue in FINAL
+Separated the shadowing effect of the terrain to a second configurable pass.
+Updated sun directional shadow map region
+Updates AntTweakBar to version 1.14
+Updates Awesomium to 1.6.4 Adds a simple test to call javascript Adds Awesomium C++ object handles
+
++-----------------+
+| 2012.02 (@r100) |
++-----------------+
+
+Adds Basic integration of PhysX 3.2
+Adds 3dsmax documentation 
+Adds a method (RandomVector3) to generate random vectors
+Adds basic support to set the initial window position
+Adds deallocation of nodes to node allocator
+Adds packaging tools
+Adds PhysX camera visual debugging support
+Adds PhysX dynamic sphere support
+Adds PhysX support to load a static mesh from a VCNMesh
+Adds static terrain support
+Adds support for dynamic bodies 
+Adds support to create an physic actor from a node 
+Adds support to load .x files as Vicuna models
+Cleans up shaders
+Cleans up the exporter a bit
+Cleans up the HUD
+Cleans up the menus
+Cleans up the project settings
+Deletes unused files
+Enables PhysX Profiling in debug builds 
+Extracts height from static terrain
+Fixes fullscreen mode
+Fixes node hierarchy transformation
+Fixes some .x vertex adjacencies errors
+Improves effects
+Improves SSAO (still bad when mixed with transparency)
+Improves Sun entity
+Improves assertion dialog UI
+Moves PixProf.h to VCNRenderer module and overrides it in VCND3D9
+Optimize Awesomium rendering
+Reduces size of button in the assert dialog
+Refactors loading a mesh from a .x file
+Refactors terrain effect 
+Removes FMOD dependencies in GameApp
+Removes some unused sounds
+Renames precompiled headers
+Renames Terrain to ProceduralTerrain 
+Replaces Game headers
+Replaces VCN D3D9 module headers
+Replaces VCNAudio headers
+Replaces VCNCore headers
+Replaces VCNFMOD headers
+Replaces VCNImporter headers
+Replaces VCNNodes headers
+Replaces VCNParticle module headers
+Replaces VCNPhysic module headers
+Replaces VCNPhysX module headers
+Replaces VCNRenderer module headers
+Replaces VCNResources module headers
+Replaces VCNTests module headers
+Replaces VCNUI module headers
+Replaces VCNUtils module headers
+Replaces VCNWindows module headers
+Updates sound configuration
+
++---------------+
+| 2012.01 (@r1) |
++---------------+
+Major refactoring
+Integrates FMOD
+Adds Shadow mapping
+Adds support for .X importation

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="UserProjectSettings" SchemaVersion="62">
+	<UserProjectSettingsInfo>
+		<UserProjectSettings Name="" ID="{96037601-F922-420B-BDCA-FEB8789ED6FE}">
+			<PropertyList>
+				<Property Name="DefaultSoundSPL" Type="Real64" Value="60" />
+			</PropertyList>
+		</UserProjectSettings>
+	</UserProjectSettingsInfo>
+</WwiseDocument>

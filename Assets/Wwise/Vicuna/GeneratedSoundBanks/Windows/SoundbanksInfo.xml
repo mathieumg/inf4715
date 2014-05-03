@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" SchemaVersion="9">
+	<RootPaths>
+		<ProjectRoot>I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\</ProjectRoot>
+		<SourceFilesRoot>I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents />
+	<StreamedFiles />
+	<SoundBanks>
+		<SoundBank Id="523689745" Language="SFX">
+			<ShortName>Vicuna</ShortName>
+			<Path>Vicuna.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3597308922" Name="Ambiance_music_play" />
+				<Event Id="742897156" Name="Ambiance_music_stop" />
+				<Event Id="1448255654" Name="Bed_grit_play" />
+				<Event Id="3040106926" Name="Block_collision_play" />
+				<Event Id="1997939040" Name="Breaker_play" />
+				<Event Id="341301218" Name="Breaker_stop" />
+				<Event Id="739398180" Name="Fibonacci_play" />
+				<Event Id="2363710874" Name="Flush_play" />
+				<Event Id="3039589941" Name="Footsteps_concrete_play" />
+				<Event Id="1206689299" Name="Footsteps_concrete_stop" />
+				<Event Id="1708462471" Name="Grab_objects_play" />
+				<Event Id="901454101" Name="Hydraulic_bridge_play" />
+				<Event Id="981340130" Name="Jump_play" />
+				<Event Id="1284828341" Name="Keyring_play" />
+				<Event Id="2312574497" Name="Laser_room_play" />
+				<Event Id="337567223" Name="Laser_room_stop" />
+				<Event Id="950237290" Name="Lateral_door_play" />
+				<Event Id="1595583390" Name="Metal_door_play" />
+				<Event Id="4098134011" Name="Open_stocking_play" />
+				<Event Id="3040813216" Name="Paper_clue_play" />
+				<Event Id="678154080" Name="Push_block_play" />
+				<Event Id="2266898447" Name="Randombots_play" />
+				<Event Id="731035405" Name="Randombots_stop" />
+				<Event Id="145376957" Name="Robots_mouvements_play" />
+				<Event Id="2372692523" Name="Robots_mouvements_stop" />
+				<Event Id="116903177" Name="Stocking_options_play" />
+				<Event Id="2428510351" Name="Switch1_play" />
+				<Event Id="3622331774" Name="Switch2_play" />
+				<Event Id="3580903514" Name="Wood_door_play" />
+			</IncludedEvents>
+			<IncludedDialogueEvents />
+			<ReferencedStreamedFiles />
+			<IncludedFullFiles>
+				<File Id="759083603" Language="SFX">
+					<ShortName>ambiance_drone1.wav</ShortName>
+					<Path>sfx\ambiance_drone1_d39329a0.wem</Path>
+				</File>
+				<File Id="809337560" Language="SFX">
+					<ShortName>ambiance_ending.wav</ShortName>
+					<Path>sfx\ambiance_ending_ddc98ef4.wem</Path>
+				</File>
+				<File Id="789618064" Language="SFX">
+					<ShortName>ambiance_Puzzle2.wav</ShortName>
+					<Path>sfx\ambiance_puzzle2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="39800708" Language="SFX">
+					<ShortName>ambiance_robots.wav</ShortName>
+					<Path>sfx\ambiance_robots_629faa29.wem</Path>
+				</File>
+				<File Id="1010316427" Language="SFX">
+					<ShortName>bed_grit.wav</ShortName>
+					<Path>sfx\bed_grit_ddc98ef4.wem</Path>
+				</File>
+				<File Id="373054436" Language="SFX">
+					<ShortName>breaker2.wav</ShortName>
+					<Path>sfx\breaker2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="431923424" Language="SFX">
+					<ShortName>Breaker_actived1.wav</ShortName>
+					<Path>sfx\breaker_actived1_ddc98ef4.wem</Path>
+				</File>
+				<File Id="416302491" Language="SFX">
+					<ShortName>Breaker_poweron.wav</ShortName>
+					<Path>sfx\breaker_poweron_ddc98ef4.wem</Path>
+				</File>
+				<File Id="448456250" Language="SFX">
+					<ShortName>Breath.wav</ShortName>
+					<Path>sfx\breath_7c21c0a4.wem</Path>
+				</File>
+				<File Id="720700729" Language="SFX">
+					<ShortName>broken_glass3_1.wav</ShortName>
+					<Path>sfx\broken_glass3_1_ddc98ef4.wem</Path>
+				</File>
+				<File Id="522723358" Language="SFX">
+					<ShortName>broken_glass3_2.wav</ShortName>
+					<Path>sfx\broken_glass3_2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="49005974" Language="SFX">
+					<ShortName>broken_glass3_3.wav</ShortName>
+					<Path>sfx\broken_glass3_3_ddc98ef4.wem</Path>
+				</File>
+				<File Id="549588361" Language="SFX">
+					<ShortName>Dropwater_dripping_01-001.wav</ShortName>
+					<Path>sfx\dropwater_dripping_01-001_ddc98ef4.wem</Path>
+				</File>
+				<File Id="454453036" Language="SFX">
+					<ShortName>Dropwater_dripping_01-002.wav</ShortName>
+					<Path>sfx\dropwater_dripping_01-002_ddc98ef4.wem</Path>
+				</File>
+				<File Id="941328883" Language="SFX">
+					<ShortName>Dropwater_dripping_01-003.wav</ShortName>
+					<Path>sfx\dropwater_dripping_01-003_ddc98ef4.wem</Path>
+				</File>
+				<File Id="92966791" Language="SFX">
+					<ShortName>Dropwater_dripping_01.wav</ShortName>
+					<Path>sfx\dropwater_dripping_01_ddc98ef4.wem</Path>
+				</File>
+				<File Id="851487577" Language="SFX">
+					<ShortName>Electric_laser.wav</ShortName>
+					<Path>sfx\electric_laser_2598c00f.wem</Path>
+				</File>
+				<File Id="117864563" Language="SFX">
+					<ShortName>Fibonacci_right.wav</ShortName>
+					<Path>sfx\fibonacci_right_ddc98ef4.wem</Path>
+				</File>
+				<File Id="642591912" Language="SFX">
+					<ShortName>Fibonacci_wrong.wav</ShortName>
+					<Path>sfx\fibonacci_wrong_ddc98ef4.wem</Path>
+				</File>
+				<File Id="356059906" Language="SFX">
+					<ShortName>fix_block.wav</ShortName>
+					<Path>sfx\fix_block_ddc98ef4.wem</Path>
+				</File>
+				<File Id="364943392" Language="SFX">
+					<ShortName>flush2.wav</ShortName>
+					<Path>sfx\flush2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="486109209" Language="SFX">
+					<ShortName>Footstep01.wav</ShortName>
+					<Path>sfx\footstep01_ddc98ef4.wem</Path>
+				</File>
+				<File Id="85503452" Language="SFX">
+					<ShortName>Footstep10.wav</ShortName>
+					<Path>sfx\footstep10_ddc98ef4.wem</Path>
+				</File>
+				<File Id="101030116" Language="SFX">
+					<ShortName>Footstep11.wav</ShortName>
+					<Path>sfx\footstep11_ddc98ef4.wem</Path>
+				</File>
+				<File Id="62930280" Language="SFX">
+					<ShortName>Footstep12.wav</ShortName>
+					<Path>sfx\footstep12_ddc98ef4.wem</Path>
+				</File>
+				<File Id="628870754" Language="SFX">
+					<ShortName>Footstep13.wav</ShortName>
+					<Path>sfx\footstep13_ddc98ef4.wem</Path>
+				</File>
+				<File Id="43549529" Language="SFX">
+					<ShortName>Footstep2.wav</ShortName>
+					<Path>sfx\footstep2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="712740083" Language="SFX">
+					<ShortName>Footstep3.wav</ShortName>
+					<Path>sfx\footstep3_ddc98ef4.wem</Path>
+				</File>
+				<File Id="558918047" Language="SFX">
+					<ShortName>Footstep4.wav</ShortName>
+					<Path>sfx\footstep4_ddc98ef4.wem</Path>
+				</File>
+				<File Id="172000346" Language="SFX">
+					<ShortName>Footstep5.wav</ShortName>
+					<Path>sfx\footstep5_ddc98ef4.wem</Path>
+				</File>
+				<File Id="193186957" Language="SFX">
+					<ShortName>Footstep6.wav</ShortName>
+					<Path>sfx\footstep6_ddc98ef4.wem</Path>
+				</File>
+				<File Id="350669575" Language="SFX">
+					<ShortName>Footstep7.wav</ShortName>
+					<Path>sfx\footstep7_ddc98ef4.wem</Path>
+				</File>
+				<File Id="919603645" Language="SFX">
+					<ShortName>Footstep8.wav</ShortName>
+					<Path>sfx\footstep8_ddc98ef4.wem</Path>
+				</File>
+				<File Id="376059534" Language="SFX">
+					<ShortName>Footstep9.wav</ShortName>
+					<Path>sfx\footstep9_ddc98ef4.wem</Path>
+				</File>
+				<File Id="648425785" Language="SFX">
+					<ShortName>grab_objects.wav</ShortName>
+					<Path>sfx\grab_objects_ddc98ef4.wem</Path>
+				</File>
+				<File Id="7050483" Language="SFX">
+					<ShortName>hydrolic_bridge.wav</ShortName>
+					<Path>sfx\hydrolic_bridge_ddc98ef4.wem</Path>
+				</File>
+				<File Id="376968225" Language="SFX">
+					<ShortName>Jump_concrete.wav</ShortName>
+					<Path>sfx\jump_concrete_ddc98ef4.wem</Path>
+				</File>
+				<File Id="69734701" Language="SFX">
+					<ShortName>keyring1.wav</ShortName>
+					<Path>sfx\keyring1_ddc98ef4.wem</Path>
+				</File>
+				<File Id="38672568" Language="SFX">
+					<ShortName>lasert01.wav</ShortName>
+					<Path>sfx\lasert01_ddc98ef4.wem</Path>
+				</File>
+				<File Id="1012773516" Language="SFX">
+					<ShortName>lasert02.wav</ShortName>
+					<Path>sfx\lasert02_ddc98ef4.wem</Path>
+				</File>
+				<File Id="214882055" Language="SFX">
+					<ShortName>lasert03.wav</ShortName>
+					<Path>sfx\lasert03_ddc98ef4.wem</Path>
+				</File>
+				<File Id="355851473" Language="SFX">
+					<ShortName>lasert04.wav</ShortName>
+					<Path>sfx\lasert04_ddc98ef4.wem</Path>
+				</File>
+				<File Id="182562567" Language="SFX">
+					<ShortName>lateral_door_open.wav</ShortName>
+					<Path>sfx\lateral_door_open_ddc98ef4.wem</Path>
+				</File>
+				<File Id="299225995" Language="SFX">
+					<ShortName>metal_door_locked.wav</ShortName>
+					<Path>sfx\metal_door_locked_ddc98ef4.wem</Path>
+				</File>
+				<File Id="632834586" Language="SFX">
+					<ShortName>metal_door_open.wav</ShortName>
+					<Path>sfx\metal_door_open_a29000df.wem</Path>
+				</File>
+				<File Id="307545742" Language="SFX">
+					<ShortName>open_door_wood.wav</ShortName>
+					<Path>sfx\open_door_wood_ddc98ef4.wem</Path>
+				</File>
+				<File Id="101395422" Language="SFX">
+					<ShortName>open_stocking.wav</ShortName>
+					<Path>sfx\open_stocking_ddc98ef4.wem</Path>
+				</File>
+				<File Id="352238056" Language="SFX">
+					<ShortName>pen_paper.wav</ShortName>
+					<Path>sfx\pen_paper_ddc98ef4.wem</Path>
+				</File>
+				<File Id="199786132" Language="SFX">
+					<ShortName>push_block.wav</ShortName>
+					<Path>sfx\push_block_e35c2031.wem</Path>
+				</File>
+				<File Id="749849308" Language="SFX">
+					<ShortName>random_robot01.wav</ShortName>
+					<Path>sfx\random_robot01_ddc98ef4.wem</Path>
+				</File>
+				<File Id="220396978" Language="SFX">
+					<ShortName>random_robot02.wav</ShortName>
+					<Path>sfx\random_robot02_ddc98ef4.wem</Path>
+				</File>
+				<File Id="905004730" Language="SFX">
+					<ShortName>random_robot03.wav</ShortName>
+					<Path>sfx\random_robot03_ddc98ef4.wem</Path>
+				</File>
+				<File Id="65287357" Language="SFX">
+					<ShortName>random_robot04.wav</ShortName>
+					<Path>sfx\random_robot04_ddc98ef4.wem</Path>
+				</File>
+				<File Id="53345126" Language="SFX">
+					<ShortName>random_robot05.wav</ShortName>
+					<Path>sfx\random_robot05_ddc98ef4.wem</Path>
+				</File>
+				<File Id="300042600" Language="SFX">
+					<ShortName>random_robot06.wav</ShortName>
+					<Path>sfx\random_robot06_ddc98ef4.wem</Path>
+				</File>
+				<File Id="773549325" Language="SFX">
+					<ShortName>random_robot07.wav</ShortName>
+					<Path>sfx\random_robot07_ddc98ef4.wem</Path>
+				</File>
+				<File Id="984721684" Language="SFX">
+					<ShortName>random_robot08.wav</ShortName>
+					<Path>sfx\random_robot08_ddc98ef4.wem</Path>
+				</File>
+				<File Id="706728609" Language="SFX">
+					<ShortName>random_robot09.wav</ShortName>
+					<Path>sfx\random_robot09_ddc98ef4.wem</Path>
+				</File>
+				<File Id="136911956" Language="SFX">
+					<ShortName>robots_mouvement.wav</ShortName>
+					<Path>sfx\robots_mouvement_3d887f91.wem</Path>
+				</File>
+				<File Id="553572265" Language="SFX">
+					<ShortName>Silence01.wav</ShortName>
+					<Path>sfx\silence01_ddc98ef4.wem</Path>
+				</File>
+				<File Id="499823673" Language="SFX">
+					<ShortName>Silence02.wav</ShortName>
+					<Path>sfx\silence02_ddc98ef4.wem</Path>
+				</File>
+				<File Id="23670843" Language="SFX">
+					<ShortName>Silence03.wav</ShortName>
+					<Path>sfx\silence03_ddc98ef4.wem</Path>
+				</File>
+				<File Id="1043760957" Language="SFX">
+					<ShortName>stocking_options.wav</ShortName>
+					<Path>sfx\stocking_options_ddc98ef4.wem</Path>
+				</File>
+				<File Id="725858428" Language="SFX">
+					<ShortName>switch1.wav</ShortName>
+					<Path>sfx\switch1_ddc98ef4.wem</Path>
+				</File>
+				<File Id="271860721" Language="SFX">
+					<ShortName>switch2.wav</ShortName>
+					<Path>sfx\switch2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="88795628" Language="SFX">
+					<ShortName>wind1.wav</ShortName>
+					<Path>sfx\wind1_ddc98ef4.wem</Path>
+				</File>
+				<File Id="592461489" Language="SFX">
+					<ShortName>wind2.wav</ShortName>
+					<Path>sfx\wind2_ddc98ef4.wem</Path>
+				</File>
+				<File Id="620100431" Language="SFX">
+					<ShortName>wind3.wav</ShortName>
+					<Path>sfx\wind3_ddc98ef4.wem</Path>
+				</File>
+				<File Id="723466852" Language="SFX">
+					<ShortName>wood_door_locked_bad.wav</ShortName>
+					<Path>sfx\wood_door_locked_bad_ddc98ef4.wem</Path>
+				</File>
+				<File Id="619114872" Language="SFX">
+					<ShortName>wood_door_locked_good.wav</ShortName>
+					<Path>sfx\wood_door_locked_good_ddc98ef4.wem</Path>
+				</File>
+			</IncludedFullFiles>
+			<IncludedPrefetchFiles />
+			<ExternalSources />
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<IncludedEvents />
+			<IncludedDialogueEvents />
+			<ReferencedStreamedFiles />
+			<IncludedFullFiles />
+			<IncludedPrefetchFiles />
+			<ExternalSources />
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

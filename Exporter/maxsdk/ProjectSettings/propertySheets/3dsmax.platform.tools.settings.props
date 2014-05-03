@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemDefinitionGroup>
+		<ClCompile Condition="'$(Platform)'=='$(PlatformX32)'">
+			<PreprocessorDefinitions>;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+		</ClCompile>
+		<ClCompile Condition="'$(Platform)'=='$(PlatformX64)'">
+			<PreprocessorDefinitions>;WIN32;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</ClCompile>
+		<Link Condition="'$(Platform)'=='$(PlatformX32'">
+			<BaseAddress>baseaddr.txt</BaseAddress>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+		<Link Condition="'$(Platform)'=='$(PlatformX64'">
+			<BaseAddress>baseaddr64.txt</BaseAddress>
+			<TargetMachine>MachineX64</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+</Project>

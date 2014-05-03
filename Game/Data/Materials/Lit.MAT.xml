@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<Material Name="LitMaterial" Version="1">
+  <AmbientColor r="0.3" g="0.3" b="0.3" a="1.0"/>
+  <DiffuseColor r="0.3" g="0.3" b="0.3" a="1.0"/>
+  <SpecularColor r="0.1" g="0.1" b="0.1" a="1.0" power="32.0"/>
+
+  <Effect name="Lit">
+  </Effect>
+
+</Material>

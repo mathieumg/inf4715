@@ -1,0 +1,44 @@
+﻿TODO
+================================================================================
+- Support window resizing in windowed mode
+  + Support for resources reloading (Compile, Prepare, Release interfaces)
+- Replace MSXML with pugixml
+- Add Animation system supporting skinning and rigging, key frame, etc.
+- Add Deferred rendering
+- Add more unit tests
+- Improve rendering system
+  + Improve shaders/materials/effects pipeline
+  + Add post-effect subsystem
+  + Implement DX11
+- Integrate LUA
+- Add lazy caching of XML to binary data
+- Improve 3DSMAX exporter
+  + Export lights
+  + Export materials
+  + Export scene
+- Add support for FBX
+- Develop a level editor
+- Use right handed system with 
+  X -> right/strafe, Y -> forward and Z -> Up
+- Improve input supports (joystick, better mouse support, callbacks, etc.)
+- Special effects
+  + Depth of field
+  + Skinning
+  + Morphing
+  + Glow
+  + Bloom
+  + Subsurface Scattering
+  + HDR (High Dynamic Range)
+  + Toon
+  + Normal Map
+  + Parallax Map
+  + Transparency
+  + Refraction
+  + Reflexion
+  + Shadow mapping
+  + Fur
+  + Environment mapping
+  + Lens flare
+  + Animated textures
+- Create VCNGameUtils and be able to create samples quiclky having only a Game.h/cpp
+- Compile without exception

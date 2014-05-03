@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0106e3e3-f3f4-479e-b157-432decf8fb01}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{342beeab-44f2-4bc3-b21a-ab6192766da0}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{fb68f240-c9e9-422f-be1d-639d79d08bfc}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{089879f0-bcfb-4e49-9e23-12b6909f7c50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\EditableModifierCommon\CreateFaceMouseProcTemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editpat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editpops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editsops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editspl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EditPatch.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="addvertc.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="attach.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Bevel.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bmp00001.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bmp00002.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="booleant.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boolinte.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boolsubt.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boolunio.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="chamfer.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="copy_tan.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="createwe.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cross_se.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CROSSHR.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="crossins.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="extrudec.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="fillet.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mask_boo.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="outline.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="paste_tan.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="patselm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="patselt.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="segbreak.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="segrefin.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="splinese.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="splselm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="thselcur.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Trim.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="vertconn.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="vinsert.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EditPatch.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="editspl.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\EditableModifierCommon\CreateFaceMouseProcTemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dllmain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="editpat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,97 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""maxversion.r""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MODE                "Mode"
+    IDS_AXIS                "Axis"
+    IDS_SELECTION_VALUE     "Selection Value"
+    IDS_PUSH_PULL           "Push/Pull Value"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PAINTDEFORM_AXIS_XFORM_X "X"
+    IDS_PAINTDEFORM_AXIS_XFORM_Y "Y"
+    IDS_PAINTDEFORM_AXIS_XFORM_Z "Z"
+    IDS_PAINTSEL_PAINT      "Paint"
+    IDS_PAINTSEL_ERASE      "Revert"
+    IDS_PAINTSEL_BLUR       "Blur"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PAINTDEFORM_PUSHPULL "Push/Pull"
+    IDS_PAINTDEFORM_RELAX   "Relax"
+    IDS_PAINTDEFORM_ERASE   "Revert"
+    IDS_PAINTDEFORM_AXIS_DEFORMEDNORMS "Deformed Normals"
+    IDS_PAINTDEFORM_AXIS_ORIGNORMS "Original Normals"
+END
+
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "maxversion.r"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

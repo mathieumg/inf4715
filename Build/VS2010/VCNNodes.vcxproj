@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final|Win32">
+      <Configuration>Final</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D0D6C8BA-0EBD-4239-B14D-5A5705F186E9}</ProjectGuid>
+    <RootNamespace>VCNNodes</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Final.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Release.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Vicuna_Debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;PX_PHYSX_CHARACTER_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Sources;../../Sources/3rdparty/$(PhysXDir)/Include;$(ProjectDir)..\..\Sources\3rdparty\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;PX_PHYSX_CHARACTER_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Sources;$(ProjectDir)..\..\Sources\3rdparty\include;../../Sources/3rdparty/$(PhysXDir)/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\Sources;$(ProjectDir)..\..\Sources\3rdparty\include;../../Sources/3rdparty/$(PhysXDir)/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PX_PHYSX_CHARACTER_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources/VCNNodes\Component.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\ComponentCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\Event.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\EventManager.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources/VCNNodes\Light.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\Node.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\NodeAllocator.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\NodeCore.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\RenderNode.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\TimerComponent.cpp" />
+    <ClCompile Include="..\..\Sources\VCNNodes\ComponentFactory.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\TestComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\AutoRotateComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\PhysicsComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\EmptyComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\TestBert.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\TestLua.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\CircularWallRotatingComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\NodePropertiesComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\PuzzleCubeComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\AiRobotComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\CharacterStartingPointComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\UsableComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\DoorComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\SoundEmitterComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\SlidingDoorComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\RotatingDoorComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\RemoteUsableComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\SoundEmitterEventComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\SoundEmitterStateComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\SoundEmitterSwitchComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\MazeSwitchComponent.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\SlidingBridgeComponent.cpp" />
+    <ClCompile Include="..\..\Sources\VCNNodes\GameEvent.cpp" />
+    <ClCompile Include="..\..\Sources\VCNNodes\TriggerManager.cpp" />
+    <ClCompile Include="..\..\Sources\VCNNodes\TriggerNode.cpp" />
+    <ClCompile Include="..\..\Sources/VCNNodes\PhysicsTriggerComponent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources/VCNNodes\Component.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\ComponentBase.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\ComponentCore.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\Event.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\EventManager.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\Precompiled.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\Light.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\Node.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\NodeAllocator.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\NodeCore.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\RenderNode.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\TimerComponent.h" />
+    <ClInclude Include="..\..\Sources\VCNNodes\ComponentFactory.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\TestComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\AutoRotateComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\PhysicsComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\EmptyComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\TestBert.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\TestLua.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\CircularWallRotatingComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\NodePropertiesComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\PuzzleCubeComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\AiRobotComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\CharacterStartingPointComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\UsableComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\DoorComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\SoundEmitterComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\SlidingDoorComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\RotatingDoorComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\RemoteUsableComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\SoundEmitterEventComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\SoundEmitterStateComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\SoundEmitterSwitchComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\MazeSwitchComponent.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\SlidingBridgeComponent.h" />
+    <ClInclude Include="..\..\Sources\VCNNodes\GameEvent.h" />
+    <ClInclude Include="..\..\Sources\VCNNodes\TriggerManager.h" />
+    <ClInclude Include="..\..\Sources\VCNNodes\TriggerNode.h" />
+    <ClInclude Include="..\..\Sources/VCNNodes\PhysicsTriggerComponent.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets"></ImportGroup>
+</Project>

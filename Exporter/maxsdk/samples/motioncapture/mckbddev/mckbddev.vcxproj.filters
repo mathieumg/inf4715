@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{9e571c51-9ba1-4467-aa59-48e2ce85a565}</UniqueIdentifier>
+      <Extensions>*.cpp, *.def, *.lib</Extensions>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{e93e75a5-a00e-423b-9b83-9c7036b92499}</UniqueIdentifier>
+      <Extensions>*.h</Extensions>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{d6b27c97-5850-427c-915f-0f422ca110f6}</UniqueIdentifier>
+      <Extensions>*.rc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mckbddev.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mckbddev.def">
+      <Filter>Source</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mckbddev.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="mckbddev.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

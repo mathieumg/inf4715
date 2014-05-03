@@ -1,0 +1,617 @@
+Index: Game/Data/Shaders/VCNShadowMap.fx
+===================================================================
+--- Game/Data/Shaders/VCNShadowMap.fx	(revision 140)
++++ Game/Data/Shaders/VCNShadowMap.fx	(working copy)
+@@ -29,11 +29,6 @@
+   float3 Position2D : TEXCOORD0;
+ };
+ 
+-struct PS_OUT
+-{
+-  float4 Color : COLOR0;
+-};
+-
+ //
+ // Vertex shader
+ //
+@@ -51,12 +46,14 @@
+ //
+ // Pixel shader
+ //
+-PS_OUT ShadowMapPixelShader(VS_OUT PSIn)
++float4 ShadowMapPixelShader(VS_OUT PSIn) : COLOR0
+ {
+-  PS_OUT Output = (PS_OUT)0;
++  float4 Output;
+     
+-  Output.Color.r = PSIn.Position2D.z /*/ gMaxDepth*/;
+-  Output.Color.g = Output.Color.r * Output.Color.r;
++  Output.r = PSIn.Position2D.z /*/ gMaxDepth*/;
++  Output.g = Output.r * Output.r;
++  Output.b = 0.0f;
++  Output.a = 1.0f;
+ 
+   return Output;
+ }
+Index: Game/Data/Shaders/VCNTerrain.fx
+===================================================================
+--- Game/Data/Shaders/VCNTerrain.fx	(revision 140)
++++ Game/Data/Shaders/VCNTerrain.fx	(working copy)
+@@ -106,7 +106,7 @@
+   float2 DiffuseUV            : TEXCOORD3; // Texture UV
+   float3 ViewDir              : TEXCOORD4; // Camera view direction
+   float4 ShadowMapSamplingPos : TEXCOORD5;
+-  float4 RealDistance         : TEXCOORD6;
++  float RealDistance          : TEXCOORD6;
+ };
+ 
+ //
+@@ -199,6 +199,10 @@
+   // Apply shadow effect
+   if( gLightTypeDirectional )
+   {
++    float light_shadow_bias = gLightConstantAttenuation;
++    float light_vsm_epsilon = gLightLinearAttenuation;
++    float blurringFactor = gLightQuadAttenuation;
++
+     // Transform the surface into light space and project
+     // NB: Could be done in the vertex shader, but doing it here keeps the "light
+     // shader" abstraction and doesn't limit # of shadowed lights.
+@@ -208,18 +212,19 @@
+     // Rescale viewport to be [0,1] (texture coordinate space)
+     float2 shadow_tex = surf_tex.xy * float2(0.5, -0.5) + 0.5;
+ 
+-    float4 moments = BlurX6(ShadowMapTextureSampler, shadow_tex, gLightQuadAttenuation);
++    //float4 moments = BlurX6(ShadowMapTextureSampler, shadow_tex, blurringFactor);
++    float4 moments = tex2D(ShadowMapTextureSampler, shadow_tex);
+ 
+     // Rescale light distance and check if we're in shadow
+-    // NOTE: gLightConstantAttenuation is used as a bias and not as a constant attenuation.
+-    float rescaled_dist_to_light = In.RealDistance.x - gLightConstantAttenuation;
++    // NOTE: light_shadow_bias is used as a bias and not as a constant attenuation.
++    float rescaled_dist_to_light = In.RealDistance - light_shadow_bias;
+     float lit_factor = (rescaled_dist_to_light <= moments.x);
+ 
+     // Variance shadow mapping
+-    // NOTE: gLightLinearAttenuation is used as a bias and not as a linear attenuation.
++    // NOTE: light_vsm_epsilon is used as a bias and not as a linear attenuation.
+     float E_x2 = moments.y;
+     float Ex_2 = moments.x * moments.x;
+-    float variance = min(max(E_x2 - Ex_2, 0.0) + gLightLinearAttenuation, 1.0);
++    float variance = min(max(E_x2 - Ex_2, 0.0) + light_vsm_epsilon, 1.0);
+     float m_d = (moments.x - rescaled_dist_to_light);
+     float p = variance / (variance + m_d * m_d);
+ 
+Index: Sources/GameApp/Main.cpp
+===================================================================
+--- Sources/GameApp/Main.cpp	(revision 140)
++++ Sources/GameApp/Main.cpp	(working copy)
+@@ -213,7 +213,7 @@
+   WindowStyle &= ~WS_VISIBLE;
+     
+   // Adjust Window To True Requested Size 
+-  ::AdjustWindowRectEx(&windowRect, WindowStyle, FALSE, WindowExStyle);
++  AdjustWindowRectEx(&windowRect, WindowStyle, FALSE, WindowExStyle);
+ 
+   // Fix width and height
+   windowWidth = (windowRect.right-windowRect.left);
+@@ -252,34 +252,23 @@
+ 
+   // Clear loading screen and show the game window
+   //
+-  ClearLoading();
+   ShowWindow( GLOBAL_WINDOW_HANDLE, SW_SHOW );
+   SetForegroundWindow( GLOBAL_WINDOW_HANDLE );
+ 
+   // Main loop
+   //
+-  Timer loopTimer;
++  Timer loopTimer, appTimer;
++  appTimer.start();
+   loopTimer.start();
+-
++  
+   bool running = true;
+-  double lastFrameTime = loopTimer.getTime();
+   while ( running )
+   {
+-    double currentTime = loopTimer.getTime();
+-    double frameTime = currentTime - lastFrameTime;
+-    lastFrameTime = currentTime;
+-
+-    // Update frame timer info.
+-    VCNCoreTimer::GetInstance()->Tick( frameTime );
+-
+-    CHRONO_AVERAGE( "FRM" );
+-
+     // Process system and user inputs
+-    if ( ::PeekMessage(&msg, NULL, 0, 0, PM_REMOVE) )
++    if ( ::PeekMessage(&msg, NULL, 0, 0, PM_REMOVE | PM_NOYIELD) )
+     {
+       CHRONO_AVERAGE( "IPT" );
+-      // Have we received a quit message?
+-      //
++
+       if ( msg.message == WM_QUIT )
+       {
+         running = false;
+@@ -289,22 +278,36 @@
+       ::TranslateMessage(&msg);
+       ::DispatchMessage(&msg);
+     }
++    else
++    {
++      CHRONO_AVERAGE( "FRM" );
+ 
+-    // Update
+-    {
+-      CHRONO_AVERAGE( "CPU" );
+-      running &= game->Process( static_cast<float>(frameTime) );
++      float frameTime = static_cast<float>(loopTimer.getTime());
++      loopTimer.restart();
++
++      // Fix frame time in case we were 
++      // debugging or blocking the main thread
++      if ( frameTime > 1.0f )
++        frameTime = 1 / 30.0f;
++
++      // Update frame timer info.
++      VCNCoreTimer::GetInstance()->Tick( frameTime );
++
++      // Update
++      {
++        CHRONO_AVERAGE( "CPU" );
++        running &= game->Process( frameTime );
++      }
++
++      // Render
++      {
++        CHRONO_AVERAGE( "GPU" );
++        running &= game->Render();
++      }
+     }
+-    
+-    // Render
+-    {
+-      CHRONO_AVERAGE( "GPU" );
+-      running &= game->Render();
+-    }
+-    
+   }
+ 
+-  TRACE( VCNTXT("Total run: %.1fs\n"), loopTimer.getTime() );
++  TRACE( VCNTXT("Total run: %.1fs\n"), appTimer.getTime() );
+ 
+   // Release the modules
+   game->Uninitialize();
+Index: Sources/GameApp/SplashScreen.h
+===================================================================
+--- Sources/GameApp/SplashScreen.h	(revision 140)
++++ Sources/GameApp/SplashScreen.h	(working copy)
+@@ -102,7 +102,7 @@
+   }
+ }
+ 
+-inline void ClearLoading()
++inline void HideLoading()
+ {
+   SplashScreen::HideSplashScreen();
+ }
+Index: Sources/GameApp/Sun.cpp
+===================================================================
+--- Sources/GameApp/Sun.cpp	(revision 140)
++++ Sources/GameApp/Sun.cpp	(working copy)
+@@ -17,7 +17,12 @@
+ //////////////////////////////////////////////////////////////////////////
+ Sun::Sun(const VCNNodeID nodeID)
+   : VCNDirectionalLight( nodeID )
+-  , mPosition( Vector3::Zero )
++  , mPosition( -30.52f, 18.51f, -58.77f )
++  , mDistance( 384.0f )
++  , mFrustomWidth( 1049.0f )
++  , mFrustomHeight( 292.0f )
++  , mFrustomNear( 10.0f )
++  , mFrustomFar( 617.0f )
+ {
+   SetTag( VCNTXT("Sun") );
+   
+@@ -69,8 +74,13 @@
+ 
+   TwDefine(ss.str().c_str());
+ 
+-  TwAddVarCB(mBar, "Dir", TW_TYPE_DIR3F, SetFLDir, GetFLDir, this, "label='Dir'");
+-  TwAddVarRW(mBar, "Pos", TW_TYPE_DIR3F, &mPosition, "label='Light pos' help='Change the position.'");
++  TwAddVarCB(mBar, "Dir",     TW_TYPE_DIR3F, SetFLDir, GetFLDir, this, "label='Dir'");
++  TwAddVarRW(mBar, "At",      TW_TYPE_DIR3F, &mPosition,      "label='Sun look at' help='Change the position.'");
++  TwAddVarRW(mBar, "Dist",    TW_TYPE_FLOAT, &mDistance,      "label='Sun distance' ");
++  TwAddVarRW(mBar, "FWidth",  TW_TYPE_FLOAT, &mFrustomWidth,  "label='Frustum width' ");
++  TwAddVarRW(mBar, "FHeight", TW_TYPE_FLOAT, &mFrustomHeight, "label='Frustum height' ");
++  TwAddVarRW(mBar, "FNear",   TW_TYPE_FLOAT, &mFrustomNear,   "label='Frustum near' ");
++  TwAddVarRW(mBar, "FFar",    TW_TYPE_FLOAT, &mFrustomFar,    "label='Frustum far' ");
+ }
+ 
+ //////////////////////////////////////////////////////////////////////////
+@@ -115,9 +125,8 @@
+ const Matrix4 Sun::GetViewMatrix() const
+ {
+   Matrix4 view;
+-  const Vector3 to = VCNXformCore::GetInstance()->GetViewPosition();
+-  const Vector3 from = to - GetDirection() * 240.0f;
+-  view.SetLookAt(from, to, Vector3(0, 1, 0));
++  const Vector3 from = mPosition - GetDirection() * mDistance;
++  view.SetLookAt(from, mPosition, Vector3(0, 1, 0));
+   return view;
+ }
+ 
+@@ -135,6 +144,6 @@
+ const Matrix4 Sun::GetProjectionMatrix() const 
+ {
+   Matrix4 proj;
+-  proj.SetOrthogonality( 650.0f, 256.0f, 10.0f, 240.0f );
++  proj.SetOrthogonality( mFrustomWidth, mFrustomHeight, mFrustomNear, mFrustomFar );
+   return proj;
+ }
+Index: Sources/GameApp/Sun.h
+===================================================================
+--- Sources/GameApp/Sun.h	(revision 140)
++++ Sources/GameApp/Sun.h	(working copy)
+@@ -45,6 +45,11 @@
+ 
+   TwBar*                mBar;
+   Vector3               mPosition;
++  VCNFloat              mDistance;
++  VCNFloat              mFrustomWidth;
++  VCNFloat              mFrustomHeight;
++  VCNFloat              mFrustomNear;
++  VCNFloat              mFrustomFar;
+ };
+ 
+ #endif // SUN_H
+Index: Sources/VCND3D9/VCND3D9.cpp
+===================================================================
+--- Sources/VCND3D9/VCND3D9.cpp	(revision 140)
++++ Sources/VCND3D9/VCND3D9.cpp	(working copy)
+@@ -296,14 +296,7 @@
+   mDevice->SetSamplerState( 0, D3DSAMP_MIPFILTER, D3DTEXF_LINEAR );
+ 
+   // Set a viewport that takes the full area
+-  D3DVIEWPORT9 d3dVP;
+-  d3dVP.X      = 0;
+-  d3dVP.Y      = 0;
+-  d3dVP.Width  = mScreenWidth;
+-  d3dVP.Height = mScreenHeight;
+-  d3dVP.MinZ   = 0.0f;
+-  d3dVP.MaxZ   = 1.0f;
+-  if( FAILED(mDevice->SetViewport(&d3dVP)) )
++  if ( !RestoreFullViewport() )
+     return false;
+ 
+   CreateLineBuffers();
+@@ -1438,3 +1431,25 @@
+ 
+   return D3DTEXF_NONE;
+ }
++
++///////////////////////////////////////////////////////////////////////
++const VCNBool VCND3D9::RestoreFullViewport()
++{
++  return SetViewport( mScreenWidth, mScreenHeight );
++}
++
++///////////////////////////////////////////////////////////////////////
++const VCNBool VCND3D9::SetViewport(const VCNUInt32 width, const VCNUInt32 height)
++{
++  D3DVIEWPORT9 d3dVP;
++  d3dVP.X      = 0;
++  d3dVP.Y      = 0;
++  d3dVP.Width  = width;
++  d3dVP.Height = height;
++  d3dVP.MinZ   = 0.0f;
++  d3dVP.MaxZ   = 1.0f;
++  if( FAILED(mDevice->SetViewport(&d3dVP)) )
++    return false;
++
++  return true;
++}
+Index: Sources/VCND3D9/VCND3D9.h
+===================================================================
+--- Sources/VCND3D9/VCND3D9.h	(revision 140)
++++ Sources/VCND3D9/VCND3D9.h	(working copy)
+@@ -84,6 +84,8 @@
+   virtual void RenderScreenCache(const VCNResID cacheID, const VCNResID textureID) const override;
+   virtual void SetTextureMode(VCNRenderState) override;
+   virtual void SetTextureFiltering(VCNRenderState mag, VCNRenderState min, VCNRenderState max) override;
++  virtual const VCNBool SetViewport(const VCNUInt32 width, const VCNUInt32 height) override;
++  virtual const VCNBool RestoreFullViewport() override;
+ 
+ private:
+ 
+Index: Sources/VCND3D9/VCND3D9EffectCore.cpp
+===================================================================
+--- Sources/VCND3D9/VCND3D9EffectCore.cpp	(revision 140)
++++ Sources/VCND3D9/VCND3D9EffectCore.cpp	(working copy)
+@@ -118,16 +118,15 @@
+   // Get screen dimension for render target size
+   const VCNPoint& res = VCNRenderCore::GetInstance()->GetResolution();
+ 
+-  // Create shadow map texture
+-  const UINT rtWidth = res.x / 2;
+-  const UINT rtHeight = res.y / 2;
+-
+   // Create the shadow map render target
+-  HRESULT hr = device->CreateTexture(512, 512, 1, D3DUSAGE_RENDERTARGET, D3DFMT_G32R32F, D3DPOOL_DEFAULT, &mShadowMapTexture, 0);
++  HRESULT hr = device->CreateTexture(512, 512, 1, D3DUSAGE_RENDERTARGET, D3DFMT_G16R16F, D3DPOOL_DEFAULT, &mShadowMapTexture, 0);
+   VCN_ASSERT_MSG( SUCCEEDED(hr), _T("Unable to create shadow map render target texture") );
+ 
++  hr = device->CreateTexture(512, 512, 1, D3DUSAGE_RENDERTARGET, D3DFMT_G16R16F, D3DPOOL_DEFAULT, &mShadowMapTextureAlternate, 0);
++  VCN_ASSERT_MSG( SUCCEEDED(hr), _T("Unable to create shadow map render target texture") );
++
+   // Extract the associated surface for rendering
+-  hr = D3DXCreateRenderToSurface( device, 512, 512, D3DFMT_G32R32F, TRUE, D3DFMT_D16, &mShadowMapRenderTarget);
++  hr = D3DXCreateRenderToSurface( device, 512, 512, D3DFMT_G16R16F, TRUE, D3DFMT_D16, &mShadowMapRenderTarget);
+   VCN_ASSERT_MSG( SUCCEEDED(hr), _T("Unable to create shadow map render target") );
+   
+   // Create the SSAO depth/normal map render target
+@@ -139,7 +138,7 @@
+   VCN_ASSERT( SUCCEEDED(hr) );
+ 
+   // Create the SSAO map texture render target
+-  hr = device->CreateTexture(rtWidth, rtHeight, 1, D3DUSAGE_RENDERTARGET, D3DFMT_X8R8G8B8, D3DPOOL_DEFAULT, &mSSAOTexture, 0);
++  hr = device->CreateTexture(res.x, res.y, 1, D3DUSAGE_RENDERTARGET, D3DFMT_X8R8G8B8, D3DPOOL_DEFAULT, &mSSAOTexture, 0);
+   VCN_ASSERT_MSG( SUCCEEDED(hr), _T("Unable to create SSAO render target texture") );
+ 
+   // Extract the associated surface for rendering
+@@ -147,7 +146,7 @@
+   VCN_ASSERT( SUCCEEDED(hr) );
+ 
+   // Create the SSAO map texture render target
+-  hr = device->CreateTexture(rtWidth, rtHeight, 1, D3DUSAGE_RENDERTARGET, D3DFMT_X8R8G8B8, D3DPOOL_DEFAULT, &mSSAOAlternateTexture, 0);
++  hr = device->CreateTexture(res.x, res.y, 1, D3DUSAGE_RENDERTARGET, D3DFMT_X8R8G8B8, D3DPOOL_DEFAULT, &mSSAOAlternateTexture, 0);
+   VCN_ASSERT_MSG( SUCCEEDED(hr), _T("Unable to create SSAO render target texture") );
+ 
+   // Extract the associated surface for rendering
+@@ -180,6 +179,7 @@
+   SAFE_RELEASE_CHECK( mScreenTexture );
+   
+   SAFE_RELEASE( mShadowMapTexture );
++  SAFE_RELEASE( mShadowMapTextureAlternate );
+   SAFE_RELEASE( mShadowMapRenderTarget );
+ 
+   SAFE_RELEASE( mSSAORandomTexture );
+@@ -212,9 +212,13 @@
+   CComPtr<IDirect3DDevice9> device;
+   mShadowMapRenderTarget->GetDevice( &device );
+ 
++  D3DXRTS_DESC rtDesc;
++  mShadowMapRenderTarget->GetDesc( &rtDesc );
++  VCNRenderCore::GetInstance()->SetViewport(rtDesc.Width, rtDesc.Height);
++
+   // Clear the shadow map for what's coming
+   device->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, 0, 1.0f, 0);
+-  device->SetRenderState(D3DRS_COLORWRITEENABLE, D3DCOLORWRITEENABLE_RED | D3DCOLORWRITEENABLE_GREEN);
++  //device->SetRenderState(D3DRS_COLORWRITEENABLE, D3DCOLORWRITEENABLE_RED | D3DCOLORWRITEENABLE_GREEN);
+   device->SetRenderState(D3DRS_ALPHABLENDENABLE, FALSE);
+ 
+   // Backup current view settings
+@@ -239,11 +243,14 @@
+   VCNXformCore::GetInstance()->SetViewLookAt( oldView );
+ 
+   // Enable color writes, for the next step uses it
+-  device->SetRenderState(D3DRS_COLORWRITEENABLE, D3DCOLORWRITEENABLE_ALPHA | D3DCOLORWRITEENABLE_RED | D3DCOLORWRITEENABLE_GREEN | D3DCOLORWRITEENABLE_BLUE);
++  //device->SetRenderState(D3DRS_COLORWRITEENABLE, D3DCOLORWRITEENABLE_ALPHA | D3DCOLORWRITEENABLE_RED | D3DCOLORWRITEENABLE_GREEN | D3DCOLORWRITEENABLE_BLUE);
+ 
+   hr = mShadowMapRenderTarget->EndScene(D3DX_FILTER_NONE);
+   VCN_ASSERT( SUCCEEDED(hr) );
+ 
++  //GenerateVerticalBlurMap(mShadowMapTexture, mShadowMapTextureAlternate);
++  //GenerateHorizontalBlurMap(mShadowMapTextureAlternate, mShadowMapTexture);
++
+   // Set shadow map texture for effects that needs it
+   // TODO: Effects that need the shadow map should pull it from the effect core shadow maps pool
+   mEffectMap[eidTerrain]->Cast<VCND3D9_TerrainFX>()->SetShadowMapTexture( mShadowMapTexture );
+@@ -251,6 +258,13 @@
+ 
+   // We are done generating shadow map
+   mGeneratingShadowMap = false;
++
++  // Set back buffer back
++  CComPtr<IDirect3DSurface9> backBufferSurface;
++  device->GetBackBuffer(0, 0, D3DBACKBUFFER_TYPE_MONO, &backBufferSurface);
++  device->SetRenderTarget(0, backBufferSurface);
++
++  VCNRenderCore::GetInstance()->RestoreFullViewport();
+ }
+ 
+ //////////////////////////////////////////////////////////////////////////
+@@ -348,7 +362,7 @@
+   VCN_ASSERT( SUCCEEDED(hr) );
+ 
+   // select the vertex buffer to display
+-  hr = device->SetStreamSource(0, mHalfScreenVertexBuffer, 0, sizeof(SCREENVERTEX));
++  hr = device->SetStreamSource(0, mScreenVertexBuffer, 0, sizeof(SCREENVERTEX));
+   VCN_ASSERT( SUCCEEDED(hr) );
+ 
+   // Draw the SSAO result
+@@ -404,7 +418,7 @@
+   VCN_ASSERT( SUCCEEDED(hr) );
+ 
+   // select the vertex buffer to display
+-  hr = device->SetStreamSource(0, mHalfScreenVertexBuffer, 0, sizeof(SCREENVERTEX));
++  hr = device->SetStreamSource(0, mScreenVertexBuffer, 0, sizeof(SCREENVERTEX));
+   VCN_ASSERT( SUCCEEDED(hr) );
+ 
+   // Draw the SSAO result
+@@ -458,7 +472,7 @@
+   VCN_ASSERT( SUCCEEDED(hr) );
+ 
+   // select the vertex buffer to display
+-  hr = device->SetStreamSource(0, mHalfScreenVertexBuffer, 0, sizeof(SCREENVERTEX));
++  hr = device->SetStreamSource(0, mScreenVertexBuffer, 0, sizeof(SCREENVERTEX));
+   VCN_ASSERT( SUCCEEDED(hr) );
+ 
+   // Draw the SSAO result
+@@ -481,6 +495,93 @@
+   VCN_ASSERT( SUCCEEDED(hr) );
+ }
+ 
++void VCND3D9EffectCore::GenerateVerticalBlurMap(LPDIRECT3DTEXTURE9 textureIn, LPDIRECT3DTEXTURE9 textureOut)
++{
++  GPU_PROFILE_BLOCK_NAME( VCNTXT("Vertical Blur") );
++
++  HRESULT hr = S_FALSE;
++
++  LPDIRECT3DDEVICE9 device = VCNRenderCore::GetInstance()->Cast<VCND3D9>()->GetD3DDevice();
++
++  CComPtr<IDirect3DSurface9> surface;
++  textureOut->GetSurfaceLevel( 0, &surface );
++
++  // Set shadow map surface and start rendering of scene using the shadow map effect
++  hr = device->SetRenderTarget(0, surface);
++  VCN_ASSERT( SUCCEEDED(hr) );
++
++  device->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, 0, 1.0f, 0);
++  device->BeginScene();
++
++  // Set SSAO shader
++  VCNDXShaderCore* shaderCore = static_cast<VCNDXShaderCore*>( VCNDXShaderCore::GetInstance() );
++  VCNDXSSSAO* ssaoShader = static_cast<VCNDXSSSAO*>( shaderCore->GetShader( sidSSAO ) );
++
++  // Select the SSAO shader
++  shaderCore->SelectShader( sidSSAO );       
++
++  hr = device->SetFVF(D3DFVF_SCREEN);
++  VCN_ASSERT( SUCCEEDED(hr) );
++
++  // select the vertex buffer to display
++  hr = device->SetStreamSource(0, mHalfScreenVertexBuffer, 0, sizeof(SCREENVERTEX));
++  VCN_ASSERT( SUCCEEDED(hr) );
++
++  // Draw the SSAO result
++  hr = ssaoShader->GetEffect()->SetTechnique( "SSAOVerticalBlurTechnique" );
++  hr = ssaoShader->GetEffect()->SetTexture( "gSSAOMap", textureIn );
++  hr = ssaoShader->GetEffect()->SetFloat( "gBlurOffset", mBlurOffset );
++
++  ssaoShader->RenderPrimitive( 2, D3DPT_TRIANGLESTRIP );
++
++  hr = device->EndScene();
++  VCN_ASSERT( SUCCEEDED(hr) );
++}
++
++void VCND3D9EffectCore::GenerateHorizontalBlurMap(LPDIRECT3DTEXTURE9 textureIn, LPDIRECT3DTEXTURE9 textureOut)
++{
++  GPU_PROFILE_BLOCK_NAME( VCNTXT("Horizontale Blur") );
++
++  HRESULT hr = S_FALSE;
++
++  VCND3D9* renderer = static_cast<VCND3D9*>(VCNRenderCore::GetInstance());
++  LPDIRECT3DDEVICE9 device = renderer->GetD3DDevice();
++
++  CComPtr<IDirect3DSurface9> surface;
++  textureOut->GetSurfaceLevel( 0, &surface );
++
++  // Set shadow map surface and start rendering of scene using the shadow map effect
++  hr = device->SetRenderTarget(0, surface);
++  VCN_ASSERT( SUCCEEDED(hr) );
++
++  device->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, 0, 1.0f, 0);
++  device->BeginScene();
++
++  // Set SSAO shader
++  VCNDXShaderCore* shaderCore = static_cast<VCNDXShaderCore*>( VCNDXShaderCore::GetInstance() );
++  VCNDXSSSAO* ssaoShader = static_cast<VCNDXSSSAO*>( shaderCore->GetShader( sidSSAO ) );
++
++  // Select the SSAO shader
++  shaderCore->SelectShader( sidSSAO );       
++
++  hr = device->SetFVF(D3DFVF_SCREEN);
++  VCN_ASSERT( SUCCEEDED(hr) );
++
++  // select the vertex buffer to display
++  hr = device->SetStreamSource(0, mHalfScreenVertexBuffer, 0, sizeof(SCREENVERTEX));
++  VCN_ASSERT( SUCCEEDED(hr) );
++
++  // Draw the SSAO result
++  hr = ssaoShader->GetEffect()->SetTechnique( "SSAOHorizontaleBlurTechnique" );
++  hr = ssaoShader->GetEffect()->SetTexture( "gSSAOMap", textureIn );
++  hr = ssaoShader->GetEffect()->SetFloat( "gBlurOffset", mBlurOffset );
++
++  ssaoShader->RenderPrimitive( 2, D3DPT_TRIANGLESTRIP );
++
++  hr = device->EndScene();
++  VCN_ASSERT( SUCCEEDED(hr) );
++}
++
+ void VCND3D9EffectCore::GenerateSceneMap()
+ {
+   GPU_PROFILE_BLOCK_NAME( VCNTXT("Scene Map") );
+@@ -516,8 +617,8 @@
+ 
+   // create three vertices using the CUSTOMVERTEX struct built earlier
+   const VCNPoint& screenRes = VCNRenderCore::GetInstance()->GetResolution();
+-  const FLOAT W = (FLOAT)screenRes.x / 2.0f;
+-  const FLOAT H = (FLOAT)screenRes.y / 2.0f;
++  const FLOAT W = 512;//(FLOAT)screenRes.x / 2.0f;
++  const FLOAT H = 512;//(FLOAT)screenRes.y / 2.0f;
+   SCREENVERTEX vertices[] =
+   {
+     { 0.0f, 0.0f, 0, 1.0f, 0, 0},
+Index: Sources/VCND3D9/VCND3D9EffectCore.h
+===================================================================
+--- Sources/VCND3D9/VCND3D9EffectCore.h	(revision 140)
++++ Sources/VCND3D9/VCND3D9EffectCore.h	(working copy)
+@@ -61,6 +61,9 @@
+   // Blur the SSAO map texture
+   void GenerateSSAOHorizontaleBlur();
+ 
++  void GenerateVerticalBlurMap(LPDIRECT3DTEXTURE9 textureIn, LPDIRECT3DTEXTURE9 textureOut);
++  void GenerateHorizontalBlurMap(LPDIRECT3DTEXTURE9 textureIn, LPDIRECT3DTEXTURE9 textureOut);
++
+ // Data members
+ 
+   // Texture and surface used to render the scene
+@@ -70,6 +73,7 @@
+ 
+   // Shadow map stuff
+   LPDIRECT3DTEXTURE9      mShadowMapTexture;
++  LPDIRECT3DTEXTURE9      mShadowMapTextureAlternate;
+   LPD3DXRENDERTOSURFACE   mShadowMapRenderTarget;
+ 
+   // SSAO map stuff (Normal and depth texture/surface)
+Index: Sources/VCNPhysX/VCNPhysxCoreImpl.cpp
+===================================================================
+--- Sources/VCNPhysX/VCNPhysxCoreImpl.cpp	(revision 140)
++++ Sources/VCNPhysX/VCNPhysxCoreImpl.cpp	(working copy)
+@@ -18,6 +18,7 @@
+ #include "VCNResources/VCNResourceCore.h"
+ #include "VCNUtils/VCNAssert.h"
+ #include "VCNUtils/VCNConstants.h"
++#include "VCNUtils/VCNChrono.h"
+ 
+ ///////////////////////////////////////////////////////////////////////
+ VCNPhysxCoreImpl::VCNPhysxCoreImpl()
+@@ -131,6 +132,8 @@
+   if(mAccumulator < mStepSize)
+     return true;
+ 
++  CHRONO_AVERAGE( "PHX" );
++
+   mAccumulator -= mStepSize;
+ 
+   // Run the physic simulation
+Index: Sources/VCNRenderer/VCNRenderCore.h
+===================================================================
+--- Sources/VCNRenderer/VCNRenderCore.h	(revision 140)
++++ Sources/VCNRenderer/VCNRenderCore.h	(working copy)
+@@ -79,6 +79,12 @@
+   /// Set the current declaration
+   virtual void SetDeclaration(const VCNDeclaration* Declaration) = 0;
+ 
++  /// Sets the rendering viewport
++  virtual const VCNBool SetViewport(const VCNUInt32 width, const VCNUInt32 height) = 0;
++
++  /// Sets a viewport that cover the entire screen
++  virtual const VCNBool RestoreFullViewport() = 0;
++
+ // Rendering support
+ 
+   /// Clear all the active graphic buffers

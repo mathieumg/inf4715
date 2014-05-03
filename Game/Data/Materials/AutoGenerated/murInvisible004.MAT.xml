@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Material Name="murInvisible004Material" Version="1"><AmbientColor r="4.705883E-02" g="1" b="0" a="9.999999E-02"/><DiffuseColor r="4.705883E-02" g="1" b="0" a="9.999999E-02"/><SpecularColor r="0" g="0" b="0" a="9.999999E-02" power="30"/><UseLighting value="1"/><Effect name="LitTextured"><TextureParam name="DiffuseTexture" value="Textures/NoTexture.jpg"/></Effect></Material>

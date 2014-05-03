@@ -1,0 +1,13 @@
+name             flame
+texture         flame.tga
+acceleration    0.1 2.6 0.1
+start_color     0.3 0.04 0.03 1.0
+end_color       1.0 0.8 0.16 0.0
+blend_type      additive
+emitter_life    -1
+particle_life   3.0
+rate            2
+velocity        1.0
+size            3.0
+variance        2.0
+rotation        0.3

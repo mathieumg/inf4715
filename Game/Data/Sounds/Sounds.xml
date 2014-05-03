@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundsConfig>
+  <Sounds>
+	<Sound ID="BackgroundMain"
+           Filename="Main.mp3"
+           Type="Ambient"
+           Volume="50"
+           Loop="1"
+           Dimension="2D" />
+           
+    <Sound ID="Collision" 
+           Filename="Collision.wav" 
+           Type="Triggered"
+           Volume="100"
+           Loop="0" 
+           Dimension="3D" 
+           PositionX="-30" PositionY="24" PositionZ="162"
+           MinDistance="25" MaxDistance="300" />
+  </Sounds>
+</SoundsConfig>

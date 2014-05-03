@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Template Files">
+      <UniqueIdentifier>{f4c20f37-762d-4171-93ca-bad1368b2566}</UniqueIdentifier>
+      <Extensions>txt</Extensions>
+    </Filter>
+    <Filter Include="HTML Files">
+      <UniqueIdentifier>{ac2248f7-9149-49c0-badb-72de52200829}</UniqueIdentifier>
+      <Extensions>htm</Extensions>
+    </Filter>
+    <Filter Include="Image Files">
+      <UniqueIdentifier>{4e4cffed-31d7-47d7-a722-89dc5605a50c}</UniqueIdentifier>
+      <Extensions>bmp</Extensions>
+    </Filter>
+    <Filter Include="Script Files">
+      <UniqueIdentifier>{4042826f-9faa-4cef-891a-1f740d72b1cb}</UniqueIdentifier>
+      <Extensions>js</Extensions>
+    </Filter>
+    <Filter Include="Miscellaneous Files">
+      <UniqueIdentifier>{89306301-3c58-4b42-866f-bc57874c5950}</UniqueIdentifier>
+      <Extensions>vsz;vsdir;ico;vcproj;csproj;css;inf</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Templates\1033\3dsmaxsdk_preinclude.h">
+      <Filter>Template Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Templates\1033\resource.h">
+      <Filter>Template Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Templates\1033\root.h">
+      <Filter>Template Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Templates\1033\veroverrides.h">
+      <Filter>Template Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Templates\1033\ATMOSPHERIC_TYPE_Atmospheric.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\CAMERA_TYPE_CameraObject.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\CAMERA_TYPE_GenCamera.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\COLPICK_TYPE_ColPick.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\CONTROLLER_TYPE_Control.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\CONTROLLER_TYPE_StdControl.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\dllentry.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\FILE_EXPORT_3DXI_TYPE_SceneExport.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\FILE_EXPORT_TYPE_SceneExport.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\FILE_IMPORT_TYPE_SceneImport.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\FILE_LIST_TYPE_None.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\FILTER_KERNEL_TYPE_FilterKernel.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\GRID_OBJECT_TYPE_None.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\GUP_TYPE_GUP.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\HELPER_OBJECT_TYPE_ConstObject.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\HELPER_OBJECT_TYPE_HelperObject.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\IK_TYPE_IKSolver.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\IMAGE_FILTER_COMPOSITOR_TYPE_ImageFilter.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\IMAGE_LOADER_SAVER_TYPE_BitmapIO.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\IMAGE_VIEWER_TYPE_ViewFile.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\LIGHT_TYPE_GenLight.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\LIGHT_TYPE_LightObject.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\MANIP_TYPE_Manipulator.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\MANIP_TYPE_SimpleManipulator.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\MATERIAL_TYPE_Mtl.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\MODIFIER_TYPE_Modifier.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\MODIFIER_TYPE_SimpleMod2.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\NURBS_OBJECT_TYPE_None.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\PARTICLE_TYPE_ParticleObject.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\PARTICLE_TYPE_SimpleParticle.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\PATCH_OBJECT_TYPE_PatchObject.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\PROCEDURAL_OBJECT_TYPE_GeomObject.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\PROCEDURAL_OBJECT_TYPE_SimpleObject2.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\RENDER_EFFECT_TYPE_Effect.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\RENDERER_TYPE_Renderer.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\SAMPLER_TYPE_Sampler.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\SHADER_TYPE_Shader.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\SHADOW_TYPE_ShadowType.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\SKIN_GIZMO_TYPE_GizmoClass.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\SOUND_TYPE_SoundObj.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\SPACE_WARP_TYPE_SimpleWSMMod.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\TEXTURE_2D_TYPE_Texmap.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\TEXTURE_3D_TYPE_Tex3D.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\TEXTURE_3D_TYPE_Texmap.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\TRACK_VIEW_UTILITY_TYPE_TrackViewUtility.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\1033\UTILITY_TYPE_UtilityObj.cpp">
+      <Filter>Template Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Templates\1033\root.rc">
+      <Filter>Template Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HTML\1033\default.htm">
+      <Filter>HTML Files</Filter>
+    </None>
+    <None Include="HTML\1033\Page_2.htm">
+      <Filter>HTML Files</Filter>
+    </None>
+    <None Include="HTML\1033\Page_3.htm">
+      <Filter>HTML Files</Filter>
+    </None>
+    <None Include="HTML\1033\plugarray.js">
+      <Filter>HTML Files</Filter>
+    </None>
+    <None Include="Scripts\1033\default.js">
+      <Filter>Script Files</Filter>
+    </None>
+    <None Include="3dsmaxPluginWizard.ico">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="3dsmaxPluginWizard.vsdir">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="3dsmaxPluginWizard.vsz">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="1033\styles.css">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="Templates\1033\Templates.inf">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="Images\3dsmaxPluginWizard.gif" />
+    <None Include="Images\3dsmaxPluginWizard_BG.gif" />
+  </ItemGroup>
+</Project>

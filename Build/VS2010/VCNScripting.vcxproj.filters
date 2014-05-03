@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="PCH files">
+      <UniqueIdentifier>{08447223-319c-4f61-b8d0-4ac029a766bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8c26f591-fd1c-4ee3-8465-c59c613ab4d2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources\VCNScripting\Precompiled.h">
+      <Filter>PCH files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\VCNScripting\ScriptingCore.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources\VCNScripting\Precompiled.cpp">
+      <Filter>PCH files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\VCNScripting\ScriptingCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

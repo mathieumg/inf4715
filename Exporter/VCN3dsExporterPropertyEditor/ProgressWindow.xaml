@@ -1,0 +1,17 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:VCN3dsExporterPropertyEditor" x:Class="VCN3dsExporterPropertyEditor.ProgressWindow"
+        Title="ProgressWindow" Height="54" Width="302" ShowInTaskbar="False" Topmost="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+	<Grid RenderTransformOrigin="0.487,0.683" Height="50" VerticalAlignment="Top" Name="myGrid">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="51*"/>
+			<ColumnDefinition Width="160*"/>
+			<ColumnDefinition Width="83*"/>
+		</Grid.ColumnDefinitions>
+		<Label Name="myLabel"  Content="{Binding ProgressName}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="302"/>
+
+		<ProgressBar Name="myProgressbar"  Margin="10,25.96,12,0" Value="{Binding Progress}"  Grid.ColumnSpan="3" Height="15" VerticalAlignment="Top"/>
+
+	</Grid>
+</Window>

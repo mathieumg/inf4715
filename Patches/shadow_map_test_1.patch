@@ -1,0 +1,231 @@
+Index: Game/Data/Shaders/VCNShadowMap.fx
+===================================================================
+--- Game/Data/Shaders/VCNShadowMap.fx	(revision 132)
++++ Game/Data/Shaders/VCNShadowMap.fx	(working copy)
+@@ -56,8 +56,15 @@
+   PS_OUT Output = (PS_OUT)0;
+     
+   Output.Color.r = PSIn.Position2D.z /*/ gMaxDepth*/;
+-  Output.Color.g = Output.Color.r * Output.Color.r;
+ 
++  // Compute partial derivatives of depth.  
++  float dx = ddx(PSIn.Position2D.z);  
++  float dy = ddy(PSIn.Position2D.z);  
++  // Compute second moment over the pixel extents.  
++  Output.Color.g = PSIn.Position2D.z*PSIn.Position2D.z + 0.25*(dx*dx + dy*dy);  
++
++  //Output.Color.g = Output.Color.r * Output.Color.r;
++
+   return Output;
+ }
+ 
+@@ -66,7 +73,7 @@
+   pass P0
+   {
+     VertexShader = compile vs_2_0 ShadowMapVertexShader();
+-    PixelShader = compile ps_2_0 ShadowMapPixelShader();
++    PixelShader = compile ps_3_0 ShadowMapPixelShader();
+ 
+     ZEnable = true;
+     ZWriteEnable = true;
+Index: Game/Data/Shaders/VCNTerrain.fx
+===================================================================
+--- Game/Data/Shaders/VCNTerrain.fx	(revision 132)
++++ Game/Data/Shaders/VCNTerrain.fx	(working copy)
+@@ -80,7 +80,7 @@
+   Texture = <gShadowMapTexture>;
+   AddressU  = CLAMP;
+   AddressV  = CLAMP;
+-  MipFilter = LINEAR;
++  MipFilter = NONE;
+   MinFilter = LINEAR;
+   MagFilter = LINEAR;
+ };
+@@ -106,7 +106,7 @@
+   float2 DiffuseUV            : TEXCOORD3; // Texture UV
+   float3 ViewDir              : TEXCOORD4; // Camera view direction
+   float4 ShadowMapSamplingPos : TEXCOORD5;
+-  float4 RealDistance         : TEXCOORD6;
++  float RealDistance          : TEXCOORD6;
+ };
+ 
+ //
+@@ -140,6 +140,16 @@
+   return Output;    
+ }
+ 
++float linstep(float min, float max, float v)  
++{  
++  return clamp((v - min) / (max - min), 0.0f, 1.0f);  
++}  
++float ReduceLightBleeding(float p_max, float Amount)  
++{  
++  // Remove the [0, Amount] tail and linearly rescale (Amount, 1].  
++   return linstep(Amount, 1.0f, p_max);  
++}
++
+ //
+ // Pixel shader
+ //
+@@ -199,6 +209,11 @@
+   // Apply shadow effect
+   if( gLightTypeDirectional )
+   {
++    float light_shadow_bias = gLightConstantAttenuation;
++    float light_vsm_epsilon = gLightLinearAttenuation;
++    float blurringFactor = gLightQuadAttenuation;
++    float g_MinVariance = gLightLinearAttenuation;
++
+     // Transform the surface into light space and project
+     // NB: Could be done in the vertex shader, but doing it here keeps the "light
+     // shader" abstraction and doesn't limit # of shadowed lights.
+@@ -208,23 +223,42 @@
+     // Rescale viewport to be [0,1] (texture coordinate space)
+     float2 shadow_tex = surf_tex.xy * float2(0.5, -0.5) + 0.5;
+ 
+-    float4 moments = BlurX6(ShadowMapTextureSampler, shadow_tex, gLightQuadAttenuation);
++    float4 moments = tex2D(ShadowMapTextureSampler, shadow_tex);//, blurringFactor);
+ 
++    float t = (In.RealDistance.x) - light_shadow_bias;
++
++    // One-tailed inequality valid if t > Moments.x  
++    float p = (t <= moments.x);  
++    // Compute variance.  
++    float Variance = moments.y - (moments.x*moments.x);  
++    Variance = max(Variance, g_MinVariance);  
++    // Compute probabilistic upper bound.  
++    float d = t - moments.x;  
++    float p_max = ReduceLightBleeding(Variance / (Variance + d*d), light_shadow_bias);  
++
++    litColor *= max(p, p_max);
++
++#if 0
++
+     // Rescale light distance and check if we're in shadow
+     // NOTE: gLightConstantAttenuation is used as a bias and not as a constant attenuation.
+-    float rescaled_dist_to_light = In.RealDistance.x - gLightConstantAttenuation;
++    float rescaled_dist_to_light = (In.RealDistance.x) - light_shadow_bias;
+     float lit_factor = (rescaled_dist_to_light <= moments.x);
+ 
+     // Variance shadow mapping
+     // NOTE: gLightLinearAttenuation is used as a bias and not as a linear attenuation.
+     float E_x2 = moments.y;
+     float Ex_2 = moments.x * moments.x;
+-    float variance = min(max(E_x2 - Ex_2, 0.0) + gLightLinearAttenuation, 1.0);
++    float variance = min(max(E_x2 - Ex_2, 0.0) + light_vsm_epsilon, 1.0);
+     float m_d = (moments.x - rescaled_dist_to_light);
+     float p = variance / (variance + m_d * m_d);
+ 
++    float n_dot_l = dot(normal, -gLightDirection);
++    float self_shadow = clamp(n_dot_l * 2.0, 0.0, 1.0);
++
+     // Adjust the light color based on the shadow attenuation
+-    litColor *= max(lit_factor, max(p, 0.35f));
++    litColor *= max(lit_factor, p) * self_shadow;
++#endif
+   }
+ 
+   return float4(litColor.rgb, 1.0f);
+Index: Sources/GameApp/Sun.cpp
+===================================================================
+--- Sources/GameApp/Sun.cpp	(revision 132)
++++ Sources/GameApp/Sun.cpp	(working copy)
+@@ -17,7 +17,12 @@
+ //////////////////////////////////////////////////////////////////////////
+ Sun::Sun(const VCNNodeID nodeID)
+   : VCNDirectionalLight( nodeID )
+-  , mPosition( Vector3::Null )
++  , mPosition( -30.52f, 18.51f, -58.77f )
++  , mDistance( 384.0f )
++  , mFrustomWidth( 1049.0f )
++  , mFrustomHeight( 292.0f )
++  , mFrustomNear( 10.0f )
++  , mFrustomFar( 617.0f )
+ {
+   SetTag( VCNTXT("Sun") );
+   
+@@ -69,8 +74,13 @@
+ 
+   TwDefine(ss.str().c_str());
+ 
+-  TwAddVarCB(mBar, "Dir", TW_TYPE_DIR3F, SetFLDir, GetFLDir, this, "label='Dir'");
+-  TwAddVarRW(mBar, "Pos", TW_TYPE_DIR3F, &mPosition, "label='Light pos' help='Change the position.'");
++  TwAddVarCB(mBar, "Dir",     TW_TYPE_DIR3F, SetFLDir, GetFLDir, this, "label='Dir'");
++  TwAddVarRW(mBar, "At",      TW_TYPE_DIR3F, &mPosition,      "label='Sun look at' help='Change the position.'");
++  TwAddVarRW(mBar, "Dist",    TW_TYPE_FLOAT, &mDistance,      "label='Sun distance' ");
++  TwAddVarRW(mBar, "FWidth",  TW_TYPE_FLOAT, &mFrustomWidth,  "label='Frustum width' ");
++  TwAddVarRW(mBar, "FHeight", TW_TYPE_FLOAT, &mFrustomHeight, "label='Frustum height' ");
++  TwAddVarRW(mBar, "FNear",   TW_TYPE_FLOAT, &mFrustomNear,   "label='Frustum near' ");
++  TwAddVarRW(mBar, "FFar",    TW_TYPE_FLOAT, &mFrustomFar,    "label='Frustum far' ");
+ }
+ 
+ //////////////////////////////////////////////////////////////////////////
+@@ -115,9 +125,8 @@
+ const Matrix4 Sun::GetViewMatrix() const
+ {
+   Matrix4 view;
+-  const Vector3 to = VCNXformCore::GetInstance()->GetViewPosition();
+-  const Vector3 from = to - GetDirection() * 240.0f;
+-  view.SetLookAt(from, to, Vector3(0, 1, 0));
++  const Vector3 from = mPosition - GetDirection() * mDistance;
++  view.SetLookAt(from, mPosition, Vector3(0, 1, 0));
+   return view;
+ }
+ 
+@@ -135,6 +144,6 @@
+ const Matrix4 Sun::GetProjectionMatrix() const 
+ {
+   Matrix4 proj;
+-  proj.SetOrthogonality( 650.0f, 256.0f, 10.0f, 240.0f );
++  proj.SetOrthogonality( mFrustomWidth, mFrustomHeight, mFrustomNear, mFrustomFar );
+   return proj;
+ }
+Index: Sources/GameApp/Sun.h
+===================================================================
+--- Sources/GameApp/Sun.h	(revision 132)
++++ Sources/GameApp/Sun.h	(working copy)
+@@ -45,6 +45,11 @@
+ 
+   TwBar*                mBar;
+   Vector3               mPosition;
++  VCNFloat              mDistance;
++  VCNFloat              mFrustomWidth;
++  VCNFloat              mFrustomHeight;
++  VCNFloat              mFrustomNear;
++  VCNFloat              mFrustomFar;
+ };
+ 
+ #endif // SUN_H
+Index: Sources/VCND3D9/Effects/VCND3D9_LightingFX.cpp
+===================================================================
+--- Sources/VCND3D9/Effects/VCND3D9_LightingFX.cpp	(revision 132)
++++ Sources/VCND3D9/Effects/VCND3D9_LightingFX.cpp	(working copy)
+@@ -22,8 +22,8 @@
+ 
+ static TwBar* sBar = 0;
+ float VCND3D9_LightingFX::mArg1(0.0005350f);
+-float VCND3D9_LightingFX::mArg2(0.0000085f);
+-float VCND3D9_LightingFX::mArg3(0.0021770f);
++float VCND3D9_LightingFX::mArg2(0.00085f);
++float VCND3D9_LightingFX::mArg3(0.0025770f);
+ 
+ //-------------------------------------------------------------
+ /// Constructor
+Index: Sources/VCND3D9/VCND3D9EffectCore.cpp
+===================================================================
+--- Sources/VCND3D9/VCND3D9EffectCore.cpp	(revision 132)
++++ Sources/VCND3D9/VCND3D9EffectCore.cpp	(working copy)
+@@ -123,11 +123,11 @@
+   const UINT rtHeight = res.y / 2;
+ 
+   // Create the shadow map render target
+-  HRESULT hr = device->CreateTexture(512, 512, 1, D3DUSAGE_RENDERTARGET, D3DFMT_G32R32F, D3DPOOL_DEFAULT, &mShadowMapTexture, 0);
++  HRESULT hr = device->CreateTexture(1024, 1024, 1, D3DUSAGE_RENDERTARGET, D3DFMT_G16R16F, D3DPOOL_DEFAULT, &mShadowMapTexture, 0);
+   VCN_ASSERT_MSG( SUCCEEDED(hr), _T("Unable to create shadow map render target texture") );
+ 
+   // Extract the associated surface for rendering
+-  hr = D3DXCreateRenderToSurface( device, 512, 512, D3DFMT_G32R32F, TRUE, D3DFMT_D16, &mShadowMapRenderTarget);
++  hr = D3DXCreateRenderToSurface( device, 1024, 1024, D3DFMT_G16R16F, TRUE, D3DFMT_D16, &mShadowMapRenderTarget);
+   VCN_ASSERT_MSG( SUCCEEDED(hr), _T("Unable to create shadow map render target") );
+   
+   // Create the SSAO depth/normal map render target

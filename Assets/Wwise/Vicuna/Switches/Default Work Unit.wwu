@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{037A90DF-08D1-42B9-94EA-23749D1925DC}" SchemaVersion="62">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{037A90DF-08D1-42B9-94EA-23749D1925DC}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Breaker" ID="{2A2E77F2-597C-4EB1-8E8C-F5853752FB8C}">
+					<ChildrenList>
+						<Switch Name="Activated" ID="{AE697A9F-5E23-4246-8601-B71B32D32B74}" />
+						<Switch Name="Power_on" ID="{7298D7A2-48B6-4BCC-B01A-0817F717F9E3}" />
+						<Switch Name="Power_off" ID="{F943DF26-14EC-43B1-864C-F05D1EB05235}" />
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Fibonacci" ID="{9DE722C7-7CE6-413B-8A53-16F6B1AEE384}">
+					<ChildrenList>
+						<Switch Name="Right" ID="{45773F35-93CF-4F3E-8602-DEE825C42E8E}" />
+						<Switch Name="Wrong" ID="{27EF217A-0A38-4449-9122-EC571BCFF65A}" />
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

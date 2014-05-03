@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9D3803AD-6089-479F-97F9-F39159CBDC77}" SchemaVersion="62">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{9D3803AD-6089-479F-97F9-F39159CBDC77}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Vicuna" ID="{E518DD65-8235-4D50-B6D7-E60D5A754B38}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Footsteps_concrete_play" ID="{55374FFB-F5A5-45DB-AB4C-3EE22C91B9AA}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="0" Y="0" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Footsteps_concrete_stop" ID="{64FDAF6C-0029-4DA8-9CB5-DA9F4B780695}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="0" Y="1" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Jump_play" ID="{8455DC5F-E8EF-432D-B3BD-027911245F4C}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="0" Y="2" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Grab_objects_play" ID="{445C019E-2D1B-4B61-B3DB-CABBF735CF4D}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="0" Y="3" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Paper_clue_play" ID="{2E7773A9-E148-45C1-8A4F-E783BAD2423C}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="0" Y="4" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Flush_play" ID="{756223BB-48DB-4B85-B344-C6152E68DEDD}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="0" Y="5" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Bed_grit_play" ID="{1C68F301-CD02-4A56-B4F5-3D96F362E494}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="0" Y="6" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Breaker_play" ID="{61994DF6-7E3E-4231-9343-0812F2722C41}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="1" Y="0" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Breaker_stop" ID="{10188162-A760-4A1B-ADE7-2EA78450ED2E}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="1" Y="1" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Wood_door_play" ID="{B2A64D8E-6F81-4CF8-A6CA-9F036854A396}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="1" Y="2" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Metal_door_play" ID="{7E7C031B-4457-4520-B484-0E37B9C35ACA}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="1" Y="3" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Lateral_door_play" ID="{7FFCE0BB-DE8E-4FD4-9C86-59AC38533DB9}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="1" Y="4" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Keyring_play" ID="{B051313E-22A1-4991-80C6-C83D6D28CF16}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="1" Y="5" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Hydraulic_bridge_play" ID="{756E1282-953B-48C7-95F2-1E9B7F74D2D5}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="1" Y="6" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Push_block_play" ID="{528A22AF-B56D-4ED2-853C-5E832A99D4BC}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="2" Y="0" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Block_collision_play" ID="{DA7902EF-726A-4187-A19F-2BE0EB4940FD}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="2" Y="1" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Switch1_play" ID="{CE926B3B-9802-4E9B-823F-034CBD9C9B40}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="2" Y="2" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Switch2_play" ID="{5411020C-5548-4A7F-B9AD-D6D9D7B07337}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="2" Y="3" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Fibonacci_play" ID="{BB0B01B1-7390-4C99-904E-0E8E63DA9809}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="2" Y="4" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Robots_mouvements_play" ID="{132F8182-143F-4F39-AA00-E128CD122CC4}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="2" Y="5" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Robots_mouvements_stop" ID="{86CE4F6E-BDCF-4997-A13E-DCF9A30938AD}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="2" Y="6" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambiance_music_play" ID="{CD1365FA-B43F-4BA9-8416-81F496059AD5}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="3" Y="0" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambiance_music_stop" ID="{AFE855F4-64F6-4442-AE1C-F9E667D41EC1}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="3" Y="1" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Randombots_play" ID="{F41576CB-E403-40C9-8AD3-C0CDC9016A23}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="3" Y="2" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Randombots_stop" ID="{D677228E-8A4F-4279-9670-A61891C29284}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="3" Y="3" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Open_stocking_play" ID="{A6C63DF7-3BCF-4AE2-9E64-FC4CCF66194B}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="3" Y="4" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Stocking_options_play" ID="{A490C512-1448-4149-9424-CE2D7573E860}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="3" Y="5" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Laser_room_play" ID="{A3AE4E11-2D54-490E-AA35-D65F5EB5FAD9}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="3" Y="6" />
+						</Module>
+						<Module>
+							<ObjectRef Name="Laser_room_stop" ID="{788E9C3F-D838-4672-A26F-F746BDFD61C4}" WorkUnitID="{DE8C6DE4-FD01-4FCD-B903-DA076DB87E99}" />
+							<Position X="3" Y="7" />
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true" />
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Locked_openable" ID="{2149D90D-3D50-4708-859A-41193A99DB3E}" />
+						<CurrentStateRef Name="Locked_openable" ID="{377BF08C-3B24-4329-AEB3-43FA8D77D218}" />
+						<CurrentStateRef Name="Walk" ID="{36B06CBD-6C4A-43E0-9F2A-9D275055BE20}" />
+						<CurrentStateRef Name="Puzzle2" ID="{94EE4080-56B7-4E50-8B20-A4CC15F0AE77}" />
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Right" ID="{45773F35-93CF-4F3E-8602-DEE825C42E8E}" />
+						<CurrentSwitchRef Name="Activated" ID="{AE697A9F-5E23-4246-8601-B71B32D32B74}" />
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

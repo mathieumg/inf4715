@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ea4e72ae-a9fa-46b7-afd7-e1eef9b26bfe}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{c46d001b-535e-4f97-badd-4f8481e0cef8}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PatchSel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PatchSel.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="mask_subobjtypes.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="patchsel.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="patselm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="patselt.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="subobjtypes.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PatchSel.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

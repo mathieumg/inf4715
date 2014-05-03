@@ -1,0 +1,110 @@
+///
+/// Copyright (C) 2012 - All Rights Reserved
+/// All rights reserved. http://www.equals-forty-two.com
+///
+/// @brief Implements the menu state class. 
+///
+
+#include "Precompiled.h"
+#include "MenuState.h"
+#include "InputManager.h"
+#include "SoundManager.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+MenuState::MenuState()
+: mMenu(0)
+{
+}
+
+////////////////////////////////////////////////////////////////////////
+MenuState::~MenuState()
+{
+  if ( mMenu ) 
+  {
+    delete mMenu;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////
+///
+/// Render
+///
+/// @param[in] Nothing
+///
+/// @return Nothing
+///
+////////////////////////////////////////////////////////////////////////
+void MenuState::Render() const
+{
+  if ( mMenu )
+  {
+    mMenu->Render();
+  }
+}
+
+////////////////////////////////////////////////////////////////////////
+///
+/// OnLeave
+///
+/// @param[in] Nothing
+///
+/// @return Nothing
+///
+////////////////////////////////////////////////////////////////////////
+void MenuState::OnLeave()
+{
+  // Stop menu music
+  SoundManager::GetInstance().StopAllMenuTracks();
+
+  delete mMenu;
+  mMenu = 0;
+}
+
+////////////////////////////////////////////////////////////////////////
+///
+/// OnEnter
+///
+/// @param[in] Nothing
+///
+/// @return Nothing
+///
+////////////////////////////////////////////////////////////////////////
+void MenuState::OnEnter()
+{
+  // Initialize the Main Menu
+  mMenu = new MainMenu("MainMenu.html");
+
+  // Show mouse cursor
+  InputManager::GetInstance().SetMouseCaptured(false);
+
+  // Stop ambient game sounds
+  //FIXME: Crashes the game for now, FMOD legacy?
+  //SoundManager::GetInstance().StopAllAmbientTracks();
+
+  // Start menu music
+  SoundManager::GetInstance().PlayAllMenuTracks();
+}
+
+//////////////////////////////////////////////////////////////////////////
+VCNBool MenuState::Initialize()
+{
+  return true;
+}
+
+//////////////////////////////////////////////////////////////////////////
+VCNBool MenuState::Uninitialize()
+{
+  return true;
+}
+
+//////////////////////////////////////////////////////////////////////////
+void MenuState::Update( float elapsedTime )
+{
+  if ( mMenu )
+  {
+    mMenu->Update( elapsedTime );
+  }
+}

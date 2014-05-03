@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VCNModels>
+
+	<VCNModel Name="Quad" version="3.0">
+		<Node Name="Quad" Type="Render" Mesh="QuadMesh" Material="Blank" 
+          posx="0" posy="0" posz="0" 
+          qrotw="1" qrotx="0" qroty="0" qrotz="0" 
+          sclx="1" scly="1" sclz="1"/>
+	</VCNModel>
+	
+	<VCNModel Name="BillBoardQuad" version="3.0">
+		<Node Name="Quad" Type="Render" Mesh="QuadMesh" Material="Blank" 
+          posx="0" posy="0" posz="0" 
+          qrotw="1" qrotx="0" qroty="0" qrotz="0" 
+          sclx="1" scly="1" sclz="1"/>
+	</VCNModel>
+	
+</VCNModels>

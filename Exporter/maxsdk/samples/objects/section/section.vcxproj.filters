@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{191d4527-d4a1-4d67-9b8c-065b72a6a581}</UniqueIdentifier>
+      <Extensions>*.cpp *.def</Extensions>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{ce84d1ae-1906-4a34-9b66-1c78e7c7ad3f}</UniqueIdentifier>
+      <Extensions>*.lib</Extensions>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{ba9e0874-2801-4f74-ba63-6a3b76835ced}</UniqueIdentifier>
+      <Extensions>*.rc</Extensions>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{0e8954b0-2673-49a7-b070-50a0c20e2c0e}</UniqueIdentifier>
+      <Extensions>*.h</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="section.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="section.DEF">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="section.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sect_res.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

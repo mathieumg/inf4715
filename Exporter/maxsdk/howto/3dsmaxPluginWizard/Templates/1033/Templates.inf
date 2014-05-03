@@ -1,0 +1,9 @@
+dllentry.cpp
+[!output PLUGINTYPE_TEMPLATE].cpp
+root.h
+root.def
+3dsmaxsdk_preinclude.h
+resource.h
+root.rc
+root.vcxproj
+root.vcxproj.filters

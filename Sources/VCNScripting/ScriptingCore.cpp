@@ -1,0 +1,17 @@
+///
+/// Copyright (C) 2014 - All Rights Reserved
+/// All rights reserved. Mathieu M-Gosselin
+/// 
+
+#include "Precompiled.h"
+#include "ScriptingCore.h"
+
+//////////////////////////////////////////////////////////////////////////
+VCNScriptingCore::VCNScriptingCore()
+{
+}
+
+//////////////////////////////////////////////////////////////////////////
+VCNScriptingCore::~VCNScriptingCore()
+{
+}

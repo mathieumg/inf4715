@@ -1,0 +1,1099 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4e7fe82c-2572-4aca-b271-2ce835da927a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Source Files\SuperLu">
+      <UniqueIdentifier>{85283624-ac61-418b-abb4-b458b4bf5523}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a5a1ec15-efe8-4582-a9a7-a87fc6b0ab74}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{63688567-6d15-4de2-ad73-d825641d3fbb}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source Files\CBLAS">
+      <UniqueIdentifier>{367f0b72-69d8-4a8b-8e85-4703364f59a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MeshTopoData">
+      <UniqueIdentifier>{063597d5-e3f1-4b7a-b53d-0d8210be46d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tools">
+      <UniqueIdentifier>{ca12e932-30f3-482f-9251-947c6eeb0350}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{7af3fdd7-bd90-48f0-874e-fe0700794704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Actions">
+      <UniqueIdentifier>{cc4bd3c8-d8f2-4310-96d3-fa51ae921932}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Defaults.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DllEntry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="publishedFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sctex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="undo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unwrap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Unwrap_PaintDialogMethods.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\caxpy.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\ccopy.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\cdotc.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\cgemv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\cgerc.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\chemv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\cher2.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\cscal.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\ctrsv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dasum.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\daxpy.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dcabs1.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dcopy.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\ddot.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dgemv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dger.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dnrm2.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\drot.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dscal.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dsymv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dsyr2.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dtrsv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dzasum.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\dznrm2.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\icamax.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\idamax.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\isamax.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\izamax.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\sasum.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\saxpy.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\scasum.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\scnrm2.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\scopy.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\sdot.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\sgemv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\sger.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\snrm2.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\srot.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\sscal.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\ssymv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\ssyr2.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\strsv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\zaxpy.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\zcopy.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\zdotc.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\zgemv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\zgerc.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\zhemv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\zher2.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\zscal.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="CBLAS_SRC\ztrsv.c">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\ccolumn_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\ccolumn_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\ccopy_to_ucol.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cgscon.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cgsequ.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cgsrfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cgssv.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cgssvx.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cgstrf.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cgstrs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\clacon.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\clangs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\claqgs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cmemory.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cmyblas2.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\colamd.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cpanel_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cpanel_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cpivotgrowth.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cpivotL.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cpruneL.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\creadhb.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\csnode_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\csnode_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\csp_blas2.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\csp_blas3.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\cutil.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dcolumn_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dcolumn_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dcomplex.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dcopy_to_ucol.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dGetDiagU.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dgscon.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dgsequ.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dgsrfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dgssv.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dgssvx.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dgstrf.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dgstrs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dgstrsL.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dgstrsU.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dlacon.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dlamch.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dlangs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dlaqgs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dmemory.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dmyblas2.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dpanel_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dpanel_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dpivotgrowth.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dpivotL.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dpruneL.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dreadhb.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dsnode_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dsnode_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dsp_blas2.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dsp_blas3.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dutil.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\dzsum1.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\get_perm_c.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\heap_relax_snode.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\icmax1.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\izmax1.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\lsame.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\memory.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\mmd.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\relax_snode.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\scolumn_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\scolumn_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\scomplex.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\scopy_to_ucol.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\scsum1.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sgscon.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sgsequ.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sgsrfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sgssv.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sgssvx.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sgstrf.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sgstrs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\slacon.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\slamch.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\slangs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\slaqgs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\smemory.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\smyblas2.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sp_coletree.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sp_ienv.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sp_preorder.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\spanel_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\spanel_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\spivotgrowth.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\spivotL.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\spruneL.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sreadhb.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\ssnode_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\ssnode_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\ssp_blas2.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\ssp_blas3.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\superlu_timer.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\sutil.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\util.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\xerbla.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zcolumn_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zcolumn_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zcopy_to_ucol.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zgscon.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zgsequ.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zgsrfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zgssv.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zgssvx.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zgstrf.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zgstrs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zlacon.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zlangs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zlaqgs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zmemory.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zmyblas2.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zpanel_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zpanel_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zpivotgrowth.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zpivotL.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zpruneL.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zreadhb.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zsnode_bmod.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zsnode_dfs.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zsp_blas2.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zsp_blas3.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperLU_SRC\zutil.c">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshTopoData_RelaxMethods.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshTopoData.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshTopoData_MappingMethods.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshTopoData_MeshMethods.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshTopoData_MNMeshMethods.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshTopoData_PatchMethods.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+    <ClCompile Include="patch.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+    <ClCompile Include="poly.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolCopyPaste.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolUVWTweak.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolFlatten.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolGrouping.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolGroupingActions.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolGroupingData.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolGroupingUndo.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolLSCM.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolLSCMMatrix.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolMapping.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolNormalMap.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolPelt.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolPeltEdgeSelectMode.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolRegularMap.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolRegularMapScriptCommands.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolRegularMapUndo.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolRelax.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolRelaxBySprings.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolRenderUVs.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolSelect.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolSketch.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolSolver.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolSplineMapping.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolSplineMapping_CommandModes.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolSplineMapping_SplineData.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolSplineMapping_Undo.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolSplineMapping_UnwrapFunctions.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolStitch.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolUnfold.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="TVData.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilCluster.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions.cpp">
+      <Filter>Source Files\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions_Checked.cpp">
+      <Filter>Source Files\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions_Enabled.cpp">
+      <Filter>Source Files\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions_Execute.cpp">
+      <Filter>Source Files\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="UnwrapCustomToolBar.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UnwrapCustomToolBarFloating.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UnwrapCustomToolBarSetup.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UnwrapCustomUI.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionLookup.cpp">
+      <Filter>Source Files\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="UnwrapModifierPanel.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UnwrapSideBarUI.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="TvConnectionInfo.cpp">
+      <Filter>Source Files\MeshTopoData</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="mods.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Include\iunwrap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IUnwrapMax8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshTopoData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modsres.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PeltData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceOverride.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TVData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="undo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unwrap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="veroverrides.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CBLAS_SRC\f2c.h">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClInclude>
+    <ClInclude Include="CBLAS_SRC\slu_Cnames.h">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClInclude>
+    <ClInclude Include="CBLAS_SRC\superlu_f2c.h">
+      <Filter>Source Files\CBLAS</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperLU_SRC\colamd.h">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperLU_SRC\slu_cdefs.h">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperLU_SRC\slu_Cnames.h">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperLU_SRC\slu_dcomplex.h">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperLU_SRC\slu_ddefs.h">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperLU_SRC\slu_scomplex.h">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperLU_SRC\slu_sdefs.h">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperLU_SRC\slu_util.h">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperLU_SRC\slu_zdefs.h">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperLU_SRC\supermatrix.h">
+      <Filter>Source Files\SuperLu</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolGrouping.h">
+      <Filter>Source Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolGroupingData.h">
+      <Filter>Source Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolLSCM.h">
+      <Filter>Source Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolRegularMap.h">
+      <Filter>Source Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Solver.h">
+      <Filter>Source Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="UnwrapSideBarUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UnwrapCustomUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UnwrapModifierPanelUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UnwrapCustomToolBars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TvConnectionInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="unwrap.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="addvertc.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="attach.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Bevel.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bmp00001.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bmp00002.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bmp00003.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bmp00004.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="booleant.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boolinte.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boolsubt.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="boolunio.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bulbmask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="bulbs.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="chamfer.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="createwe.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CROSSHR.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="crossins.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cur00001.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor10.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor11.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor12.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor13.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor16.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor17.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor22.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor3.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor4.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor5.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor6.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor7.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor8.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="cursor9.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="echamfer.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="extrudec.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="faceselt.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="fillet.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="magnify.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mask_boo.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mask_fac.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mask_subobjtypes.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mask_unw.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="move_x.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="move_y.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="movex1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="outline.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="panhand.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="patchsel.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="patselm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="region.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="scale_x.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="scale_y.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="segbreak.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="segrefin.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="selmask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="sketchcu.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="sketchpi.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="splselm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="subobjtypes.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="thselcur.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Trim.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="trimbut.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="trimmask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_option.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_option_mask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_transform.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_transform_mask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_verts.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_verts_mask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_view.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrap_view_mask.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="unwrapto.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="vchamfer.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="vertconn.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="vinsert.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="weld.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="weldcur1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CBLAS_SRC\Makefile">
+      <Filter>Source Files\CBLAS</Filter>
+    </None>
+  </ItemGroup>
+</Project>

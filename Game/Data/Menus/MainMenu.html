@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="MenuStyle.css">  
+	</head>
+		<body id="Body">
+			<div id="MainMenu">
+				<div id="MainMenuLinks">
+					<button id="newgame_button" type="button" onclick="Native.newGameCallback()" ></button>
+					<button id="quit_button" type="button" onclick="Native.quitCallback()"></button>
+				</div>
+			</div>
+			
+			<div id="Logo">
+				<img src="prison_escape.png" />
+			</div>
+		
+			<script type="text/javascript">
+			    // Prevent text selection
+                window.onload = function() 
+                {
+                  document.onselectstart = function() {return false;} // ie
+                  document.onmousedown = function() {return false;} // mozilla
+                }
+			</script>
+
+		</body>
+</html> 

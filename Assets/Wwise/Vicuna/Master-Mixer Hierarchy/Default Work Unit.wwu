@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C1961BC0-4EB1-4921-AE46-9008B08C072D}" SchemaVersion="62">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{C1961BC0-4EB1-4921-AE46-9008B08C072D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ChildrenList>
+						<Bus Name="Music" ID="{B2D8EFF4-AB7A-4A73-8CC8-9BE57471CAFB}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<EffectInfo>
+								<NoEffect Platform="Linked" Index="0" />
+							</EffectInfo>
+						</Bus>
+						<Bus Name="Actions" ID="{FB07506E-2EB0-4156-B577-36EA59AA65B9}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<EffectInfo>
+								<NoEffect Platform="Linked" Index="0" />
+							</EffectInfo>
+						</Bus>
+						<Bus Name="Interface" ID="{E8F7BC77-15AF-411E-90D5-F7433CB3213F}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<EffectInfo>
+								<NoEffect Platform="Linked" Index="0" />
+							</EffectInfo>
+						</Bus>
+						<Bus Name="Player" ID="{A4D0DB88-7CDA-4BE7-A7B8-4797CC26A30E}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<EffectInfo>
+								<NoEffect Platform="Linked" Index="0" />
+							</EffectInfo>
+						</Bus>
+					</ChildrenList>
+					<EffectInfo>
+						<NoEffect Platform="Linked" Index="0" />
+					</EffectInfo>
+				</Bus>
+				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}" />
+				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}" />
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

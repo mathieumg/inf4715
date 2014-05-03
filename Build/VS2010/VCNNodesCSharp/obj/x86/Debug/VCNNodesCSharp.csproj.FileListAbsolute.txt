@@ -1,0 +1,4 @@
+I:\INF4715\SVN\trunk\Vicuna\Build\VS2010\VCNNodesCSharp\bin\x86\Debug\VCNNodesCSharp.dll
+I:\INF4715\SVN\trunk\Vicuna\Build\VS2010\VCNNodesCSharp\bin\x86\Debug\VCNNodesCSharp.pdb
+I:\INF4715\SVN\trunk\Vicuna\Build\VS2010\VCNNodesCSharp\obj\x86\Debug\VCNNodesCSharp.dll
+I:\INF4715\SVN\trunk\Vicuna\Build\VS2010\VCNNodesCSharp\obj\x86\Debug\VCNNodesCSharp.pdb

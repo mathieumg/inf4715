@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+	<!-- Define character sets, platforms and configurations 3ds Max can use.
+	Changing the values of these properties affects the name of the project configurations too.-->
+	<PropertyGroup Label="UserMacros">
+		<PlatformX32>Win32</PlatformX32>
+		<PlatformX64>x64</PlatformX64>
+		<ConfigDebug>Debug</ConfigDebug>
+		<ConfigRelease>Release</ConfigRelease>
+		<ConfigHybrid>Hybrid</ConfigHybrid>
+		<CharSetUnicode>Unicode</CharSetUnicode>
+		<CharSetMultibyte>Multibyte</CharSetMultibyte>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Configuration">
+		<UseOfMfc>false</UseOfMfc>
+		<UseOfAtl>false</UseOfAtl>
+		<PlatformToolset>v100</PlatformToolset>
+		<CharacterSet Condition="'$(Configuration)'=='$(ConfigDebug)$(CharSetUnicode)' or '$(Configuration)'=='$(ConfigRelease)$(CharSetUnicode)' or '$(Configuration)'=='$(ConfigHybrid)$(CharSetUnicode)'">$(CharSetUnicode)</CharacterSet>
+		<!-- As a last resort, set the charset to Unicode -->
+		<CharacterSet Condition="'$(CharacterSet)'==''">$(CharSetUnicode)</CharacterSet>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<!-- Intermediate Directory path needs to end in  "\" -->
+		<IntDir>$(Platform)\$(Configuration)\</IntDir>
+	</PropertyGroup>
+</Project>

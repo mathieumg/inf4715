@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{a6e34e07-b164-40da-84b0-99425d2419d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{9b81e5b2-fd14-4bfd-8f81-86098038af7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{f8f6984e-c6b2-46ab-8f55-320273cd7c62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AboutBox">
+      <UniqueIdentifier>{27b58e15-fa4f-4754-8bdd-2d3214c46263}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="about.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="gtypes.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxFind.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxFindApp.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowPropDlg.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualTrackball.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IVirtualTrackBall.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxFindGeometry.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="gtypes.h">
+      <Filter>AboutBox</Filter>
+    </ClInclude>
+    <ClInclude Include="VirtualTrackball.h">
+      <Filter>AboutBox</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceOverride.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MaxFind.rc">
+      <Filter>Headers</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon1.ico">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="3DSMax_Finder.ico" />
+    <None Include="icon2.ico" />
+  </ItemGroup>
+</Project>

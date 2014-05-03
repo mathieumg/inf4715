@@ -1,0 +1,700 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>HUD</title>
+  <style type="text/css">
+  
+    body
+    {
+        margin-top: 0;
+    }
+  
+	@font-face {
+	  font-family: 'Arizonia';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Arizonia'), local('Arizonia-Regular'), url(https://themes.googleusercontent.com/static/fonts/arizonia/v4/8Usm7f8XTsZinW2e-ZMd5fesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+	}
+    
+    img { border: 0; }
+	
+	.glossy
+	{	
+		border: 1px solid rgba(0,0,0,0.5);
+		border-bottom: 3px solid rgba(0,0,0,0.5);
+
+		border-radius: 3px;
+
+		-webkit-box-shadow: 
+			0 2px 8px rgba(0,0,0,0.5),
+			inset 0 1px rgba(255,255,255,0.3),
+			inset 0 10px rgba(255,255,255,0.2),
+			inset 0 10px 20px rgba(255,255,255,0.25),
+			inset 0 15px 30px rgba(0,0,0,0.3);
+	}
+    
+    #background
+    {
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      position: fixed;
+      z-index: -1;
+    }
+    
+    #crosshair
+    {
+      top: 50%;
+      left: 50%;
+      margin-left:-12px;
+      margin-top:-12px;  
+      width: 24px;
+      height: 24px;
+      margin: auto;
+      position: fixed;
+      z-index: 5;
+      background-image: url(images/crosshair_white.png);
+    }
+    
+    .stretch
+    {
+      width: 100%;
+      height: 100%;
+    }
+    
+    @font-face
+    {
+      font-family: CALAVERA;
+      src: url('CALAVERA.ttf');
+    }
+    
+    .res_frame
+    {
+      font-family: CALAVERA;
+      font-size: 1.5em;
+      color: white;
+      position: fixed;
+      text-align: center;
+      vertical-align:middle;
+      display: table;
+      table-layout: fixed;
+      
+      /* debug border
+      border: 1px coral solid;
+      */
+    }
+    
+    .res_inner
+    {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    
+    #res_one_frame { left: 4.8%; width: 4.6%; top: 91.7%; height: 3.7%; }
+    #res_two_frame { left: 14.6%; width: 18.2%; top: 91.7%; height: 3.7%; }
+    #res_three_frame { left: 41.5%; width: 5.5%; top: 91.7%; height: 3.7%; }
+    #res_four_frame { left: 57.5%; width: 23.2%; top: 87.9%; height: 11.8%; }
+    #res_five_frame { left: 81.0%; width: 19.0%; top: 91.7%; height: 3.7%; }
+	
+	#current_item_container {
+		z-index:5;
+		background-image: url(images/round.png);
+		width: 225px;
+		height: 225px;
+		position: fixed;
+		right: -30px;
+		bottom: -50px;
+		overflow: hidden;
+		text-align: center;
+		visibility: hidden;
+	}
+	
+	#current_item_name {
+		width: 70%;
+		margin: auto;
+		margin-top: 5px;
+		margin-bottom: 0px;
+		font-weight: bold;
+		font-size: 1.5em;
+		color: white;
+		text-shadow: 1px 1px black;
+		font-family: arial;
+	}
+	
+	#current_item {
+		width: 100px;
+		height: 100px;
+		margin:auto;
+		margin-top: 12px;
+		border: none;
+	}
+    
+    #table_action
+    {
+      position: fixed;
+      text-align: center;
+      vertical-align:middle;
+      display: table;
+      table-layout: fixed;
+      
+      left: 73.4%;
+      width: 26.1%;
+      top: 76.5%;
+      height: 21.5%;
+      
+      /* debug border
+      border: 1px red solid;
+      */
+    }
+    
+    .btn_action_icon
+    {
+      display:block;
+      width: 71px;
+      height: 45px;
+    }
+        
+    #action_description
+	{
+	  position: fixed;
+	  z-index:10;
+	  bottom: 2%;
+	  left: 2%;
+      right: 12%;
+	  height: 40px;
+      text-align: center;
+      font-size: 2em;
+	  font-family: arial;
+      color: white;
+	  text-shadow: 1px 1px black;
+	}
+	
+	#textmessage 
+	{
+	  position: fixed;
+	  background-image:url('images/parchemin.png');
+	  z-index:10;
+	  top: 40%;
+	  left: 50%;
+	  height: 700px;
+	  width: 1013px;
+	  margin-top: -250px;
+	  margin-left: -506px;
+	  visibility: hidden;
+	}
+	
+	#textcontent
+	{
+		width: 80%;
+		height: 300px;
+		margin: auto;
+		overflow: hidden;
+		margin-top: 120px;
+	    font-family: 'Arizonia', Helvetica, sans-serif;
+	    font-size: 1.8em;
+        text-align:justify;
+        overflow-y:auto;
+        padding-right: 10px;
+	}
+	
+	#exitbutton
+	{
+		margin-left: 500px;
+		margin-top: 50px;
+		border: 3px solid #947004;
+		width: 100px;
+		font-family: arial;
+		text-align: center;
+		font-weight: bold;
+		font-size: 3em;
+		color: #947004;
+		cursor: pointer;
+	}
+	
+	#exitbutton:hover
+	{
+		border-color: #443506;
+		color: #443506;
+	}
+	
+	#inventory 
+	{
+	  position: fixed;
+	  z-index:10;
+	  top: 40%;
+	  left: 50%;
+	  height: 548px;
+	  width: 798px;
+	  margin-top: -225px;
+	  margin-left: -400px;
+	  visibility: hidden;
+	  font-family: arial;
+	}
+	
+	#inventory_content
+	{
+		  height: 502px;
+		  background-image:url('images/bginventory.jpg');
+		  border: 1px solid rgba(0,0,0,0.5);
+		  overflow: hidden;
+	}
+	
+	#inventory_title
+	{
+		text-align: center;
+		font-size: 1.5em;
+		font-weight: bold;
+		padding: 5px;
+		background-color: gray;
+		color: white;
+		text-shadow: 1px 1px black;
+		border: 1px solid rgba(0,0,0,0.5);
+		border-bottom: 3px solid rgba(0,0,0,0.5);
+		
+		-webkit-box-shadow: 
+			0 2px 8px rgba(0,0,0,0.5),
+			inset 0 1px rgba(255,255,255,0.3),
+			inset 0 10px rgba(255,255,255,0.2),
+			inset 0 10px 20px rgba(255,255,255,0.25),
+			inset 0 -15px 30px rgba(0,0,0,0.3);
+			
+		-webkit-border-radius: 3px 3px 0px 0px;
+	}
+	
+	.inventory_item
+	{
+		float: left;
+		width: 197px;
+		height: 165px;
+		text-align: center;
+		font-size: 1.3em;
+		font-weight: bold;
+		border: 1px grey dashed;
+	    color: white;
+		text-shadow: 1px 1px black;
+	}
+	
+	.inventory_item:hover
+	{
+		background-color:rgba(255,255,255,0.5);
+		border: 1px white solid;
+	}
+	
+	#sidemenu {
+		z-index:5;
+		background-image: url(images/sidemenu.png);
+		width: 172px;
+		height: 263px;
+		position: fixed;
+		right: 0px;
+		bottom: 200px;
+		overflow: hidden;
+		text-align: center;
+		/*visibility: hidden;*/
+	}
+	
+	.action {
+		width: 80%;
+		border: 3px solid white;
+		margin-top: 22px;
+		margin-left: 20px;
+		font-size: 1.5em;
+		font-weight: bold;
+		font-family: Arial;
+		color: white;
+	}
+	
+	.selected {
+		color: #b7b045;
+		border-color: #b7b045;
+	}
+    
+    #top_bar
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 30px;
+        background-color: grey;
+        font-weight: bold;
+        color: white;
+        font-size: 1.5em;
+		text-shadow: 1px 1px black;
+        padding-right: 10px;
+        padding-top: 7px;
+        padding-left: 10px;
+        overflow: hidden;
+        
+        background-color: gray;
+		border: 1px 0px 0px 0px solid rgba(0,0,0,0.5);
+		border-bottom: 1px solid rgba(0,0,0,0.5);
+		
+		-webkit-box-shadow: 
+			0 2px 8px rgba(0,0,0,0.5),
+			inset 0 1px rgba(255,255,255,0.3),
+			inset 0 2px rgba(255,255,255,0.2),
+			inset 0 10px 20px rgba(255,255,255,0.25),
+			inset 0 -15px 30px rgba(0,0,0,0.3);
+    }
+    
+    .top_button
+    {
+        display: block;
+        float: right;
+        background-color: lightgrey;
+        font-size: 16px;
+        padding: 2px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        
+        		border: 1px 0px 0px 0px solid rgba(0,0,0,0.5);
+		border-bottom: 1px solid rgba(0,0,0,0.5);
+		
+		-webkit-box-shadow: 
+			0 2px 8px rgba(0,0,0,0.5),
+			inset 0 1px rgba(255,255,255,0.3),
+			inset 0 2px rgba(255,255,255,0.2),
+			inset 0 10px 20px rgba(255,255,255,0.25),
+			inset 0 -15px 30px rgba(0,0,0,0.3);
+            
+        -webkit-border-radius: 3px;
+        letter-spacing: 3px
+    }
+    
+    .top_button_selected
+    {
+        background-color: #eff2b6;
+    }
+    
+    .menu_hint
+    {
+        color: #eff2b6;
+    }
+    
+    #awareness_container
+    {
+        float: left;
+        visibility: hidden;
+    }
+    
+    #awareness_message
+    {
+        float: left;
+    }
+    
+    #awareness_bar_container
+    {
+        float: right;
+        width: 250px;
+        height: 22px;
+        text-align: center;
+        border: 2px solid black;
+        margin-left: 5px;
+        margin-right: 10px;
+        font-size: 20px;
+        	position: relative;
+        background: #555;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+        -moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+        box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+    }
+    
+    #awareness_bar_red
+    {
+        display: block;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        background-color:rgba(255,0,0,0.7);
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        width: 0%;
+    }
+    
+    #awareness_bar_text
+    {
+        position:absolute;
+        display:inline-block;
+        text-align: center;
+        top:0px;
+        left: 0;
+        width: 100%;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+     
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-button {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        border-radius: 10px;
+    }
+     
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    }
+
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+
+    // Prevent text selection
+    window.onload = function () 
+    {
+      document.onselectstart = function () { return false; } // ie
+      document.onmousedown = function () { return false; } // mozilla
+    }
+  </script>
+  
+  <div id="action_description"></div>
+  
+  
+  <div id="top_bar">
+     
+    <span class="top_button"><span class="menu_hint">M</span>ENU</span>
+    <span id="inventory_button" class="top_button"><span class="menu_hint">I</span>NVENTORY</span>
+    <div id="awareness_container">
+        <div id="awareness_message">ROBOT AWARENESS:</div>
+        <div id="awareness_bar_container">
+            <span id="awareness_bar_red"></span>
+            <div id="awareness_bar_text"><span id="awareness">0</span>%</div>
+        </div>
+    </div>
+  </div>
+  
+  <div id="inventory">
+	<div id="inventory_title">Inventory</div>
+	<div id="inventory_content">
+	</div>
+  </div>
+  
+  <div id="textmessage">
+	<div id="textcontent">
+		MESSAGE
+	</div>
+	<div id="exitbutton" onclick="closeTextMessage()">OK</div>
+  </div>
+  
+  <div id="sidemenu">
+	<div class="action selected"><u>U</u>SE</div>
+	<div class="action"><u>T</u>ALK</div>
+	<div class="action">TA<u>K</u>E</div>
+	<div class="action"><u>G</u>IVE</div>
+  </div>
+  
+  <div id="current_item_container">
+	<img id="current_item" src="images/blank.png" /><br />
+	<div id="current_item_name"></div>
+  </div>
+  
+  <div id="background">
+    <!-- <img src="images/HUD.png" class="stretch" alt="" /> -->
+  </div>
+  <div id="crosshair"></div>
+
+  <!-- Resource counters   
+  <div id="res_one_frame" class="res_frame"><div id="res_one_value" class="res_inner">842</div></div>
+  <div id="res_two_frame" class="res_frame"><div id="res_two_value" class="res_inner">1025</div></div>
+  <div id="res_three_frame" class="res_frame"><div id="res_three_value" class="res_inner">0</div></div>
+  <div id="res_four_frame" class="res_frame"><div id="res_four_value" class="res_inner">date</div></div>
+  <div id="res_five_frame" class="res_frame"><div id="res_five_value" class="res_inner">HUD example</div></div>
+  -->
+
+
+
+  <script type="text/javascript">
+	var inventoryShown = false;
+	var textMessageShown = false;
+	var inventoryBox = document.getElementById('inventory');
+	var testMessageBox = document.getElementById('textmessage');
+	var testMessage = document.getElementById('textcontent');
+	var inventoryContent = document.getElementById('inventory_content');
+	var currentItem = document.getElementById('current_item_container');
+	var currentItemName = document.getElementById('current_item_name');
+	var currentItemImg = document.getElementById('current_item');
+	var actionDescription = document.getElementById('action_description');
+	var awarenessSection = document.getElementById('awareness_container');
+	var awarenessBar = document.getElementById('awareness_bar_red');
+	var awarenessPercentage = document.getElementById('awareness');
+	var inventoryButton = document.getElementById('inventory_button');
+	var descriptionTimer;
+	
+	var itemData = {};
+	
+	function registerItem(itemId, itemDescription, imageId) {
+		itemData[itemId] = {
+			img: imageId,
+			desc: itemDescription
+		};
+	}
+	
+	function getItemInfo(itemId) {
+		if (itemData[itemId]) {
+			return itemData[itemId];
+		}
+		
+		return {
+			img: "unknown_item_small",
+			desc: itemId
+		};
+	}
+	
+	function itemPicked(itemId) {
+		setCurrentItem(itemId);
+	}
+	
+	function renderItem(itemId) {
+		var itemInfo = getItemInfo(itemId);
+		
+		return '<div class="inventory_item"><img src="images/' + itemInfo.img + '.png" onclick="itemPicked(\'' + itemId + '\');" /><br /><span>' + itemInfo.desc + '</span></div>';
+	}
+
+    function itemList()
+    {       
+		var generateHtml = '';
+		
+        for( var i = 0; i < arguments.length; i++ )
+        {
+			generateHtml += renderItem(arguments[i]);
+        }
+		
+		inventoryContent.innerHTML = generateHtml;
+    }
+	
+	function removeCurrentItem() {
+		currentItemName.innerHTML = "";
+		currentItemImg.src = "images/blank.png";
+	}
+	
+	function setCurrentItem(itemId) {
+		var itemInfo = getItemInfo(itemId);
+		
+		currentItemName.innerHTML = itemInfo.desc;
+		currentItemImg.src = "images/" + itemInfo.img + ".png";
+		
+		// Call Awesomium callback to indicate newly selected item.
+		Native.itemEquippedCallback(itemId);
+	}
+    
+    function unequip() {
+    	currentItemName.innerHTML = "";
+		currentItemImg.src = "images/blank.png";
+    }
+	
+	function setCurrentAction(actionIndex) {
+		var currentSelected = document.getElementsByClassName('selected')[0];
+		currentSelected.className = "action";
+		
+		var newSelected = document.getElementsByClassName('action')[parseInt(actionIndex, 10)];
+		newSelected.className = "action selected";
+	}
+	
+	function hideAll()
+	{
+		if (inventoryShown)
+		{
+			toggleInventory();
+		}
+		
+		if (textMessageShown)
+		{
+			closeTextMessage();
+		}
+	}
+	
+	function toggleInventory()
+    {       		
+		inventoryShown = !inventoryShown;
+		
+		//FIXME: A bit hacky...
+		if (inventoryShown && textMessageShown)
+		{
+			closeTextMessage();
+		}
+		
+		inventoryBox.style.visibility = inventoryShown ? 'visible' : 'hidden';
+        inventoryButton.className = 'top_button' + ( inventoryShown ? (' top_button_selected') : '' );
+		if (inventoryShown)
+		{
+			Native.takeMouseCallback();
+		} else
+		{
+			Native.freeMouseCallback();
+		}
+    }
+	
+	function showTextMessage(messageContent)
+    {       
+		hideAll();
+		
+		Native.takeMouseCallback();
+		testMessage.innerHTML = messageContent;
+		testMessageBox.style.visibility = 'visible';
+    }
+	
+	function closeTextMessage()
+	{
+		testMessageBox.style.visibility = 'hidden';
+		Native.freeMouseCallback();
+	}
+    
+    function displayActionDescription(description, timeout)
+    {
+        // We wouldn't want timers to stack...
+		if(descriptionTimer) {
+			clearTimeout(descriptionTimer);
+		}
+		
+		actionDescription.innerHTML = description;
+		
+		if(timeout) {
+			timeout = parseInt(timeout, 10);
+			descriptionTimer = setTimeout(function() {
+				descriptionTimer = null;
+				displayActionDescription("");
+			}, timeout);
+		}
+    }
+    
+    function showAwarenessLevel()
+    {
+        awarenessSection.style.visibility = "visible";
+    }
+    
+     function hideAwarenessLevel()
+    {
+        awarenessSection.style.visibility = "hidden";
+    }
+    
+    function setAwarenessLevel(awarenessLevel)
+    {
+        awarenessBar.style.width = awarenessLevel + "%";
+        awareness.innerHTML = awarenessLevel;
+    }
+	
+	// Workaround for weird bug...
+	setTimeout(function() {
+		currentItem.style.visibility = 'visible';
+    }, 3000);
+
+  </script>
+ 
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Material Name="TexturedMaterial" Version="1">
+  <AmbientColor r="1.0" g="1.0" b="1.0" a="1.0"/>
+  <DiffuseColor r="1.0" g="1.0" b="1.0" a="1.0"/>
+  <SpecularColor r="1.0" g="1.0" b="1.0" a="1.0" power="32.0"/>
+  <Effect name="Textured">
+    <TextureParam name="DiffuseTexture" value="Textures/crate.jpg"></TextureParam>
+  </Effect>
+</Material>

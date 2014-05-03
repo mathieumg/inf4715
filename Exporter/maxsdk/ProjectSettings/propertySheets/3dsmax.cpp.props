@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!-- Import project settings from property sheets.
+	The order in which these are imported should not matter, since no setting 
+	in one of the prop sheets should overwrite the same setting defined in another prop sheet.
+	Importing them conditionally allows -->
+	<ImportGroup Label="PropertySheets">
+		<!-- 3ds Max specific property sheets -->
+	</ImportGroup>
+	<ImportGroup Condition="'$(Platform)'=='$(PlatformX32)' or '$(Platform)'=='$(PlatformX64)'" Label="PropertySheets">
+		<!-- Import project settings specific to the platform -->
+		<Import Project="3dsmax.platform.tools.settings.props" Condition="exists('3dsmax.platform.tools.settings.props')" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)'=='$(ConfigDebug)$(CharSetUnicode)' or '$(Configuration)'=='$(ConfigRelease)$(CharSetUnicode)' or '$(Configuration)'=='$(ConfigHybrid)$(CharSetUnicode)'" Label="PropertySheets">
+		<!-- Import project settings specific to the config -->
+		<Import Project="3dsmax.config.tools.settings.props" Condition="exists('3dsmax.config.tools.settings.props')" />
+	</ImportGroup>
+	<ImportGroup  Label="PropertySheets">
+		<Import Project="3dsmax.common.tools.settings.props" Condition="exists('3dsmax.common.tools.settings.props')" />
+	</ImportGroup>
+</Project>

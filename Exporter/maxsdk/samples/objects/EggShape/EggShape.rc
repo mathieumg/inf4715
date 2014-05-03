@@ -1,0 +1,178 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""veroverrides.h""\r\n"
+    "#include ""maxversion.r""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PANEL DIALOGEX 0, 0, 108, 82
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_LENGTH_EDIT,"CustEdit",WS_TABSTOP,51,6,36,10
+    CONTROL         "",IDC_LENGTH_SPIN,"SpinnerControl",0x0,90,6,7,10
+    CONTROL         "",IDC_ROT_EDIT,"CustEdit",WS_TABSTOP,51,60,36,10
+    CONTROL         "",IDC_ROT_SPIN,"SpinnerControl",0x0,90,60,7,10
+    LTEXT           "Angle:",IDC_STATIC,13,60,29,9
+    CONTROL         "Outline",IDC_DONUT_CHECK,"Button",BS_AUTOCHECKBOX | BS_LEFT | BS_VCENTER | WS_TABSTOP,13,30,60,18
+    CONTROL         "",IDC_THICK_EDIT,"CustEdit",WS_TABSTOP,51,48,36,10
+    CONTROL         "",IDC_THICK_SPIN,"SpinnerControl",0x0,90,48,7,10
+    LTEXT           "Thickness:",IDC_THICKNESS_TEXT,13,48,36,9
+    LTEXT           "Length:",IDC_STATIC,13,7,29,9
+    CONTROL         "",IDC_WIDTH_EDIT,"CustEdit",WS_TABSTOP,51,18,36,10
+    CONTROL         "",IDC_WIDTH_SPIN,"SpinnerControl",0x0,90,18,7,10
+    LTEXT           "Width:",IDC_STATIC,13,20,29,9
+END
+
+IDD_KEY_PANEL DIALOGEX 0, 0, 108, 122
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_LENGTH_EDIT,"CustEdit",WS_TABSTOP,48,48,35,10
+    CONTROL         "",IDC_LENGTH_SPIN,"SpinnerControl",0x0,90,48,7,10
+    PUSHBUTTON      "Create",IDC_CREATE_BUTTON,53,100,47,14
+    LTEXT           "Angle:",IDC_STATIC,18,84,27,10,0,WS_EX_RIGHT
+    CONTROL         "",IDC_ROT_EDIT,"CustEdit",WS_TABSTOP,48,84,35,10
+    CONTROL         "",IDC_ROT_SPIN,"SpinnerControl",0x0,90,84,7,10
+    PUSHBUTTON      "Reset",IDC_RESET_BUTTON,6,100,47,14
+    CONTROL         "",IDC_THICK_EDIT,"CustEdit",WS_TABSTOP,48,72,35,10
+    CONTROL         "",IDC_THICK_SPIN,"SpinnerControl",0x0,90,72,7,10
+    LTEXT           "Thickness:",IDC_STATIC,12,72,35,10,0,WS_EX_RIGHT
+    LTEXT           "Length:",IDC_STATIC,12,48,35,10,0,WS_EX_RIGHT
+    CONTROL         "",IDC_WIDTH_EDIT,"CustEdit",WS_TABSTOP,48,60,35,10
+    CONTROL         "",IDC_WIDTH_SPIN,"SpinnerControl",0x0,90,60,7,10
+    LTEXT           "Width:",IDC_STATIC,12,60,35,10,0,WS_EX_RIGHT
+    CONTROL         "",IDC_X_EDIT,"CustEdit",WS_TABSTOP,48,6,35,10
+    CONTROL         "",IDC_Y_EDIT,"CustEdit",WS_TABSTOP,48,18,35,10
+    CONTROL         "",IDC_Z_EDIT,"CustEdit",WS_TABSTOP,48,30,35,10
+    CONTROL         "",IDC_X_SPIN,"SpinnerControl",0x0,90,6,7,10
+    CONTROL         "",IDC_Y_SPIN,"SpinnerControl",0x0,90,18,7,10
+    CONTROL         "",IDC_Z_SPIN,"SpinnerControl",0x0,90,30,7,10
+    LTEXT           "X:",IDC_STATIC,18,6,27,10,0,WS_EX_RIGHT
+    LTEXT           "Y:",IDC_STATIC,18,18,27,10,0,WS_EX_RIGHT
+    LTEXT           "Z:",IDC_STATIC,18,30,27,10,0,WS_EX_RIGHT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 100
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_KEY_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 100
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_LIBDESCRIPTION      "An Egg Shape"
+    IDS_CATEGORY            "Splines"
+    IDS_CLASS_NAME          "Egg"
+    IDS_PARAMS              "Parameters"
+    IDS_SPIN                "Spin"
+    IDS_KEYPARM             "Keyboard Entry"
+    IDS_RB_POS              "Position"
+    IDS_CHECKBOX            "Checkbox"
+    IDS_INT_COMBOBOX        "Combobox"
+    IDS_PARAM_ANGLE_TOOLTIP "(egg_angle) The tilting of the egg with respect to the axis through the egg's upper and lower cirlce"
+    IDS_PARAM_THICK_TOOLTIP "(egg_thickness) The distance between the inner layer and the outer layer"
+    IDS_PARAM_OUTLINE_TOOLTIP "(egg_outline) Whether the egg has 2 layers"
+    IDS_PARAM_LENGTH_TOOLTIP 
+                            "(egg_length) The length of the egg, defined to be 3 times the redius of the lower circle"
+    IDS_PARAM_WIDTH_TOOLTIP "(egg_width) The width of the egg, defined to be 2 times the redius of the lower circle"
+    IDS_LENGTH              "Length"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_WIDTH               "Width"
+    IDS_THICKNESS           "Thickness"
+    IDS_OUTLINE             "Outline"
+    IDS_ANGLE               "Angle"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "veroverrides.h"
+#include "maxversion.r"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

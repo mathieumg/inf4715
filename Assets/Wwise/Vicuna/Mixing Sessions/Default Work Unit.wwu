@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{099AA1C8-4FC9-4277-BE5E-3E8994F3CC73}" SchemaVersion="62">
+	<MixingSessions>
+		<WorkUnit Name="Default Work Unit" ID="{099AA1C8-4FC9-4277-BE5E-3E8994F3CC73}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="Prison_Escape" ID="{E874F37B-7B8E-47F1-9688-682FE2BFC6B8}">
+					<ObjectList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C1961BC0-4EB1-4921-AE46-9008B08C072D}" />
+						<ObjectRef Name="Music" ID="{B2D8EFF4-AB7A-4A73-8CC8-9BE57471CAFB}" WorkUnitID="{C1961BC0-4EB1-4921-AE46-9008B08C072D}" />
+						<ObjectRef Name="Actions" ID="{FB07506E-2EB0-4156-B577-36EA59AA65B9}" WorkUnitID="{C1961BC0-4EB1-4921-AE46-9008B08C072D}" />
+						<ObjectRef Name="Interface" ID="{E8F7BC77-15AF-411E-90D5-F7433CB3213F}" WorkUnitID="{C1961BC0-4EB1-4921-AE46-9008B08C072D}" />
+						<ObjectRef Name="Player" ID="{A4D0DB88-7CDA-4BE7-A7B8-4797CC26A30E}" WorkUnitID="{C1961BC0-4EB1-4921-AE46-9008B08C072D}" />
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
+	</MixingSessions>
+</WwiseDocument>

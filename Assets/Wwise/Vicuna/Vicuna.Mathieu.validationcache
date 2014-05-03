@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="62">
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1616172800" DateHigh="30367575" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="1057159311" DateHigh="30359573" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Attenuations\Default Work Unit.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Conversion Settings\Default Work Unit.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Conversion Settings\Factory Conversion Settings.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Dynamic Dialogue\Default Work Unit.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Default Work Unit.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory Convolution Reverb Effects.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory Effects.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory iZotope Box Modeler.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory iZotope Delay.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory iZotope Dynamics.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory iZotope Filters.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Effects\Factory McDSP Effects.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Events\Default Work Unit.wwu" DateLow="3152896" DateHigh="30367024" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Game Parameters\Default Work Unit.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Interactive Music Hierarchy\Vicuna.wwu" DateLow="1144692480" DateHigh="30357745" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="816172800" DateHigh="30367575" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Mixing Sessions\Default Work Unit.wwu" DateLow="753218304" DateHigh="30367026" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Presets\Default Work Unit.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Queries\Default Work Unit.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Queries\Factory Queries.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\SoundBanks\Default Work Unit.wwu" DateLow="318381824" DateHigh="30367031" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3253349120" DateHigh="30367030" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\States\Default Work Unit.wwu" DateLow="877989376" DateHigh="30367019" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Switches\Default Work Unit.wwu" DateLow="4110663680" DateHigh="30366795" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Triggers\Default Work Unit.wwu" DateLow="4210094848" DateHigh="30348737" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Vicuna.Mathieu.wsettings" DateLow="2867835029" DateHigh="30367523" />
+	<ValidationCacheItem File="I:\INF4715\SVN\trunk\Vicuna\Assets\Wwise\Vicuna\Vicuna.wproj" DateLow="4210094848" DateHigh="30348737" />
+</ValidationCache>

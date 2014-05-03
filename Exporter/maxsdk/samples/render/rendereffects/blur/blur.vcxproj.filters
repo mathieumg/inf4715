@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{74f975cb-7922-43cd-9aca-f0045e84d036}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Source Files\_blurTypes %28.cpp%29">
+      <UniqueIdentifier>{282a4f9d-0a8d-4948-89e7-99b571183e6a}</UniqueIdentifier>
+      <Extensions>.cpp</Extensions>
+    </Filter>
+    <Filter Include="Source Files\_selTypes %28.cpp%29">
+      <UniqueIdentifier>{85a87648-fbf1-43ba-8d6a-5062e6ff46da}</UniqueIdentifier>
+      <Extensions>.cpp</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6b5bd703-e80e-42e8-8054-a4e48063133b}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\_blurTypes %28.h%29">
+      <UniqueIdentifier>{b91b2515-c86f-4892-8fe0-2a1c665a9a60}</UniqueIdentifier>
+      <Extensions>.h</Extensions>
+    </Filter>
+    <Filter Include="Header Files\_selTypes %28.h%29">
+      <UniqueIdentifier>{1e4fbd12-21ca-4835-b260-f95ce7f71a5d}</UniqueIdentifier>
+      <Extensions>.h</Extensions>
+    </Filter>
+    <Filter Include="Library Files">
+      <UniqueIdentifier>{dd92570c-1f47-4bad-980b-ae23cf08f1cd}</UniqueIdentifier>
+      <Extensions>.lib</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="blur.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="blurMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlgProcs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_blurTypes\blurBase.cpp">
+      <Filter>Source Files\_blurTypes %28.cpp%29</Filter>
+    </ClCompile>
+    <ClCompile Include="_blurTypes\blurDirectional.cpp">
+      <Filter>Source Files\_blurTypes %28.cpp%29</Filter>
+    </ClCompile>
+    <ClCompile Include="_blurTypes\blurRadial.cpp">
+      <Filter>Source Files\_blurTypes %28.cpp%29</Filter>
+    </ClCompile>
+    <ClCompile Include="_blurTypes\blurUniform.cpp">
+      <Filter>Source Files\_blurTypes %28.cpp%29</Filter>
+    </ClCompile>
+    <ClCompile Include="_selectTypes\scTex.cpp">
+      <Filter>Source Files\_selTypes %28.cpp%29</Filter>
+    </ClCompile>
+    <ClCompile Include="_selectTypes\selIgnBack.cpp">
+      <Filter>Source Files\_selTypes %28.cpp%29</Filter>
+    </ClCompile>
+    <ClCompile Include="_selectTypes\selImage.cpp">
+      <Filter>Source Files\_selTypes %28.cpp%29</Filter>
+    </ClCompile>
+    <ClCompile Include="_selectTypes\selLum.cpp">
+      <Filter>Source Files\_selTypes %28.cpp%29</Filter>
+    </ClCompile>
+    <ClCompile Include="_selectTypes\selMaps.cpp">
+      <Filter>Source Files\_selTypes %28.cpp%29</Filter>
+    </ClCompile>
+    <ClCompile Include="_selectTypes\selMatIds.cpp">
+      <Filter>Source Files\_selTypes %28.cpp%29</Filter>
+    </ClCompile>
+    <ClCompile Include="_selectTypes\selObjIds.cpp">
+      <Filter>Source Files\_selTypes %28.cpp%29</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="blurMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlgProcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dllMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_blurTypes\blurBase.h">
+      <Filter>Header Files\_blurTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_blurTypes\blurDirectional.h">
+      <Filter>Header Files\_blurTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_blurTypes\blurRadial.h">
+      <Filter>Header Files\_blurTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_blurTypes\blurUniform.h">
+      <Filter>Header Files\_blurTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_selectTypes\scTex.h">
+      <Filter>Header Files\_selTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_selectTypes\selBase.h">
+      <Filter>Header Files\_selTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_selectTypes\selIgnBack.h">
+      <Filter>Header Files\_selTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_selectTypes\selImage.h">
+      <Filter>Header Files\_selTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_selectTypes\selLum.h">
+      <Filter>Header Files\_selTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_selectTypes\selMaps.h">
+      <Filter>Header Files\_selTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_selectTypes\selMatIds.h">
+      <Filter>Header Files\_selTypes %28.h%29</Filter>
+    </ClInclude>
+    <ClInclude Include="_selectTypes\selObjIds.h">
+      <Filter>Header Files\_selTypes %28.h%29</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="blur.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

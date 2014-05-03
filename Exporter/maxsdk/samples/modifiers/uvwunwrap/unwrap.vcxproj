@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugUnicode|Win32">
+      <Configuration>DebugUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugUnicode|x64">
+      <Configuration>DebugUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="HybridUnicode|Win32">
+      <Configuration>HybridUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="HybridUnicode|x64">
+      <Configuration>HybridUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|Win32">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseUnicode|x64">
+      <Configuration>ReleaseUnicode</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{149D006E-7987-4B54-96DC-A2D996DD77BC}</ProjectGuid>
+    <RootNamespace>unwrap</RootNamespace>
+    <MaxSDK>../../../../maxsdk</MaxSDK>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(MaxSDK)\ProjectSettings\PropertySheets\3dsmax.general.project.settings.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(MaxSDK)\ProjectSettings\PropertySheets\3dsmax.cpp.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">..\..\..\..\exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">..\..\..\..\x64\Exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">x64\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">..\..\..\..\exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">..\..\..\..\x64\Exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">x64\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">..\..\..\..\exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">..\..\..\..\x64\Exe\stdplugs\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">x64\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">uvwunwrap</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">.dlm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">uvwunwrap</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">.dlm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">uvwunwrap</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">.dlm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">uvwunwrap</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">.dlm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">uvwunwrap</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">.dlm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">uvwunwrap</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">.dlm</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\midl\Win32\unwrap.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;mnmath.lib;maxscrpt.lib;menuman.lib;paramblk2.lib;poly.lib;bmm.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;menus.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\exe\stdplugs\uvwunwrap.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\unwrap.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\..\exe\stdplugs\uvwunwrap.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\hybrid\uvwunwrap.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='HybridUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\midl\x64\unwrap.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;mnmath.lib;maxscrpt.lib;menuman.lib;paramblk2.lib;poly.lib;bmm.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;menus.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\x64\Exe\stdplugs\uvwunwrap.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;..\..\..\..\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\unwrap.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\..\x64\Exe\stdplugs\uvwunwrap.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\x64\Hybrid\uvwunwrap.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\midl\Win32\unwrap.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;mnmath.lib;maxscrpt.lib;menuman.lib;paramblk2.lib;poly.lib;bmm.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;menus.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\exe\stdplugs\uvwunwrap.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\unwrap.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\..\exe\stdplugs\uvwunwrap.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\debug\uvwunwrap.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\midl\x64\unwrap.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;mnmath.lib;maxscrpt.lib;menuman.lib;paramblk2.lib;poly.lib;bmm.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;menus.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\x64\Exe\stdplugs\uvwunwrap.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;..\..\..\..\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\unwrap.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\..\x64\Exe\stdplugs\uvwunwrap.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress></BaseAddress>
+      <ImportLibrary>.\x64\Debug\uvwunwrap.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|Win32'">
+    <Midl>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\midl\Win32\unwrap.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\Win32\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\Win32\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\Win32\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;mnmath.lib;maxscrpt.lib;menuman.lib;paramblk2.lib;poly.lib;bmm.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;menus.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\exe\stdplugs\uvwunwrap.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\lib;..\..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\unwrap.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\..\exe\stdplugs\uvwunwrap.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress>$(MaxSDK)\baseaddr.txt,$(TargetName)</BaseAddress>
+      <ImportLibrary>.\release\uvwunwrap.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseUnicode|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\midl\x64\unwrap.tlb</TypeLibraryName>
+      <HeaderFileName>.\midl\x64\%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>.\midl\x64\%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>.\midl\x64\%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SECURE_SCL=0;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSDK)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/opt:lbr    %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>comctl32.lib;delayimp.lib;mnmath.lib;maxscrpt.lib;menuman.lib;paramblk2.lib;poly.lib;bmm.lib;core.lib;geom.lib;gfx.lib;maxutil.lib;menus.lib;mesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\..\x64\Exe\stdplugs\uvwunwrap.dlm</OutputFile>
+      <AdditionalLibraryDirectories>$(MaxSDK)\x64\lib;..\..\..\..\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;libci.lib;msvcirt.lib;libcmt.lib;libcmtd.lib;msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\unwrap.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>..\..\..\..\x64\Exe\stdplugs\uvwunwrap.dlm.pdb</ProgramDatabaseFile>
+      <BaseAddress>$(MaxSDK)\baseaddr64.txt,$(TargetName)</BaseAddress>
+      <ImportLibrary>.\x64\Release\uvwunwrap.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ActionLookup.cpp" />
+    <ClCompile Include="Actions.cpp" />
+    <ClCompile Include="Actions_Checked.cpp" />
+    <ClCompile Include="Actions_Enabled.cpp" />
+    <ClCompile Include="Actions_Execute.cpp" />
+    <ClCompile Include="CBLAS_SRC\caxpy.c" />
+    <ClCompile Include="CBLAS_SRC\ccopy.c" />
+    <ClCompile Include="CBLAS_SRC\cdotc.c" />
+    <ClCompile Include="CBLAS_SRC\cgemv.c" />
+    <ClCompile Include="CBLAS_SRC\cgerc.c" />
+    <ClCompile Include="CBLAS_SRC\chemv.c" />
+    <ClCompile Include="CBLAS_SRC\cher2.c" />
+    <ClCompile Include="CBLAS_SRC\cscal.c" />
+    <ClCompile Include="CBLAS_SRC\ctrsv.c" />
+    <ClCompile Include="CBLAS_SRC\dasum.c" />
+    <ClCompile Include="CBLAS_SRC\daxpy.c" />
+    <ClCompile Include="CBLAS_SRC\dcabs1.c" />
+    <ClCompile Include="CBLAS_SRC\dcopy.c" />
+    <ClCompile Include="CBLAS_SRC\ddot.c" />
+    <ClCompile Include="CBLAS_SRC\dgemv.c" />
+    <ClCompile Include="CBLAS_SRC\dger.c" />
+    <ClCompile Include="CBLAS_SRC\dnrm2.c" />
+    <ClCompile Include="CBLAS_SRC\drot.c" />
+    <ClCompile Include="CBLAS_SRC\dscal.c" />
+    <ClCompile Include="CBLAS_SRC\dsymv.c" />
+    <ClCompile Include="CBLAS_SRC\dsyr2.c" />
+    <ClCompile Include="CBLAS_SRC\dtrsv.c" />
+    <ClCompile Include="CBLAS_SRC\dzasum.c" />
+    <ClCompile Include="CBLAS_SRC\dznrm2.c" />
+    <ClCompile Include="CBLAS_SRC\icamax.c" />
+    <ClCompile Include="CBLAS_SRC\idamax.c" />
+    <ClCompile Include="CBLAS_SRC\isamax.c" />
+    <ClCompile Include="CBLAS_SRC\izamax.c" />
+    <ClCompile Include="CBLAS_SRC\sasum.c" />
+    <ClCompile Include="CBLAS_SRC\saxpy.c" />
+    <ClCompile Include="CBLAS_SRC\scasum.c" />
+    <ClCompile Include="CBLAS_SRC\scnrm2.c" />
+    <ClCompile Include="CBLAS_SRC\scopy.c" />
+    <ClCompile Include="CBLAS_SRC\sdot.c" />
+    <ClCompile Include="CBLAS_SRC\sgemv.c" />
+    <ClCompile Include="CBLAS_SRC\sger.c" />
+    <ClCompile Include="CBLAS_SRC\snrm2.c" />
+    <ClCompile Include="CBLAS_SRC\srot.c" />
+    <ClCompile Include="CBLAS_SRC\sscal.c" />
+    <ClCompile Include="CBLAS_SRC\ssymv.c" />
+    <ClCompile Include="CBLAS_SRC\ssyr2.c" />
+    <ClCompile Include="CBLAS_SRC\strsv.c" />
+    <ClCompile Include="CBLAS_SRC\zaxpy.c" />
+    <ClCompile Include="CBLAS_SRC\zcopy.c" />
+    <ClCompile Include="CBLAS_SRC\zdotc.c" />
+    <ClCompile Include="CBLAS_SRC\zgemv.c" />
+    <ClCompile Include="CBLAS_SRC\zgerc.c" />
+    <ClCompile Include="CBLAS_SRC\zhemv.c" />
+    <ClCompile Include="CBLAS_SRC\zher2.c" />
+    <ClCompile Include="CBLAS_SRC\zscal.c" />
+    <ClCompile Include="CBLAS_SRC\ztrsv.c" />
+    <ClCompile Include="Defaults.cpp" />
+    <ClCompile Include="DllEntry.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="MeshTopoData.cpp" />
+    <ClCompile Include="MeshTopoData_MappingMethods.cpp" />
+    <ClCompile Include="MeshTopoData_MeshMethods.cpp" />
+    <ClCompile Include="MeshTopoData_MNMeshMethods.cpp" />
+    <ClCompile Include="MeshTopoData_PatchMethods.cpp" />
+    <ClCompile Include="MeshTopoData_RelaxMethods.cpp" />
+    <ClCompile Include="patch.cpp" />
+    <ClCompile Include="poly.cpp" />
+    <ClCompile Include="publishedFunctions.cpp" />
+    <ClCompile Include="sctex.cpp" />
+    <ClCompile Include="SuperLU_SRC\ccolumn_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\ccolumn_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\ccopy_to_ucol.c" />
+    <ClCompile Include="SuperLU_SRC\cgscon.c" />
+    <ClCompile Include="SuperLU_SRC\cgsequ.c" />
+    <ClCompile Include="SuperLU_SRC\cgsrfs.c" />
+    <ClCompile Include="SuperLU_SRC\cgssv.c" />
+    <ClCompile Include="SuperLU_SRC\cgssvx.c" />
+    <ClCompile Include="SuperLU_SRC\cgstrf.c" />
+    <ClCompile Include="SuperLU_SRC\cgstrs.c" />
+    <ClCompile Include="SuperLU_SRC\clacon.c" />
+    <ClCompile Include="SuperLU_SRC\clangs.c" />
+    <ClCompile Include="SuperLU_SRC\claqgs.c" />
+    <ClCompile Include="SuperLU_SRC\cmemory.c" />
+    <ClCompile Include="SuperLU_SRC\cmyblas2.c" />
+    <ClCompile Include="SuperLU_SRC\colamd.c" />
+    <ClCompile Include="SuperLU_SRC\cpanel_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\cpanel_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\cpivotgrowth.c" />
+    <ClCompile Include="SuperLU_SRC\cpivotL.c" />
+    <ClCompile Include="SuperLU_SRC\cpruneL.c" />
+    <ClCompile Include="SuperLU_SRC\creadhb.c" />
+    <ClCompile Include="SuperLU_SRC\csnode_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\csnode_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\csp_blas2.c" />
+    <ClCompile Include="SuperLU_SRC\csp_blas3.c" />
+    <ClCompile Include="SuperLU_SRC\cutil.c" />
+    <ClCompile Include="SuperLU_SRC\dcolumn_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\dcolumn_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\dcomplex.c" />
+    <ClCompile Include="SuperLU_SRC\dcopy_to_ucol.c" />
+    <ClCompile Include="SuperLU_SRC\dGetDiagU.c" />
+    <ClCompile Include="SuperLU_SRC\dgscon.c" />
+    <ClCompile Include="SuperLU_SRC\dgsequ.c" />
+    <ClCompile Include="SuperLU_SRC\dgsrfs.c" />
+    <ClCompile Include="SuperLU_SRC\dgssv.c" />
+    <ClCompile Include="SuperLU_SRC\dgssvx.c" />
+    <ClCompile Include="SuperLU_SRC\dgstrf.c" />
+    <ClCompile Include="SuperLU_SRC\dgstrs.c" />
+    <ClCompile Include="SuperLU_SRC\dgstrsL.c" />
+    <ClCompile Include="SuperLU_SRC\dgstrsU.c" />
+    <ClCompile Include="SuperLU_SRC\dlacon.c" />
+    <ClCompile Include="SuperLU_SRC\dlamch.c" />
+    <ClCompile Include="SuperLU_SRC\dlangs.c" />
+    <ClCompile Include="SuperLU_SRC\dlaqgs.c" />
+    <ClCompile Include="SuperLU_SRC\dmemory.c" />
+    <ClCompile Include="SuperLU_SRC\dmyblas2.c" />
+    <ClCompile Include="SuperLU_SRC\dpanel_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\dpanel_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\dpivotgrowth.c" />
+    <ClCompile Include="SuperLU_SRC\dpivotL.c" />
+    <ClCompile Include="SuperLU_SRC\dpruneL.c" />
+    <ClCompile Include="SuperLU_SRC\dreadhb.c" />
+    <ClCompile Include="SuperLU_SRC\dsnode_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\dsnode_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\dsp_blas2.c" />
+    <ClCompile Include="SuperLU_SRC\dsp_blas3.c" />
+    <ClCompile Include="SuperLU_SRC\dutil.c" />
+    <ClCompile Include="SuperLU_SRC\dzsum1.c" />
+    <ClCompile Include="SuperLU_SRC\get_perm_c.c" />
+    <ClCompile Include="SuperLU_SRC\heap_relax_snode.c" />
+    <ClCompile Include="SuperLU_SRC\icmax1.c" />
+    <ClCompile Include="SuperLU_SRC\izmax1.c" />
+    <ClCompile Include="SuperLU_SRC\lsame.c" />
+    <ClCompile Include="SuperLU_SRC\memory.c" />
+    <ClCompile Include="SuperLU_SRC\mmd.c" />
+    <ClCompile Include="SuperLU_SRC\relax_snode.c" />
+    <ClCompile Include="SuperLU_SRC\scolumn_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\scolumn_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\scomplex.c" />
+    <ClCompile Include="SuperLU_SRC\scopy_to_ucol.c" />
+    <ClCompile Include="SuperLU_SRC\scsum1.c" />
+    <ClCompile Include="SuperLU_SRC\sgscon.c" />
+    <ClCompile Include="SuperLU_SRC\sgsequ.c" />
+    <ClCompile Include="SuperLU_SRC\sgsrfs.c" />
+    <ClCompile Include="SuperLU_SRC\sgssv.c" />
+    <ClCompile Include="SuperLU_SRC\sgssvx.c" />
+    <ClCompile Include="SuperLU_SRC\sgstrf.c" />
+    <ClCompile Include="SuperLU_SRC\sgstrs.c" />
+    <ClCompile Include="SuperLU_SRC\slacon.c" />
+    <ClCompile Include="SuperLU_SRC\slamch.c" />
+    <ClCompile Include="SuperLU_SRC\slangs.c" />
+    <ClCompile Include="SuperLU_SRC\slaqgs.c" />
+    <ClCompile Include="SuperLU_SRC\smemory.c" />
+    <ClCompile Include="SuperLU_SRC\smyblas2.c" />
+    <ClCompile Include="SuperLU_SRC\spanel_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\spanel_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\spivotgrowth.c" />
+    <ClCompile Include="SuperLU_SRC\spivotL.c" />
+    <ClCompile Include="SuperLU_SRC\spruneL.c" />
+    <ClCompile Include="SuperLU_SRC\sp_coletree.c" />
+    <ClCompile Include="SuperLU_SRC\sp_ienv.c" />
+    <ClCompile Include="SuperLU_SRC\sp_preorder.c" />
+    <ClCompile Include="SuperLU_SRC\sreadhb.c" />
+    <ClCompile Include="SuperLU_SRC\ssnode_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\ssnode_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\ssp_blas2.c" />
+    <ClCompile Include="SuperLU_SRC\ssp_blas3.c" />
+    <ClCompile Include="SuperLU_SRC\superlu_timer.c" />
+    <ClCompile Include="SuperLU_SRC\sutil.c" />
+    <ClCompile Include="SuperLU_SRC\util.c" />
+    <ClCompile Include="SuperLU_SRC\xerbla.c" />
+    <ClCompile Include="SuperLU_SRC\zcolumn_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\zcolumn_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\zcopy_to_ucol.c" />
+    <ClCompile Include="SuperLU_SRC\zgscon.c" />
+    <ClCompile Include="SuperLU_SRC\zgsequ.c" />
+    <ClCompile Include="SuperLU_SRC\zgsrfs.c" />
+    <ClCompile Include="SuperLU_SRC\zgssv.c" />
+    <ClCompile Include="SuperLU_SRC\zgssvx.c" />
+    <ClCompile Include="SuperLU_SRC\zgstrf.c" />
+    <ClCompile Include="SuperLU_SRC\zgstrs.c" />
+    <ClCompile Include="SuperLU_SRC\zlacon.c" />
+    <ClCompile Include="SuperLU_SRC\zlangs.c" />
+    <ClCompile Include="SuperLU_SRC\zlaqgs.c" />
+    <ClCompile Include="SuperLU_SRC\zmemory.c" />
+    <ClCompile Include="SuperLU_SRC\zmyblas2.c" />
+    <ClCompile Include="SuperLU_SRC\zpanel_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\zpanel_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\zpivotgrowth.c" />
+    <ClCompile Include="SuperLU_SRC\zpivotL.c" />
+    <ClCompile Include="SuperLU_SRC\zpruneL.c" />
+    <ClCompile Include="SuperLU_SRC\zreadhb.c" />
+    <ClCompile Include="SuperLU_SRC\zsnode_bmod.c" />
+    <ClCompile Include="SuperLU_SRC\zsnode_dfs.c" />
+    <ClCompile Include="SuperLU_SRC\zsp_blas2.c" />
+    <ClCompile Include="SuperLU_SRC\zsp_blas3.c" />
+    <ClCompile Include="SuperLU_SRC\zutil.c" />
+    <ClCompile Include="ToolCopyPaste.cpp" />
+    <ClCompile Include="ToolFlatten.cpp" />
+    <ClCompile Include="ToolGrouping.cpp" />
+    <ClCompile Include="ToolGroupingActions.cpp" />
+    <ClCompile Include="ToolGroupingData.cpp" />
+    <ClCompile Include="ToolGroupingUndo.cpp" />
+    <ClCompile Include="ToolLSCM.cpp" />
+    <ClCompile Include="ToolLSCMMatrix.cpp" />
+    <ClCompile Include="ToolMapping.cpp" />
+    <ClCompile Include="ToolNormalMap.cpp" />
+    <ClCompile Include="ToolPelt.cpp" />
+    <ClCompile Include="ToolPeltEdgeSelectMode.cpp" />
+    <ClCompile Include="ToolRegularMap.cpp" />
+    <ClCompile Include="ToolRegularMapScriptCommands.cpp" />
+    <ClCompile Include="ToolRegularMapUndo.cpp" />
+    <ClCompile Include="ToolRelax.cpp" />
+    <ClCompile Include="ToolRelaxBySprings.cpp" />
+    <ClCompile Include="ToolRenderUVs.cpp" />
+    <ClCompile Include="ToolSelect.cpp" />
+    <ClCompile Include="ToolSketch.cpp" />
+    <ClCompile Include="ToolSolver.cpp" />
+    <ClCompile Include="ToolSplineMapping.cpp" />
+    <ClCompile Include="ToolSplineMapping_CommandModes.cpp" />
+    <ClCompile Include="ToolSplineMapping_SplineData.cpp" />
+    <ClCompile Include="ToolSplineMapping_Undo.cpp" />
+    <ClCompile Include="ToolSplineMapping_UnwrapFunctions.cpp" />
+    <ClCompile Include="ToolStitch.cpp" />
+    <ClCompile Include="ToolUnfold.cpp" />
+    <ClCompile Include="ToolUVWTweak.cpp" />
+    <ClCompile Include="TvConnectionInfo.cpp" />
+    <ClCompile Include="TVData.cpp" />
+    <ClCompile Include="undo.cpp" />
+    <ClCompile Include="unwrap.cpp" />
+    <ClCompile Include="UnwrapCustomToolBar.cpp" />
+    <ClCompile Include="UnwrapCustomToolBarFloating.cpp" />
+    <ClCompile Include="UnwrapCustomToolBarSetup.cpp" />
+    <ClCompile Include="UnwrapCustomUI.cpp" />
+    <ClCompile Include="UnwrapModifierPanel.cpp" />
+    <ClCompile Include="UnwrapSideBarUI.cpp" />
+    <ClCompile Include="Unwrap_PaintDialogMethods.cpp" />
+    <ClCompile Include="UtilCluster.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="mods.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CBLAS_SRC\f2c.h" />
+    <ClInclude Include="CBLAS_SRC\slu_Cnames.h" />
+    <ClInclude Include="CBLAS_SRC\superlu_f2c.h" />
+    <ClInclude Include="Solver.h" />
+    <ClInclude Include="SuperLU_SRC\colamd.h" />
+    <ClInclude Include="SuperLU_SRC\slu_cdefs.h" />
+    <ClInclude Include="SuperLU_SRC\slu_Cnames.h" />
+    <ClInclude Include="SuperLU_SRC\slu_dcomplex.h" />
+    <ClInclude Include="SuperLU_SRC\slu_ddefs.h" />
+    <ClInclude Include="SuperLU_SRC\slu_scomplex.h" />
+    <ClInclude Include="SuperLU_SRC\slu_sdefs.h" />
+    <ClInclude Include="SuperLU_SRC\slu_util.h" />
+    <ClInclude Include="SuperLU_SRC\slu_zdefs.h" />
+    <ClInclude Include="SuperLU_SRC\supermatrix.h" />
+    <ClInclude Include="ToolGrouping.h" />
+    <ClInclude Include="ToolGroupingData.h" />
+    <ClInclude Include="ToolLSCM.h" />
+    <ClInclude Include="ToolRegularMap.h" />
+    <ClInclude Include="..\..\..\Include\iunwrap.h" />
+    <ClInclude Include="IUnwrapMax8.h" />
+    <ClInclude Include="MeshTopoData.h" />
+    <ClInclude Include="mods.h" />
+    <ClInclude Include="modsres.h" />
+    <ClInclude Include="PeltData.h" />
+    <ClInclude Include="resourceOverride.h" />
+    <ClInclude Include="TvConnectionInfo.h" />
+    <ClInclude Include="TVData.h" />
+    <ClInclude Include="undo.h" />
+    <ClInclude Include="unwrap.h" />
+    <ClInclude Include="UnwrapCustomToolBars.h" />
+    <ClInclude Include="UnwrapCustomUI.h" />
+    <ClInclude Include="UnwrapModifierPanelUI.h" />
+    <ClInclude Include="UnwrapSideBarUI.h" />
+    <ClInclude Include="veroverrides.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CBLAS_SRC\Makefile" />
+    <None Include="unwrap.def" />
+    <None Include="addvertc.cur" />
+    <None Include="attach.cur" />
+    <None Include="Bevel.cur" />
+    <None Include="bmp00001.bmp" />
+    <None Include="bmp00002.bmp" />
+    <None Include="bmp00003.bmp" />
+    <None Include="bmp00004.bmp" />
+    <None Include="booleant.bmp" />
+    <None Include="boolinte.cur" />
+    <None Include="boolsubt.cur" />
+    <None Include="boolunio.cur" />
+    <None Include="bulbmask.bmp" />
+    <None Include="bulbs.bmp" />
+    <None Include="chamfer.cur" />
+    <None Include="createwe.cur" />
+    <None Include="CROSSHR.CUR" />
+    <None Include="crossins.cur" />
+    <None Include="cur00001.cur" />
+    <None Include="cursor1.cur" />
+    <None Include="cursor10.cur" />
+    <None Include="cursor11.cur" />
+    <None Include="cursor12.cur" />
+    <None Include="cursor13.cur" />
+    <None Include="cursor16.cur" />
+    <None Include="cursor17.cur" />
+    <None Include="cursor22.cur" />
+    <None Include="cursor3.cur" />
+    <None Include="cursor4.cur" />
+    <None Include="cursor5.cur" />
+    <None Include="cursor6.cur" />
+    <None Include="cursor7.cur" />
+    <None Include="cursor8.cur" />
+    <None Include="cursor9.cur" />
+    <None Include="echamfer.cur" />
+    <None Include="extrudec.cur" />
+    <None Include="faceselt.bmp" />
+    <None Include="fillet.cur" />
+    <None Include="magnify.cur" />
+    <None Include="mask_boo.bmp" />
+    <None Include="mask_fac.bmp" />
+    <None Include="mask_subobjtypes.bmp" />
+    <None Include="mask_unw.bmp" />
+    <None Include="move_x.cur" />
+    <None Include="move_y.cur" />
+    <None Include="movex1.cur" />
+    <None Include="outline.cur" />
+    <None Include="panhand.cur" />
+    <None Include="patchsel.bmp" />
+    <None Include="patselm.bmp" />
+    <None Include="region.cur" />
+    <None Include="scale_x.cur" />
+    <None Include="scale_y.cur" />
+    <None Include="segbreak.cur" />
+    <None Include="segrefin.cur" />
+    <None Include="selmask.bmp" />
+    <None Include="sketchcu.cur" />
+    <None Include="sketchpi.cur" />
+    <None Include="splselm.bmp" />
+    <None Include="subobjtypes.bmp" />
+    <None Include="thselcur.cur" />
+    <None Include="Trim.cur" />
+    <None Include="trimbut.bmp" />
+    <None Include="trimmask.bmp" />
+    <None Include="unwrap_option.bmp" />
+    <None Include="unwrap_option_mask.bmp" />
+    <None Include="unwrap_transform.bmp" />
+    <None Include="unwrap_transform_mask.bmp" />
+    <None Include="unwrap_verts.bmp" />
+    <None Include="unwrap_verts_mask.bmp" />
+    <None Include="unwrap_view.bmp" />
+    <None Include="unwrap_view_mask.bmp" />
+    <None Include="unwrapto.bmp" />
+    <None Include="vchamfer.cur" />
+    <None Include="vertconn.cur" />
+    <None Include="vinsert.cur" />
+    <None Include="weld.cur" />
+    <None Include="weldcur1.cur" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets"></ImportGroup>
+</Project>

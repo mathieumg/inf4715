@@ -1,0 +1,10 @@
+*GameApp.exe
+*Testing.exe
+*\Tools\*
+*\Assets\*
+*\Setup
+*\Setup\*
+*\Sources\3rdparty\PhysX\Docs
+*\Sources\3rdparty\PhysX\Docs\*
+*\Exporter\Scene
+*\Exporter\Scene\*

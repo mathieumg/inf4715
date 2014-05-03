@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VCNAnims>
+	<VCNAnim Name="MoveAnim" version="3.0">
+		<Joint Name="" NbKFPos="12" NbKFRot="0" NbKFScl="0" PosAnimated="1" RotAnimated="0" SclAnimated="0">
+			<KF_Pos frame="1" time="0" x="-100" y="0" z="100"></KF_Pos>
+			<KF_Pos frame="2" time="2" x="-100" y="0" z="-20"></KF_Pos>
+			<KF_Pos frame="3" time="4"  x="-20" y="0" z="-20"></KF_Pos>
+			<KF_Pos frame="4" time="6"  x="-20" y="0" z="100"></KF_Pos>
+			<KF_Pos frame="5" time="8"  x="-20" y="0" z="-100"></KF_Pos>
+			<KF_Pos frame="6" time="10" x="20" y="0" z="100"></KF_Pos>
+			<KF_Pos frame="7" time="12" x="60" y="0" z="110"></KF_Pos>
+			<KF_Pos frame="8" time="14" x="100" y="0" z="80"></KF_Pos>
+			<KF_Pos frame="9" time="16" x="20" y="0" z="-80"></KF_Pos>
+			<KF_Pos frame="10" time="18" x="15" y="0" z="-95"></KF_Pos>
+			<KF_Pos frame="11" time="20" x="55" y="0" z="-98"></KF_Pos>
+			<KF_Pos frame="12" time="22" x="100" y="0" z="-100"></KF_Pos>
+		</Joint>
+	</VCNAnim>
+</VCNAnims>

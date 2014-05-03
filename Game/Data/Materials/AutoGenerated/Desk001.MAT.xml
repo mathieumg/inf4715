@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Material Name="Desk001Material" Version="1"><AmbientColor r="0.5882353" g="0.5882353" b="0.5882353" a="1"/><DiffuseColor r="0.5882353" g="0.5882353" b="0.5882353" a="1"/><SpecularColor r="0" g="0" b="0" a="1" power="30"/><UseLighting value="1"/><Effect name="LitTextured"><TextureParam name="DiffuseTexture" value="Textures/DeskWood_Dirty_Diffuse.png"/></Effect></Material>

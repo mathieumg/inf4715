@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{04245AFF-1CE3-4CB0-BF60-996F0664076A}" SchemaVersion="62">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{04245AFF-1CE3-4CB0-BF60-996F0664076A}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Walk_run" ID="{3D6B338B-685D-4124-BBE5-A05AAA5FDE84}">
+					<ChildrenList>
+						<State Name="None" ID="{1D226103-3BE0-4845-9C1A-27BE5626B775}" />
+						<State Name="Walk" ID="{36B06CBD-6C4A-43E0-9F2A-9D275055BE20}" />
+						<State Name="Run" ID="{9C1105D6-1C0B-4A5E-B1E5-1A004AC432ED}" />
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Wood_door" ID="{67146F55-4B05-4240-B2A2-89142FE4D9FA}">
+					<ChildrenList>
+						<State Name="None" ID="{899D090A-DA57-44B8-89C5-8716F21508A5}" />
+						<State Name="Locked_openable" ID="{377BF08C-3B24-4329-AEB3-43FA8D77D218}" />
+						<State Name="Locked_not_openable" ID="{67B0D96A-A8EC-4270-8CE4-6F686E253314}" />
+						<State Name="Opened" ID="{F5AA9BBC-7B14-4875-BF6F-0B981D139142}" />
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Metal_door" ID="{C4DBD935-FB57-4D40-9E8B-1E3D69788647}">
+					<ChildrenList>
+						<State Name="None" ID="{96938DA0-2002-4C70-A8FA-623DBA5CBCF8}" />
+						<State Name="Locked_openable" ID="{2149D90D-3D50-4708-859A-41193A99DB3E}" />
+						<State Name="Locked_not_openable" ID="{9037B2EB-1777-493B-9D6D-4D8FB2680535}" />
+						<State Name="Opened" ID="{938C5634-3673-4DDF-A951-29C69768D843}" />
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Levels_music" ID="{38FF66B9-6CD9-48FE-8F7B-DF2BE94B136B}">
+					<ChildrenList>
+						<State Name="None" ID="{C059B32A-96B1-45CB-883B-7537AD144F05}" />
+						<State Name="Puzzle1" ID="{9111C66A-A133-4B09-B35E-5B056B18711B}" />
+						<State Name="Puzzle2" ID="{94EE4080-56B7-4E50-8B20-A4CC15F0AE77}" />
+						<State Name="Ending" ID="{5940CACC-2BB6-476C-ADC0-313CE3EE0EAD}" />
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Puzzle2" ID="{94EE4080-56B7-4E50-8B20-A4CC15F0AE77}" />
+							<EndState Name="Ending" ID="{5940CACC-2BB6-476C-ADC0-313CE3EE0EAD}" />
+							<Time>0.5</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Puzzle1" ID="{9111C66A-A133-4B09-B35E-5B056B18711B}" />
+							<EndState Name="Puzzle2" ID="{94EE4080-56B7-4E50-8B20-A4CC15F0AE77}" />
+							<Time>2</Time>
+							<IsShared>true</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Ending" ID="{5940CACC-2BB6-476C-ADC0-313CE3EE0EAD}" />
+							<EndState Name="Puzzle1" ID="{9111C66A-A133-4B09-B35E-5B056B18711B}" />
+							<Time>3</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Ending" ID="{5940CACC-2BB6-476C-ADC0-313CE3EE0EAD}" />
+							<EndState Name="Puzzle2" ID="{94EE4080-56B7-4E50-8B20-A4CC15F0AE77}" />
+							<Time>3</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>
