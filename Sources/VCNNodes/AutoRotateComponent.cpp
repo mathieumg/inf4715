@@ -26,7 +26,7 @@ void VCNAutoRotateComponent::Update(VCNFloat dt)
 {                                                              
 //**CodeRegion
 	mRotationPosition += dt * mSpeedFactor;
-	VCNQuat q = VCNQuat::FromEuler(mRotationAxis.x * mRotationPosition, mRotationAxis.y * mRotationPosition, mRotationAxis.z * mRotationPosition);
+	VCNQuat q = VCNQuat::FromEuler(mRotationAxis.x * (VCNFloat)mRotationPosition, mRotationAxis.y * (VCNFloat)mRotationPosition, mRotationAxis.z * (VCNFloat)mRotationPosition);
 	q.Normalize();
 	GetOwner()->SetRotation(q);
 
